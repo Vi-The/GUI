@@ -26,7 +26,7 @@ public class HelloController {
 
     //method
     public void clickStart() throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("newRoom.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("OUTSIDESDU.fxml"));
 
         Stage window = (Stage) Startbutton.getScene().getWindow();
         window.setScene(new Scene(root, 750, 500));

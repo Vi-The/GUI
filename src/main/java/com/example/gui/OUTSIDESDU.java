@@ -14,7 +14,7 @@ import javafx.scene.shape.Rectangle;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class NewRoom implements Initializable {
+public class OUTSIDESDU implements Initializable {
 
     private BooleanProperty wPressed = new SimpleBooleanProperty();
     private BooleanProperty aPressed = new SimpleBooleanProperty();
@@ -39,7 +39,7 @@ public class NewRoom implements Initializable {
 
     AnimationTimer timer = new AnimationTimer() {
         @Override
-        public void handle(long timestamp) {
+        public void handle(long timestamp) { //switch case
 
             if(wPressed.get()) {
                 shape1.setLayoutY(shape1.getLayoutY() - movementVariable);
