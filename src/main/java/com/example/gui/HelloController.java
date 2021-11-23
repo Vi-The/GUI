@@ -29,7 +29,7 @@ public class HelloController {
         Parent root = FXMLLoader.load(getClass().getResource("OUTSIDESDU.fxml"));
 
         Stage window = (Stage) Startbutton.getScene().getWindow();
-        window.setScene(new Scene(root, 750, 500));
+        window.setScene(new Scene(root, 700, 700));
     }
 /*
     @FXML
