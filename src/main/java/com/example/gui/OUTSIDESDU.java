@@ -21,20 +21,20 @@ import java.util.ResourceBundle;
 
 public class OUTSIDESDU implements Initializable {
 
-    private BooleanProperty wPressed = new SimpleBooleanProperty();
+    private BooleanProperty wPressed = new SimpleBooleanProperty(); //skift
     private BooleanProperty aPressed = new SimpleBooleanProperty();
     private BooleanProperty sPressed = new SimpleBooleanProperty();
     private BooleanProperty dPressed = new SimpleBooleanProperty();
 
     private BooleanBinding keyPressed = wPressed.or(aPressed).or(sPressed).or(dPressed);
 
-    private int movementVariable = 2;
+    private int movementVariable = 2; //hastighed
 
     @FXML
-    private Rectangle shape1;
+    private Rectangle shape1; // skifte shape1 til navn på spilleren eller noget #cleancode
 
     @FXML
-    private AnchorPane scene;
+    private AnchorPane scene; // scene navn til navnet på det gældende rum
 
 
 
@@ -68,7 +68,7 @@ public class OUTSIDESDU implements Initializable {
             }
 
             if(sPressed.get()){
-                shape1.setLayoutY(shape1.getLayoutY() + movementVariable);
+                shape1.setLayoutY(shape1.getLayoutY() + movementVariable); // her ville man indsætte det passende frame billede så når personen går til højre/venstre så vil man se personen fra siden
             }
 
             if(aPressed.get()){
