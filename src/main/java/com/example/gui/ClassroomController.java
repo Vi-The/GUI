@@ -17,7 +17,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class GYDEHUTTENC  implements Initializable {
+public class ClassroomController  implements Initializable {
 
     @FXML
     private Rectangle shape1; // skifte shape1 til navn på spilleren eller noget #cleancode
@@ -41,29 +41,17 @@ public class GYDEHUTTENC  implements Initializable {
                     keylistener.checkKeyInput(keyEvent, shape1);
                 }
             });
-           if (shape1.getLayoutX() >= 0 && shape1.getLayoutX() <= 20 && shape1.getLayoutY() == 330 ){
+            if (shape1.getLayoutX() >= 0 && shape1.getLayoutX() <= 20 && shape1.getLayoutY() == 330  ){
                 try {
-                    Parent root = FXMLLoader.load(getClass().getResource("Kantine.fxml"));
+                    Parent root = FXMLLoader.load(getClass().getResource("GYDEHUTTENS.fxml"));
                     Stage window = (Stage) shape1.getScene().getWindow();
-                    window.setScene(new Scene(root, 700, 700));
-                    window.setTitle("Kantine");
+                    //window.setScene(new Scene(root, 700, 700));
+                    window.setTitle("Gydehutten N");
                     timer.stop();
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
             }
-           else if(shape1.getLayoutX() >= 630 && shape1.getLayoutX() <= 655 && shape1.getLayoutY() == 330 ){
-                try {
-                    Parent root = FXMLLoader.load(getClass().getResource("Classroom.fxml"));
-                    Stage window = (Stage) shape1.getScene().getWindow();
-                    window.setScene(new Scene(root, 700, 700));
-                    window.setTitle("Classroom");
-                    timer.stop();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-
         }
     };
 
@@ -73,15 +61,4 @@ public class GYDEHUTTENC  implements Initializable {
     }
 }
 
-/*
-    @Override
-    public void start(Stage primaryStage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("GYDEHUTTENS.fxml"));
-        primaryStage.setTitle("Gydehutten S");
-        primaryStage.setScene(new Scene(root, 700, 700));
-        primaryStage.show();
-    }
 
-}
-
-*/

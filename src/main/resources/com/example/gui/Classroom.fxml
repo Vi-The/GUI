@@ -5,9 +5,9 @@
 <?import javafx.scene.shape.Rectangle?>
 
 
-<AnchorPane fx:id="scene" prefHeight="700.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gui.KantineController">
+<AnchorPane fx:id="scene" prefHeight="700.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gui.ClassroomController">
    <children>
+      <Button layoutX="642.0" layoutY="674.0" mnemonicParsing="false" onAction="#start" text="Reset" />
       <Rectangle fx:id="shape1" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="40.0" layoutX="330.0" layoutY="330.0" stroke="BLACK" strokeType="INSIDE" width="40.0" />
-      <Button layoutX="650.0" layoutY="674.0" mnemonicParsing="false" onAction="#start" text="Reset" />
    </children>
 </AnchorPane>
