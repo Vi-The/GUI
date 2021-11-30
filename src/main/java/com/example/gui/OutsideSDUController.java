@@ -41,7 +41,7 @@ public class OutsideSDUController implements Initializable {
                     keylistener.checkKeyInput(keyEvent, shape1);
                 }
             });
-            if (shape1.getLayoutX() < 350 && shape1.getLayoutX() > 300 && shape1.getLayoutY() < 10){ // skal ændres så det ikke kun er på det korrdinatsæt at blokken vil skifte rum
+            if (shape1.getLayoutX() < 350 && shape1.getLayoutX() > 300 && shape1.getLayoutY() >= 639){ // skal ændres så det ikke kun er på det korrdinatsæt at blokken vil skifte rum
                 try {
                     Parent root = FXMLLoader.load(getClass().getResource("GYDEHUTTENS.fxml"));
                     Stage window = (Stage) shape1.getScene().getWindow();
