@@ -51,7 +51,7 @@ public class OUTSIDESDU implements Initializable {
         @Override
         public void handle(long timestamp) { //switch case
 
-            if (shape1.getLayoutX() == 330  && shape1.getLayoutY() == 22){ // skal ændres så det ikke kun er på det korrdinatsæt at blokken vil skifte rum
+            if (shape1.getLayoutX() == 330  && shape1.getLayoutY() == 636){ // skal ændres så det ikke kun er på det korrdinatsæt at blokken vil skifte rum
                 try {
                     Parent root = FXMLLoader.load(getClass().getResource("GYDEHUTTENS.fxml"));
                     Stage window = (Stage) shape1.getScene().getWindow();
