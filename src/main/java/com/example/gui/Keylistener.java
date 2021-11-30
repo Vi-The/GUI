@@ -7,6 +7,7 @@ import javafx.scene.shape.Rectangle;
 public class Keylistener {
     private Rectangle shape;
     private AnchorPane scene;
+    private Boolean InventoryOpen = false;
 
     Keylistener(AnchorPane scene)
     {
@@ -22,6 +23,7 @@ public class Keylistener {
             case A -> moveLeft();
             case D -> moveRight();
             case M -> System.out.println(shape.getLayoutX()+ " " + shape.getLayoutY());
+            case I -> openInventory();
         }
     }
     public void moveUp(){
@@ -35,6 +37,17 @@ public class Keylistener {
     }
     public void moveRight(){
         shape.setLayoutX(shape.getLayoutX()+40);
+    }
+
+    public void openInventory() {
+        try {
+            InventoryController inventory = new InventoryController();
+            inventory.openInv();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+
     }
 
 }
