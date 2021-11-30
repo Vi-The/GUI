@@ -29,7 +29,6 @@ public class OutsideSDUController implements Initializable {
     void start(ActionEvent event) {
         shape1.setLayoutY(330);
         shape1.setLayoutX(330);
-
     }
 
     AnimationTimer timer = new AnimationTimer() {
@@ -51,7 +50,6 @@ public class OutsideSDUController implements Initializable {
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-
             }
         }
     };
