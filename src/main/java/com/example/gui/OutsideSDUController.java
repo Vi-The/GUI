@@ -20,11 +20,9 @@ import java.util.ResourceBundle;
 public class OutsideSDUController implements Initializable {
     @FXML
     private Rectangle shape1; // skifte shape1 til navn på spilleren eller noget #cleancode
-
     @FXML
     private AnchorPane scene; // scene navn til navnet på det gældende rum
     private Keylistener keylistener = new Keylistener(scene);
-
     @FXML
     void start(ActionEvent event) {
         shape1.setLayoutY(330);
@@ -37,7 +35,6 @@ public class OutsideSDUController implements Initializable {
            scene.setOnKeyPressed(new EventHandler<KeyEvent>() {
                 @Override
                 public void handle(KeyEvent keyEvent) {
-
                     keylistener.checkKeyInput(keyEvent, shape1);
                 }
             });
