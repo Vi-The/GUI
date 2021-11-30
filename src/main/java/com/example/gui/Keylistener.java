@@ -8,6 +8,7 @@ public class Keylistener {
     private Rectangle shape;
     private AnchorPane scene;
     private Boolean InventoryOpen = false;
+    static Collision collision = new Collision();
 
     Keylistener(AnchorPane scene)
     {
@@ -27,16 +28,20 @@ public class Keylistener {
         }
     }
     public void moveUp(){
-        shape.setLayoutY(shape.getLayoutY()-40);
+        if(!collision.checkColliisonY(shape.getLayoutY()-40,shape.getLayoutX()))
+            shape.setLayoutY(shape.getLayoutY()-40);
     }
     public void moveDown(){
-        shape.setLayoutY(shape.getLayoutY()+40);
+        if(!collision.checkColliisonY(shape.getLayoutY()+40,shape.getLayoutX()))
+            shape.setLayoutY(shape.getLayoutY()+40);
     }
     public void moveLeft(){
-        shape.setLayoutX(shape.getLayoutX()-40);
+        if(!collision.checkColliisonX(shape.getLayoutX(), shape.getLayoutY()-40))
+            shape.setLayoutX(shape.getLayoutX()-40);
     }
     public void moveRight(){
-        shape.setLayoutX(shape.getLayoutX()+40);
+        if(!collision.checkColliisonX(shape.getLayoutX(), shape.getLayoutY()+40))
+            shape.setLayoutX(shape.getLayoutX()+40);
     }
 
     public void openInventory() {
