@@ -45,7 +45,7 @@ public class ClassroomController  implements Initializable {
                 try {
                     Parent root = FXMLLoader.load(getClass().getResource("GYDEHUTTENS.fxml"));
                     Stage window = (Stage) shape1.getScene().getWindow();
-                    //window.setScene(new Scene(root, 700, 700));
+                    window.setScene(new Scene(root, 700, 700));
                     window.setTitle("Gydehutten N");
                     timer.stop();
                 } catch (IOException e) {

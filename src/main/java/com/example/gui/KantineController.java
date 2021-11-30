@@ -46,7 +46,7 @@ public class KantineController  implements Initializable {
                     Parent root = FXMLLoader.load(getClass().getResource("GYDEHUTTENS.fxml"));
                     Stage window = (Stage) shape1.getScene().getWindow();
                     window.setScene(new Scene(root, 700, 700));
-                    window.setTitle("Kantine");
+                    window.setTitle("Gydehutten N");
                     timer.stop();
                 } catch (IOException e) {
                     e.printStackTrace();
