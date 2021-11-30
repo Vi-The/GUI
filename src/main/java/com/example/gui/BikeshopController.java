@@ -17,7 +17,8 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class OutsideSDUController implements Initializable {
+public class BikeshopController  implements Initializable {
+
     @FXML
     private Rectangle shape1; // skifte shape1 til navn på spilleren eller noget #cleancode
 
@@ -30,18 +31,17 @@ public class OutsideSDUController implements Initializable {
         shape1.setLayoutY(330);
         shape1.setLayoutX(330);
     }
-
     AnimationTimer timer = new AnimationTimer() {
         @Override
         public void handle(long timestamp) { //switch case
-           scene.setOnKeyPressed(new EventHandler<KeyEvent>() {
+            scene.setOnKeyPressed(new EventHandler<KeyEvent>() {
                 @Override
                 public void handle(KeyEvent keyEvent) {
 
                     keylistener.checkKeyInput(keyEvent, shape1);
                 }
             });
-            if (shape1.getLayoutX() < 350 && shape1.getLayoutX() > 300 && shape1.getLayoutY() >= 639){ // skal ændres så det ikke kun er på det korrdinatsæt at blokken vil skifte rum
+            if (shape1.getLayoutY() >= 0 && shape1.getLayoutY() <= 20 && shape1.getLayoutX() == 330 ){
                 try {
                     Parent root = FXMLLoader.load(getClass().getResource("GYDEHUTTEN_N.fxml"));
                     Stage window = (Stage) shape1.getScene().getWindow();
@@ -60,3 +60,5 @@ public class OutsideSDUController implements Initializable {
         timer.start();
     }
 }
+
+
