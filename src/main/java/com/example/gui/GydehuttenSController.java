@@ -17,7 +17,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class GYDEHUTTENC  implements Initializable {
+public class GydehuttenSController  implements Initializable {
 
     @FXML
     private Rectangle shape1; // skifte shape1 til navn på spilleren eller noget #cleancode
@@ -41,57 +41,53 @@ public class GYDEHUTTENC  implements Initializable {
                     keylistener.checkKeyInput(keyEvent, shape1);
                 }
             });
-           if (shape1.getLayoutX() >= 0 && shape1.getLayoutX() <= 20 && shape1.getLayoutY() == 330 ){
+            if (shape1.getLayoutY() >= 0 && shape1.getLayoutY() <= 20 && shape1.getLayoutX() == 330 ){
                 try {
-                    Parent root = FXMLLoader.load(getClass().getResource("Kantine.fxml"));
+                    Parent root = FXMLLoader.load(getClass().getResource("GYDEHUTTEN_N.fxml"));
                     Stage window = (Stage) shape1.getScene().getWindow();
                     window.setScene(new Scene(root, 700, 700));
-                    window.setTitle("Kantine");
+                    window.setTitle("Gydehutten N");
                     timer.stop();
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
             }
-            else if (shape1.getLayoutY() >= 0 && shape1.getLayoutY() <= 20 && shape1.getLayoutX() == 330 ){
+            else if(shape1.getLayoutX() >= 630 && shape1.getLayoutX() <= 655 && shape1.getLayoutY() == 330 ){
                 try {
-                    Parent root = FXMLLoader.load(getClass().getResource("OUTSIDESDU.fxml"));
+                    Parent root = FXMLLoader.load(getClass().getResource("Fitness.fxml"));
                     Stage window = (Stage) shape1.getScene().getWindow();
                     window.setScene(new Scene(root, 700, 700));
-                    window.setTitle("OUTSIDE SDU");
+                    window.setTitle("SDU Fitness");
                     timer.stop();
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
             }
-           else if(shape1.getLayoutX() >= 630 && shape1.getLayoutX() <= 655 && shape1.getLayoutY() == 330 ){
+            if (shape1.getLayoutX() >= 0 && shape1.getLayoutX() <= 20 && shape1.getLayoutY() == 330 ){
                 try {
-                    Parent root = FXMLLoader.load(getClass().getResource("Classroom.fxml"));
+                    Parent root = FXMLLoader.load(getClass().getResource("Nedenunder.fxml"));
                     Stage window = (Stage) shape1.getScene().getWindow();
                     window.setScene(new Scene(root, 700, 700));
-                    window.setTitle("Classroom");
-                    timer.stop();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-
-            }
-            else if (shape1.getLayoutX() < 350 && shape1.getLayoutX() > 300 && shape1.getLayoutY() >= 639){ // skal ændres så det ikke kun er på det korrdinatsæt at blokken vil skifte rum
-                try {
-                    Parent root = FXMLLoader.load(getClass().getResource("Gydehutten_S.fxml"));
-                    Stage window = (Stage) shape1.getScene().getWindow();
-                    window.setScene(new Scene(root, 700, 700));
-                    window.setTitle("Gydehutten S");
+                    window.setTitle("Nedenunder");
                     timer.stop();
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
             }
-
-
+            if (shape1.getLayoutX() < 350 && shape1.getLayoutX() > 300 && shape1.getLayoutY() >= 639){ // skal ændres så det ikke kun er på det korrdinatsæt at blokken vil skifte rum
+                try {
+                    Parent root = FXMLLoader.load(getClass().getResource("Bikeshop.fxml"));
+                    Stage window = (Stage) shape1.getScene().getWindow();
+                    window.setScene(new Scene(root, 700, 700));
+                    window.setTitle("Bikeshop");
+                    timer.stop();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
 
         }
     };
-
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -99,15 +95,4 @@ public class GYDEHUTTENC  implements Initializable {
     }
 }
 
-/*
-    @Override
-    public void start(Stage primaryStage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("GYDEHUTTENS.fxml"));
-        primaryStage.setTitle("Gydehutten S");
-        primaryStage.setScene(new Scene(root, 700, 700));
-        primaryStage.show();
-    }
 
-}
-
-*/

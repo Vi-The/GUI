@@ -40,7 +40,7 @@ public class OutsideSDUController implements Initializable {
             });
             if (shape1.getLayoutX() < 350 && shape1.getLayoutX() > 300 && shape1.getLayoutY() >= 639){ // skal ændres så det ikke kun er på det korrdinatsæt at blokken vil skifte rum
                 try {
-                    Parent root = FXMLLoader.load(getClass().getResource("GYDEHUTTENS.fxml"));
+                    Parent root = FXMLLoader.load(getClass().getResource("GYDEHUTTEN_N.fxml"));
                     Stage window = (Stage) shape1.getScene().getWindow();
                     window.setScene(new Scene(root, 700, 700));
                     window.setTitle("Gydehutten N");
