@@ -36,11 +36,11 @@ public class Keylistener {
             shape.setLayoutY(shape.getLayoutY()+40);
     }
     public void moveLeft(){
-        if(!collision.checkColliisonX(shape.getLayoutX(), shape.getLayoutY()-40))
+        if(!collision.checkColliisonX(shape.getLayoutX()-40, shape.getLayoutY()))
             shape.setLayoutX(shape.getLayoutX()-40);
     }
     public void moveRight(){
-        if(!collision.checkColliisonX(shape.getLayoutX(), shape.getLayoutY()+40))
+        if(!collision.checkColliisonX(shape.getLayoutX()+40, shape.getLayoutY()))
             shape.setLayoutX(shape.getLayoutX()+40);
     }
 

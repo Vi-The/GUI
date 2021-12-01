@@ -16,11 +16,9 @@ public class Collision {
     boolean checkColliisonY(double yAxis, double xAxis) {
         boolean checker = false;
         for (int i = 0; i < collisionContainer.size(); i++) {
-
-            if(xAxis > collisionContainer.get(i).getX()-40 && xAxis <= collisionContainer.get(i).getWidth()+40)
-            {
+            if(xAxis > collisionContainer.get(i).getX()-40 && xAxis <= collisionContainer.get(i).getWidth()+40) {
                 if(yAxis > collisionContainer.get(i).getY()-40 && yAxis <= collisionContainer.get(i).getHeight()+40) {
-                    System.out.println("test");
+                    System.out.println("collision");
                     checker = true;
                 }
             }
@@ -29,6 +27,15 @@ public class Collision {
     }
 
     boolean checkColliisonX(double xAxis, double yAxis) {
-        return false;
+        boolean checker = false;
+        for(int i = 0; i < collisionContainer.size(); i++) {
+            if(yAxis > collisionContainer.get(i).getY()-40 && yAxis <= collisionContainer.get(i).getHeight()+40){
+                if(xAxis > collisionContainer.get(i).getX()-40 && xAxis <= collisionContainer.get(i).getWidth()+40){
+                    System.out.println("collision");
+                    checker = true;
+                }
+            }
+        }
+        return checker;
     }
 }
