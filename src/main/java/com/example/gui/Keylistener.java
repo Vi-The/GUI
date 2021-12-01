@@ -27,11 +27,11 @@ public class Keylistener {
         }
     }
     public void moveUp(){
-        if(!collision.checkColliisonY(shape.getLayoutY()-40,shape.getLayoutX()))
+        if(!collision.checkCollisionY(shape.getLayoutY()-40,shape.getLayoutX()))
             shape.setLayoutY(shape.getLayoutY()-40);
     }
     public void moveDown(){
-        if(!collision.checkColliisonY(shape.getLayoutY()+40,shape.getLayoutX()))
+        if(!collision.checkCollisionY(shape.getLayoutY()+40,shape.getLayoutX()))
             shape.setLayoutY(shape.getLayoutY()+40);
     }
     public void moveLeft(){

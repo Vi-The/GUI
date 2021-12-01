@@ -17,7 +17,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class GYDEHUTTENC  implements Initializable {
+public class GydehuttenNController implements Initializable {
 
     @FXML
     private Rectangle shape1; // skifte shape1 til navn på spilleren eller noget #cleancode
@@ -47,6 +47,8 @@ public class GYDEHUTTENC  implements Initializable {
                     Stage window = (Stage) shape1.getScene().getWindow();
                     window.setScene(new Scene(root, 700, 700));
                     window.setTitle("Kantine");
+                    shape1.setLayoutY(631);
+                    shape1.setLayoutX(330);
                     timer.stop();
                 } catch (IOException e) {
                     e.printStackTrace();

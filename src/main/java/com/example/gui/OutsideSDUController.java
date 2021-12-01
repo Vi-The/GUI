@@ -50,6 +50,7 @@ public class OutsideSDUController implements Initializable {
                     Stage window = (Stage) shape1.getScene().getWindow();
                     window.setScene(new Scene(root, 700, 700));
                     window.setTitle("Gydehutten N");
+
                     collision.setDisableCollision(true);
                     timer.stop();
                 } catch (IOException e) {
