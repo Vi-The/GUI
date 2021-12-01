@@ -17,7 +17,7 @@ public class Collision {
         collisionContainer.add(new Rectangle(startX, startY, Width, Height+150));
     }
 
-    boolean checkColliisonY(double yAxis, double xAxis) {
+    boolean checkCollisionY(double yAxis, double xAxis) {
         boolean checker = false;
         if(!disableCollision)
         {
