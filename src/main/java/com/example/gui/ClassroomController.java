@@ -17,7 +17,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class ClassroomController  implements Initializable {
+public class ClassroomController  implements Initializable, iController {
 
     @FXML
     private Rectangle shape1; // skifte shape1 til navn på spilleren eller noget #cleancode
@@ -27,10 +27,22 @@ public class ClassroomController  implements Initializable {
     private Keylistener keylistener = new Keylistener(scene);
 
     @FXML
-    void start(ActionEvent event) {
+    public void start(ActionEvent event) {
         shape1.setLayoutY(330);
         shape1.setLayoutX(330);
     }
+
+    /*@Override
+    public void addImage(Parent root, int posX, int width, int posY, int height, String FolderAndImage) throws FileNotFoundException {
+        Image i = new Image(new FileInputStream(FolderAndImage));
+        ImageView image = new ImageView(i);
+        image.setX(posX);
+        image.setY(posY);
+        image.setFitHeight(height);
+        image.setFitWidth(width);
+        root.getChildrenUnmodifiable().add(image);
+    }*/
+
     AnimationTimer timer = new AnimationTimer() {
         @Override
         public void handle(long timestamp) { //switch case
@@ -59,6 +71,7 @@ public class ClassroomController  implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         timer.start();
     }
+
 }
 
 
