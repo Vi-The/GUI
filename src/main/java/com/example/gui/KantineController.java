@@ -17,7 +17,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class KantineController  implements Initializable {
+public class KantineController  implements Initializable, iController {
 
     @FXML
     private Rectangle shape1; // skifte shape1 til navn på spilleren eller noget #cleancode
@@ -27,10 +27,16 @@ public class KantineController  implements Initializable {
     private Keylistener keylistener = new Keylistener(scene);
 
     @FXML
-    void start(ActionEvent event) {
+    public void start(ActionEvent event) {
         shape1.setLayoutY(330);
         shape1.setLayoutX(330);
     }
+
+    @Override
+    public void addCollision() {
+
+    }
+
     AnimationTimer timer = new AnimationTimer() {
         @Override
         public void handle(long timestamp) { //switch case
