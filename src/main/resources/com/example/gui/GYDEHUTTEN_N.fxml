@@ -6,7 +6,7 @@
 
 <AnchorPane fx:id="scene" prefHeight="700.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gui.GydehuttenNController">
    <children>
-      <Rectangle fx:id="shape1" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="40.0" layoutX="330.0" layoutY="21.0" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+      <Rectangle fx:id="shape1" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="40.0" layoutX="330.0" layoutY="330.0" stroke="BLACK" strokeType="INSIDE" width="40.0" />
       <Button layoutX="638.0" layoutY="667.0" mnemonicParsing="false" onAction="#start" text="Reset" />
    </children>
 </AnchorPane>

@@ -47,8 +47,6 @@ public class GydehuttenSController  implements Initializable {
                     Stage window = (Stage) shape1.getScene().getWindow();
                     window.setScene(new Scene(root, 700, 700));
                     window.setTitle("Gydehutten N");
-                    shape1.setLayoutY(638);
-                    shape1.setLayoutX(330);
                     timer.stop();
                 } catch (IOException e) {
                     e.printStackTrace();
