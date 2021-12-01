@@ -7,7 +7,6 @@ import javafx.scene.shape.Rectangle;
 public class Keylistener {
     private Rectangle shape;
     private AnchorPane scene;
-    private Boolean InventoryOpen = false;
     static Collision collision = new Collision();
 
     Keylistener(AnchorPane scene)
