@@ -29,7 +29,7 @@ public class GYDEHUTTENC  implements Initializable {
     @FXML
     void start(ActionEvent event) {
         shape1.setLayoutY(330);
-        shape1.setLayoutX(21);
+        shape1.setLayoutX(330);
     }
     AnimationTimer timer = new AnimationTimer() {
         @Override
