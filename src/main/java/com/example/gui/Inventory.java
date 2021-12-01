@@ -10,14 +10,14 @@ import javafx.stage.Stage;
 
 import java.util.ArrayList;
 
-public class InventoryController {
+public class Inventory {
 
     Scene scene;
     private Group root;
     private Stage stage = new Stage();
     ArrayList<String> inventory = new ArrayList<String>();
 
-    InventoryController(){
+    Inventory(){
         inventory.add("Student ID");
         inventory.add("Books");
         inventory.add("phone");
@@ -29,8 +29,8 @@ public class InventoryController {
             root = new Group();
             Scene scene = new Scene(root,250,300);
             this.scene = scene;
-            stage.setScene(scene);
             stage.setTitle("Inventory");
+            stage.setScene(scene);
             showInv();
             stage.show();
             closeInv();

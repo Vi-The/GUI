@@ -45,7 +45,7 @@ public class Keylistener {
 
     public void openInventory() {
         try {
-            InventoryController inventory = new InventoryController();
+            Inventory inventory = new Inventory();
             inventory.openInv();
         } catch (Exception e) {
             e.printStackTrace();
