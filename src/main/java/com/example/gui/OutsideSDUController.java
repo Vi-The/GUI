@@ -8,9 +8,10 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.shape.Line;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 
@@ -22,9 +23,9 @@ public class OutsideSDUController implements Initializable {
     @FXML
     private Rectangle shape1; // skifte shape1 til navn på spilleren eller noget #cleancode
     @FXML
-    private AnchorPane scene; // scene navn til navnet på det gældende rum
+    private AnchorPane scene1; // scene navn til navnet på det gældende rum
     Collision collision = Keylistener.collision;
-    private Keylistener keylistener = new Keylistener(scene);
+    private Keylistener keylistener = new Keylistener(scene1);
     @FXML
     void start(ActionEvent event) {
         shape1.setLayoutY(330);
@@ -35,7 +36,7 @@ public class OutsideSDUController implements Initializable {
 
         @Override
         public void handle(long timestamp) { //switch case
-           scene.setOnKeyPressed(new EventHandler<KeyEvent>() {
+           scene1.setOnKeyPressed(new EventHandler<KeyEvent>() {
 
                 @Override
                 public void handle(KeyEvent keyEvent) {
@@ -49,6 +50,7 @@ public class OutsideSDUController implements Initializable {
                     Stage window = (Stage) shape1.getScene().getWindow();
                     window.setScene(new Scene(root, 700, 700));
                     window.setTitle("Gydehutten N");
+                    collision.setDisableCollision(true);
                     timer.stop();
                 } catch (IOException e) {
                     e.printStackTrace();
@@ -59,13 +61,9 @@ public class OutsideSDUController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        Rectangle rectangle = new Rectangle(50,50,280,40);
         collision.addCollisionVertically(50,50,280,40);
-        Rectangle rectangle2 = new Rectangle(50,210,40,240);
         collision.addCollisionHorizontally(50,210,40,240);
-
-        scene.getChildren().add(rectangle);
-        scene.getChildren().add(rectangle2);
+        collision.showCollisionAreas(scene1);
 
         timer.start();
     }

@@ -60,4 +60,10 @@ public class InventoryController {
             posY += 30;
         }
     }
+    void addInv(String item) {
+        inventory.add(item);
+    }
+    void removeInv(String item) {
+        inventory.remove(item);
+    }
 }
