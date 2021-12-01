@@ -41,7 +41,7 @@ public class BikeshopController  implements Initializable {
                     keylistener.checkKeyInput(keyEvent, shape1);
                 }
             });
-            if (shape1.getLayoutY() >= 0 && shape1.getLayoutY() <= 20 && shape1.getLayoutX() == 330 ){
+            if (shape1.getLayoutY() >= -40 && shape1.getLayoutY() <= 20 && shape1.getLayoutX() == 330 ){
                 try {
                     Parent root = FXMLLoader.load(getClass().getResource("GYDEHUTTEN_N.fxml"));
                     Stage window = (Stage) shape1.getScene().getWindow();

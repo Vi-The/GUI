@@ -41,7 +41,7 @@ public class FitnessController  implements Initializable {
                     keylistener.checkKeyInput(keyEvent, shape1);
                 }
             });
-            if (shape1.getLayoutX() >= 0 && shape1.getLayoutX() <= 20 && shape1.getLayoutY() == 330  ){
+            if (shape1.getLayoutX() >= -40 && shape1.getLayoutX() <= 20 && shape1.getLayoutY() == 330  ){
                 try {
                     Parent root = FXMLLoader.load(getClass().getResource("Gydehutten_S.fxml"));
                     Stage window = (Stage) shape1.getScene().getWindow();
