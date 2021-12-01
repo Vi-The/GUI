@@ -47,7 +47,7 @@ public class ClassroomController  implements Initializable, iController {
                     keylistener.checkKeyInput(keyEvent, shape1);
                 }
             });
-            if (shape1.getLayoutX() >= 0 && shape1.getLayoutX() <= 20 && shape1.getLayoutY() == 330  ){
+            if (shape1.getLayoutX() >= -40 && shape1.getLayoutX() <= 20 && shape1.getLayoutY() == 330  ){
                 try {
                     Parent root = FXMLLoader.load(getClass().getResource("GYDEHUTTEN_N.fxml"));
                     Stage window = (Stage) shape1.getScene().getWindow();

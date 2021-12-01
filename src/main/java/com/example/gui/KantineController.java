@@ -17,7 +17,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class KantineController  implements Initializable {
+public class KantineController  implements Initializable, iController {
 
     @FXML
     private Rectangle shape1; // skifte shape1 til navn på spilleren eller noget #cleancode
@@ -27,10 +27,16 @@ public class KantineController  implements Initializable {
     private Keylistener keylistener = new Keylistener(scene);
 
     @FXML
-    void start(ActionEvent event) {
+    public void start(ActionEvent event) {
         shape1.setLayoutY(330);
         shape1.setLayoutX(330);
     }
+
+    @Override
+    public void addCollision() {
+
+    }
+
     AnimationTimer timer = new AnimationTimer() {
         @Override
         public void handle(long timestamp) { //switch case
@@ -41,7 +47,7 @@ public class KantineController  implements Initializable {
                     keylistener.checkKeyInput(keyEvent, shape1);
                 }
             });
-            if (shape1.getLayoutX() >= 630 && shape1.getLayoutX() <= 655 && shape1.getLayoutY() == 330 ){
+            if (shape1.getLayoutX() >= 630 && shape1.getLayoutX() <= 670 && shape1.getLayoutY() == 330 ){
                 try {
                     Parent root = FXMLLoader.load(getClass().getResource("GYDEHUTTEN_N.fxml"));
                     Stage window = (Stage) shape1.getScene().getWindow();

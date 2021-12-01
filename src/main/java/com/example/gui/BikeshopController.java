@@ -17,7 +17,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class BikeshopController  implements Initializable {
+public class BikeshopController  implements Initializable, iController {
 
     @FXML
     private Rectangle shape1; // skifte shape1 til navn på spilleren eller noget #cleancode
@@ -27,10 +27,16 @@ public class BikeshopController  implements Initializable {
     private Keylistener keylistener = new Keylistener(scene);
 
     @FXML
-    void start(ActionEvent event) {
+    public void start(ActionEvent event) {
         shape1.setLayoutY(330);
         shape1.setLayoutX(330);
     }
+
+    @Override
+    public void addCollision() {
+
+    }
+
     AnimationTimer timer = new AnimationTimer() {
         @Override
         public void handle(long timestamp) { //switch case
@@ -41,7 +47,7 @@ public class BikeshopController  implements Initializable {
                     keylistener.checkKeyInput(keyEvent, shape1);
                 }
             });
-            if (shape1.getLayoutY() >= 0 && shape1.getLayoutY() <= 20 && shape1.getLayoutX() == 330 ){
+            if (shape1.getLayoutY() >= -40 && shape1.getLayoutY() <= 20 && shape1.getLayoutX() == 330 ){
                 try {
                     Parent root = FXMLLoader.load(getClass().getResource("GYDEHUTTEN_N.fxml"));
                     Stage window = (Stage) shape1.getScene().getWindow();
