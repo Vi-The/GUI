@@ -8,7 +8,8 @@
 
 <AnchorPane fx:id="scene" prefHeight="700.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gui.ClassroomController">
    <children>
-      <ImageView fitHeight="700.0" fitWidth="700.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="700.0" stroke="BLACK" strokeType="INSIDE" width="700.0" />
+      <ImageView fitHeight="700.0" fitWidth="700.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true" smooth="false">
          <image>
             <Image url="@../../../Assets/Background/pixil-frame-1.png" />
          </image>
