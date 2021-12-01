@@ -47,7 +47,7 @@ public class GydehuttenNController implements Initializable, iController {
                     keylistener.checkKeyInput(keyEvent, shape1);
                 }
             });
-           if (shape1.getLayoutX() >= 0 && shape1.getLayoutX() <= 20 && shape1.getLayoutY() == 330 ){
+           if (shape1.getLayoutX() >= 0 && shape1.getLayoutX() <= 160 && shape1.getLayoutY() == 330 ){
                 try {
                     Parent root = FXMLLoader.load(getClass().getResource("Kantine.fxml"));
                     Stage window = (Stage) shape1.getScene().getWindow();
@@ -71,7 +71,7 @@ public class GydehuttenNController implements Initializable, iController {
                     e.printStackTrace();
                 }
             }
-           else if(shape1.getLayoutX() >= 630 && shape1.getLayoutX() <= 655 && shape1.getLayoutY() == 330 ){
+           else if(shape1.getLayoutX() >= 520 && shape1.getLayoutX() <= 655 && shape1.getLayoutY() == 330 ){
                 try {
                     Parent root = FXMLLoader.load(getClass().getResource("Classroom.fxml"));
                     Stage window = (Stage) shape1.getScene().getWindow();
