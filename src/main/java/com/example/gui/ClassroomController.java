@@ -32,16 +32,10 @@ public class ClassroomController  implements Initializable, iController {
         shape1.setLayoutX(330);
     }
 
-    /*@Override
-    public void addImage(Parent root, int posX, int width, int posY, int height, String FolderAndImage) throws FileNotFoundException {
-        Image i = new Image(new FileInputStream(FolderAndImage));
-        ImageView image = new ImageView(i);
-        image.setX(posX);
-        image.setY(posY);
-        image.setFitHeight(height);
-        image.setFitWidth(width);
-        root.getChildrenUnmodifiable().add(image);
-    }*/
+    @Override
+    public void addCollision() {
+
+    }
 
     AnimationTimer timer = new AnimationTimer() {
         @Override

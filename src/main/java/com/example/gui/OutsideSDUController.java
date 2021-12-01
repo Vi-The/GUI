@@ -17,7 +17,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class OutsideSDUController implements Initializable {
+public class OutsideSDUController implements Initializable, iController {
     @FXML
     private Rectangle shape1; // skifte shape1 til navn på spilleren eller noget #cleancode
     @FXML
@@ -25,9 +25,14 @@ public class OutsideSDUController implements Initializable {
     Collision collision = Keylistener.collision;
     private Keylistener keylistener = new Keylistener(scene1);
     @FXML
-    void start(ActionEvent event) {
+    public void start(ActionEvent event) {
         shape1.setLayoutY(330);
         shape1.setLayoutX(330);
+    }
+
+    @Override
+    public void addCollision() {
+
     }
 
     AnimationTimer timer = new AnimationTimer() {
@@ -48,7 +53,7 @@ public class OutsideSDUController implements Initializable {
                     Stage window = (Stage) shape1.getScene().getWindow();
                     window.setScene(new Scene(root, 700, 700));
                     window.setTitle("Gydehutten N");
-
+                    addCollision();
                     collision.setDisableCollision(true);
                     timer.stop();
                 } catch (IOException e) {
