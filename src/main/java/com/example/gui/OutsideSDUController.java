@@ -28,7 +28,8 @@ public class OutsideSDUController implements Initializable, iController {
     @Override
     public void addCollision() {
         int changer = -30;
-        for (int i = 0; i < 19; i++) {
+        for (int i = 0; i < 19; i++)
+        {
             collision.addCollision(-30, changer, STANDARD_LENGTH, STANDARD_LENGTH);
             collision.addCollision(690, changer, STANDARD_LENGTH, STANDARD_LENGTH);
             collision.addCollision(changer, -30, STANDARD_LENGTH, STANDARD_LENGTH);

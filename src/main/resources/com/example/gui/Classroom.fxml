@@ -15,7 +15,7 @@
          </image>
       </ImageView>
       <Button layoutX="642.0" layoutY="674.0" mnemonicParsing="false" onAction="#start" text="Reset" />
-      <Rectangle fx:id="shape1" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="40.0" layoutX="21.0" layoutY="330.0" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+      <Rectangle fx:id="shape1" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="40.0" layoutX="10.0" layoutY="330.0" stroke="BLACK" strokeType="INSIDE" width="40.0" />
       <ImageView fitHeight="48.0" fitWidth="52.0" layoutX="357.0" layoutY="197.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../Assets/Characters/pixil-frame-22.png" />
