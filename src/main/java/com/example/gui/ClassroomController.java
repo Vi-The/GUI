@@ -44,7 +44,7 @@ public class ClassroomController  implements Initializable, iController {
         }
         changer = -30;
         for(int i = 0; i < 9; i++) {
-            //To Kantine
+            //To Gydehytte N
             collision.addCollision(-30, changer,STANDARD_LENGTH,STANDARD_LENGTH);
             collision.addCollision(-30, changer+400, STANDARD_LENGTH,STANDARD_LENGTH);
             changer += 40;
