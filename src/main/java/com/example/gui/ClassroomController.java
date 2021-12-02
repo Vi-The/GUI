@@ -45,6 +45,14 @@ public class ClassroomController  implements Initializable, iController {
             changer += 40;
         }
         collision.showCollisionAreas(scene);
+        changer = -30;
+        for(int i = 0; i < 19; i++) {
+            collision.addCollision(changer, 130,STANDARD_LENGTH,STANDARD_LENGTH);
+            changer += 40;
+        }
+        collision.addCollision(370, 170,STANDARD_LENGTH,STANDARD_LENGTH);
+        collision.addCollision(330, 170,STANDARD_LENGTH,STANDARD_LENGTH);
+        collision.addCollision(330, 210,STANDARD_LENGTH,STANDARD_LENGTH);
     }
 
     AnimationTimer timer = new AnimationTimer() {
