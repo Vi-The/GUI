@@ -5,15 +5,17 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.shape.Rectangle;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Collision {
-    private boolean disableCollision = false;
+    private boolean disableCollision;
+    private AnchorPane currentRoom;
     ArrayList<Rectangle> collisionContainer = new ArrayList<Rectangle>();
+    HashMap<AnchorPane, ArrayList<Rectangle>> collisionMap = new HashMap<>();
 
     void addCollision(int startX, int startY, int Width, int Height) {
         collisionContainer.add(new Rectangle(startX, startY, Width, Height));
     }
-
     boolean checkCollisionY(double dir, double noChange) {
         boolean checker = false;
         for (Rectangle rectangle : collisionContainer) {
@@ -47,5 +49,8 @@ public class Collision {
 
     void setDisableCollision(boolean notCollision) {
         disableCollision = notCollision;
+    }
+    void removeCollision() {
+        collisionContainer.clear();
     }
 }

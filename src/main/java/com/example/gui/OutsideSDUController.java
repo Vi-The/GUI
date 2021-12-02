@@ -24,6 +24,7 @@ public class OutsideSDUController implements Initializable, iController {
     private AnchorPane scene1; // scene navn til navnet på det gældende rum
     Collision collision = Keylistener.collision;
     private Keylistener keylistener = new Keylistener(scene1);
+
     @FXML
     public void start(ActionEvent event) {
         shape1.setLayoutY(330);
@@ -32,31 +33,29 @@ public class OutsideSDUController implements Initializable, iController {
 
     @Override
     public void addCollision() {
-
-        collision.addCollision(50,50,STANDARD_LENGTH,STANDARD_LENGTH);
-        collision.addCollision(90,50,STANDARD_LENGTH,STANDARD_LENGTH);
-        collision.addCollision(50,90,STANDARD_LENGTH,STANDARD_LENGTH);
+        collision.addCollision(50, 50, STANDARD_LENGTH, STANDARD_LENGTH);
+        /*collision.addCollision(90, 50, STANDARD_LENGTH, STANDARD_LENGTH);
+        collision.addCollision(50, 90, STANDARD_LENGTH, STANDARD_LENGTH);*/
         collision.showCollisionAreas(scene1);
     }
 
     AnimationTimer timer = new AnimationTimer() {
 
         @Override
-        public void handle(long timestamp) { //switch case
-           scene1.setOnKeyPressed(new EventHandler<KeyEvent>() {
+        public void handle(long timestamp) {
+            scene1.setOnKeyPressed(new EventHandler<KeyEvent>() {
                 @Override
                 public void handle(KeyEvent keyEvent) {
-
                     keylistener.checkKeyInput(keyEvent, shape1);
                 }
             });
-            if (shape1.getLayoutX() < 350 && shape1.getLayoutX() > 300 && shape1.getLayoutY() >= 639){ // skal ændres så det ikke kun er på det korrdinatsæt at blokken vil skifte rum
+            if (shape1.getLayoutX() < 350 && shape1.getLayoutX() > 300 && shape1.getLayoutY() >= 639) { // skal ændres så det ikke kun er på det korrdinatsæt at blokken vil skifte rum
                 try {
+                    collision.removeCollision();
                     Parent root = FXMLLoader.load(getClass().getResource("GYDEHUTTEN_N.fxml"));
                     Stage window = (Stage) shape1.getScene().getWindow();
                     window.setScene(new Scene(root, 700, 700));
                     window.setTitle("Gydehutten N");
-                    addCollision();
                     collision.setDisableCollision(true);
                     timer.stop();
                 } catch (IOException e) {
