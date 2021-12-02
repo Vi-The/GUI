@@ -44,7 +44,6 @@ public class OutsideSDUController implements Initializable, iController {
         @Override
         public void handle(long timestamp) { //switch case
            scene1.setOnKeyPressed(new EventHandler<KeyEvent>() {
-
                 @Override
                 public void handle(KeyEvent keyEvent) {
 
@@ -70,7 +69,6 @@ public class OutsideSDUController implements Initializable, iController {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         addCollision();
-
         timer.start();
     }
 

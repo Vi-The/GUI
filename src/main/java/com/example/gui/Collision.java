@@ -16,32 +16,32 @@ public class Collision {
 
     boolean checkCollisionY(double dir, double noChange) {
         boolean checker = false;
-        for (int i = 0; i < collisionContainer.size(); i++) {
-            if(dir == collisionContainer.get(i).getY() && noChange == collisionContainer.get(i).getX()){
+        for (Rectangle rectangle : collisionContainer) {
+            if (dir == rectangle.getY() && noChange == rectangle.getX()) {
                 checker = true;
             }
         }
-        return checker;
+        return !checker;
     }
     boolean checkCollisionX(double dir, double noChange) {
         boolean checker = false;
-        for (int i = 0; i < collisionContainer.size(); i++) {
-            if(dir == collisionContainer.get(i).getX() && noChange == collisionContainer.get(i).getY()){
+        for (Rectangle rectangle : collisionContainer) {
+            if (dir == rectangle.getX() && noChange == rectangle.getY()) {
                 checker = true;
             }
         }
-        return checker;
+        return !checker;
     }
 
     void showCollisionAreas(Group group) {
-        for (int i = 0; i < collisionContainer.size(); i++) {
-            group.getChildren().add(collisionContainer.get(i));
+        for (Rectangle rectangle : collisionContainer) {
+            group.getChildren().add(rectangle);
         }
     }
 
     void showCollisionAreas(AnchorPane group) {
-        for (int i = 0; i < collisionContainer.size(); i++) {
-            group.getChildren().add(collisionContainer.get(i));
+        for (Rectangle rectangle : collisionContainer) {
+            group.getChildren().add(rectangle);
         }
     }
 
