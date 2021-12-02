@@ -16,7 +16,7 @@ public class Collision {
     void addCollision(int startX, int startY, int Width, int Height) {
         collisionContainer.add(new Rectangle(startX, startY, Width, Height));
     }
-    boolean checkCollisionY(double dir, double noChange) {
+    boolean checkCollision_Yaxis(double dir, double noChange) {
         boolean checker = false;
         for (Rectangle rectangle : collisionContainer) {
             if (dir == rectangle.getY() && noChange == rectangle.getX()) {
@@ -25,7 +25,7 @@ public class Collision {
         }
         return !checker;
     }
-    boolean checkCollisionX(double dir, double noChange) {
+    boolean checkCollision_Xaxis(double dir, double noChange) {
         boolean checker = false;
         for (Rectangle rectangle : collisionContainer) {
             if (dir == rectangle.getX() && noChange == rectangle.getY()) {
