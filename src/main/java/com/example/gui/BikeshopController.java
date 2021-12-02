@@ -12,7 +12,7 @@ import javafx.scene.shape.Rectangle;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class BikeshopController  implements Initializable, iController {
+public class BikeshopController implements Initializable, iController {
 
     @FXML
     private Rectangle shape1; // skifte shape1 til navn på spilleren eller noget #cleancode
@@ -29,25 +29,58 @@ public class BikeshopController  implements Initializable, iController {
 
     @Override
     public void addCollision() {
-
+        int changer = -30;
+        for (int i = 0; i < 19; i++) {
+            collision.addCollision(-30, changer, STANDARD_LENGTH, STANDARD_LENGTH);
+            collision.addCollision(690, changer, STANDARD_LENGTH, STANDARD_LENGTH);
+            collision.addCollision(changer, 490, STANDARD_LENGTH, STANDARD_LENGTH);
+            changer += 40;
+        }
+        collision.showCollisionAreas(scene);
+        changer = -30;
+        for (int i = 0; i < 7; i++) {
+            collision.addCollision(changer, 210, STANDARD_LENGTH, STANDARD_LENGTH);
+            changer += 40;
+        }
+        changer = 330;
+        for (int i = 0; i < 9; i++) {
+            collision.addCollision(changer, 210, STANDARD_LENGTH, STANDARD_LENGTH);
+            changer += 40;
+        }
+        collision.addCollision(10, 250, STANDARD_LENGTH, STANDARD_LENGTH);
+        collision.addCollision(450, 250, STANDARD_LENGTH, STANDARD_LENGTH);
+        collision.addCollision(490, 290, STANDARD_LENGTH, STANDARD_LENGTH);
+        collision.addCollision(450, 290, STANDARD_LENGTH, STANDARD_LENGTH);
+        collision.addCollision(410, 290, STANDARD_LENGTH, STANDARD_LENGTH);
+        int posX = 90;
+        for (int x = 0; x < 4; x++) {
+            int posY = 330;
+            for (int y = 0; y < 3; y++) {
+                collision.addCollision(posX, posY, STANDARD_LENGTH, STANDARD_LENGTH);
+                posY += 40;
+            }
+            posX += 40;
+        }
     }
 
     AnimationTimer timer = new AnimationTimer() {
         @Override
         public void handle(long timestamp) {
-            RoomChanger roomChanger = new RoomChanger(collision,timer);
+            RoomChanger roomChanger = new RoomChanger(collision, timer);
             scene.setOnKeyPressed(new EventHandler<KeyEvent>() {
                 @Override
                 public void handle(KeyEvent keyEvent) {
                     keylistener.checkKeyInput(keyEvent, shape1);
                 }
             });
-            roomChanger.changeRoom(shape1, 330, -30, "Gydehutten_S", "Gydehutten Syd", true);
+            roomChanger.changeRoom(shape1, 290, 210, "Gydehutten_S", "Gydehutten Syd", true);
+            roomChanger.changeRoom(shape1, 250, 210, "Gydehutten_S", "Gydehutten Syd", true);
         }
     };
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        addCollision();
         timer.start();
     }
 }

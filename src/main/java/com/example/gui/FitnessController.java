@@ -34,6 +34,21 @@ public class FitnessController  implements Initializable, iController {
 
     @Override
     public void addCollision() {
+        int changer = -30;
+        for(int i = 0; i < 19; i++) {
+            collision.addCollision(changer,90,STANDARD_LENGTH,STANDARD_LENGTH);
+            collision.addCollision(changer,570,STANDARD_LENGTH,STANDARD_LENGTH);
+            collision.addCollision(690,changer,STANDARD_LENGTH,STANDARD_LENGTH);
+            changer += 40;
+        }
+        changer = -30;
+        for(int i = 0; i < 9; i++) {
+            //To Gydehytte N
+            collision.addCollision(-30, changer,STANDARD_LENGTH,STANDARD_LENGTH);
+            collision.addCollision(-30, changer+400, STANDARD_LENGTH,STANDARD_LENGTH);
+            changer += 40;
+        }
+        collision.showCollisionAreas(scene);
 
     }
 
@@ -44,7 +59,6 @@ public class FitnessController  implements Initializable, iController {
             scene.setOnKeyPressed(new EventHandler<KeyEvent>() {
                 @Override
                 public void handle(KeyEvent keyEvent) {
-
                     keylistener.checkKeyInput(keyEvent, shape1);
                 }
             });
@@ -54,6 +68,7 @@ public class FitnessController  implements Initializable, iController {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        addCollision();
         timer.start();
     }
 }
