@@ -47,6 +47,20 @@ public class GydehuttenNController implements Initializable, iController {
             collision.addCollision(570, changer + 400, STANDARD_LENGTH, STANDARD_LENGTH);
             changer += 40;
         }
+        //collision.showCollisionAreas(scene);
+        collision.addCollision(170, 170, STANDARD_LENGTH, STANDARD_LENGTH);
+        collision.addCollision(130, 90, STANDARD_LENGTH, STANDARD_LENGTH);
+        collision.addCollision(130, 50, STANDARD_LENGTH, STANDARD_LENGTH);
+        collision.addCollision(530, 130, STANDARD_LENGTH, STANDARD_LENGTH);
+        collision.addCollision(490, 410, STANDARD_LENGTH, STANDARD_LENGTH);
+        collision.addCollision(490, 450, STANDARD_LENGTH, STANDARD_LENGTH);
+        collision.addCollision(530, 490, STANDARD_LENGTH, STANDARD_LENGTH);
+        collision.addCollision(530, 530, STANDARD_LENGTH, STANDARD_LENGTH);
+        collision.addCollision(130, 490, STANDARD_LENGTH, STANDARD_LENGTH);
+        collision.addCollision(130, 530, STANDARD_LENGTH, STANDARD_LENGTH);
+        collision.addCollision(130, 450, STANDARD_LENGTH, STANDARD_LENGTH);
+        collision.addCollision(530, 10, STANDARD_LENGTH, STANDARD_LENGTH);
+        collision.addCollision(530, 50, STANDARD_LENGTH, STANDARD_LENGTH);
         collision.showCollisionAreas(scene);
     }
 

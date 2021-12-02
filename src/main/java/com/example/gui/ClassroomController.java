@@ -53,6 +53,15 @@ public class ClassroomController  implements Initializable, iController {
         collision.addCollision(370, 170,STANDARD_LENGTH,STANDARD_LENGTH);
         collision.addCollision(330, 170,STANDARD_LENGTH,STANDARD_LENGTH);
         collision.addCollision(330, 210,STANDARD_LENGTH,STANDARD_LENGTH);
+        int posX = 170;
+        for(int x = 0; x < 9; x++){
+            int posY = 290;
+            for (int y = 0; y < 4; y++){
+                collision.addCollision(posX, posY,STANDARD_LENGTH,STANDARD_LENGTH);
+                posY += 40;
+            }
+            posX += 40;
+        }
     }
 
     AnimationTimer timer = new AnimationTimer() {
