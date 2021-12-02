@@ -33,10 +33,25 @@ public class OutsideSDUController implements Initializable, iController {
 
     @Override
     public void addCollision() {
-        collision.addCollision(50, 50, STANDARD_LENGTH, STANDARD_LENGTH);
-        /*collision.addCollision(90, 50, STANDARD_LENGTH, STANDARD_LENGTH);
-        collision.addCollision(50, 90, STANDARD_LENGTH, STANDARD_LENGTH);*/
+        int changer = -30;
+        for(int i = 0; i < 19; i++)
+        {
+            collision.addCollision(-30, changer, STANDARD_LENGTH, STANDARD_LENGTH);
+            collision.addCollision(690, changer, STANDARD_LENGTH, STANDARD_LENGTH);
+            collision.addCollision(changer, -30, STANDARD_LENGTH, STANDARD_LENGTH);
+            changer += 40;
+        }
+        changer = -30;
+        for(int i = 0; i < 9; i++)
+        {
+            collision.addCollision(changer, 690,STANDARD_LENGTH,STANDARD_LENGTH);
+            collision.addCollision(changer+400, 690, STANDARD_LENGTH,STANDARD_LENGTH);
+            changer += 40;
+        }
         collision.showCollisionAreas(scene1);
+        collision.addCollision(50, 50, STANDARD_LENGTH, STANDARD_LENGTH);
+        collision.addCollision(90, 50, STANDARD_LENGTH, STANDARD_LENGTH);
+        collision.addCollision(50, 90, STANDARD_LENGTH, STANDARD_LENGTH);
     }
 
     AnimationTimer timer = new AnimationTimer() {
@@ -49,7 +64,7 @@ public class OutsideSDUController implements Initializable, iController {
                     keylistener.checkKeyInput(keyEvent, shape1);
                 }
             });
-            if (shape1.getLayoutX() < 350 && shape1.getLayoutX() > 300 && shape1.getLayoutY() >= 639) { // skal ændres så det ikke kun er på det korrdinatsæt at blokken vil skifte rum
+            if (shape1.getLayoutX() < 350 && shape1.getLayoutX() > 300 && shape1.getLayoutY() == 690) { // skal ændres så det ikke kun er på det korrdinatsæt at blokken vil skifte rum
                 try {
                     collision.removeCollision();
                     Parent root = FXMLLoader.load(getClass().getResource("GYDEHUTTEN_N.fxml"));
