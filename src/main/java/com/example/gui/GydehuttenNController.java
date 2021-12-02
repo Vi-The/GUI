@@ -4,16 +4,11 @@ import javafx.animation.AnimationTimer;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.shape.Rectangle;
-import javafx.stage.Stage;
 
-import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -40,14 +35,14 @@ public class GydehuttenNController implements Initializable, iController {
             collision.addCollision(changer, -30, STANDARD_LENGTH, STANDARD_LENGTH);
             collision.addCollision(changer + 400, -30, STANDARD_LENGTH, STANDARD_LENGTH);
 
-            if (i < 7) {//To Gydehutten S
+            if (i < 7) {//Toward Gydehutten S
                 collision.addCollision(changer, 690, STANDARD_LENGTH, STANDARD_LENGTH);
                 collision.addCollision(changer + 480, 690, STANDARD_LENGTH, STANDARD_LENGTH);
             }
-            //To Kantine
+            //Toward Kantine
             collision.addCollision(90, changer, STANDARD_LENGTH, STANDARD_LENGTH);
             collision.addCollision(90, changer + 400, STANDARD_LENGTH, STANDARD_LENGTH);
-            //To Classroom
+            //Toward Classroom
             collision.addCollision(570, changer, STANDARD_LENGTH, STANDARD_LENGTH);
             collision.addCollision(570, changer + 400, STANDARD_LENGTH, STANDARD_LENGTH);
             changer += 40;
@@ -66,7 +61,7 @@ public class GydehuttenNController implements Initializable, iController {
                 }
             });
             roomChanger.changeRoom(shape1, 90, 330, "Kantine", "SDU Kantine", true);
-            roomChanger.changeRoom(shape1, -30, 330, "OUTSIDESDU", "Outside SDU", true);
+            roomChanger.changeRoom(shape1, 330, -30, "OUTSIDESDU", "Outside SDU", true);
             roomChanger.changeRoom(shape1, 570, 330, "Classroom", "Classroom", true);
             //Adding doorroom to Gydehutten S
             roomChanger.changeRoom(shape1, 250, 690, "Gydehutten_S", "Gydehutten Syd", true);

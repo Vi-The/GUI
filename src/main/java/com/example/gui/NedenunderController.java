@@ -40,6 +40,7 @@ public class NedenunderController  implements Initializable, iController {
     AnimationTimer timer = new AnimationTimer() {
         @Override
         public void handle(long timestamp) { //switch case
+            RoomChanger roomChanger = new RoomChanger(collision,timer);
             scene.setOnKeyPressed(new EventHandler<KeyEvent>() {
                 @Override
                 public void handle(KeyEvent keyEvent) {
@@ -47,17 +48,7 @@ public class NedenunderController  implements Initializable, iController {
                     keylistener.checkKeyInput(keyEvent, shape1);
                 }
             });
-            if (shape1.getLayoutX() >= 630 && shape1.getLayoutX() <= 670 && shape1.getLayoutY() == 330 ){
-                try {
-                    Parent root = FXMLLoader.load(getClass().getResource("GYDEHUTTEN_S.fxml"));
-                    Stage window = (Stage) shape1.getScene().getWindow();
-                    window.setScene(new Scene(root, 700, 700));
-                    window.setTitle("Gydehutten S");
-                    timer.stop();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
+            roomChanger.changeRoom(shape1, 690, 330, "Gydehutten_S", "Gydehutten Syd", true);
         }
     };
 

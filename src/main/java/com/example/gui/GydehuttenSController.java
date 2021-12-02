@@ -67,8 +67,6 @@ public class GydehuttenSController implements Initializable, iController {
             roomChanger.changeRoom(shape1, 330, -30, "GYDEHUTTEN_N", "Gydehutten Nord", true);
             roomChanger.changeRoom(shape1, 370, -30, "GYDEHUTTEN_N", "Gydehutten Nord", true);
             roomChanger.changeRoom(shape1, 410, -30, "GYDEHUTTEN_N", "Gydehutten Nord", true);
-
-
         }
     };
 
