@@ -34,6 +34,16 @@ public class GydehuttenNController implements Initializable, iController {
 
     @Override
     public void addCollision() {
+        int changer = -30;
+        for(int i = 0; i < 9; i++)
+        {
+            collision.addCollision(changer, -30,STANDARD_LENGTH,STANDARD_LENGTH);
+            collision.addCollision(changer+400, -30, STANDARD_LENGTH,STANDARD_LENGTH);
+            collision.addCollision(changer, 690,STANDARD_LENGTH,STANDARD_LENGTH);
+            collision.addCollision(changer+400, 690, STANDARD_LENGTH,STANDARD_LENGTH);
+            changer += 40;
+        }
+        collision.showCollisionAreas(scene);
 
     }
 
@@ -47,7 +57,7 @@ public class GydehuttenNController implements Initializable, iController {
                     keylistener.checkKeyInput(keyEvent, shape1);
                 }
             });
-           if (shape1.getLayoutX() >= 0 && shape1.getLayoutX() <= 160 && shape1.getLayoutY() == 330 ){
+           if (shape1.getLayoutX() >= 0 && shape1.getLayoutX() <= 100 && shape1.getLayoutY() == 330 ){
                 try {
                     Parent root = FXMLLoader.load(getClass().getResource("Kantine.fxml"));
                     Stage window = (Stage) shape1.getScene().getWindow();
@@ -60,7 +70,7 @@ public class GydehuttenNController implements Initializable, iController {
                     e.printStackTrace();
                 }
             }
-            else if (shape1.getLayoutY() >= 0 && shape1.getLayoutY() <= 20 && shape1.getLayoutX() == 330 ){
+            else if (shape1.getLayoutY() == -30 && shape1.getLayoutX() == 330 ){
                 try {
                     Parent root = FXMLLoader.load(getClass().getResource("OUTSIDESDU.fxml"));
                     Stage window = (Stage) shape1.getScene().getWindow();
@@ -89,6 +99,7 @@ public class GydehuttenNController implements Initializable, iController {
                     Stage window = (Stage) shape1.getScene().getWindow();
                     window.setScene(new Scene(root, 700, 700));
                     window.setTitle("Gydehutten S");
+                    collision.removeCollision();
                     timer.stop();
                 } catch (IOException e) {
                     e.printStackTrace();
@@ -103,6 +114,7 @@ public class GydehuttenNController implements Initializable, iController {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        addCollision();
         timer.start();
     }
 }

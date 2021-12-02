@@ -22,7 +22,6 @@ public class OutsideSDUController implements Initializable, iController {
     private Rectangle shape1; // skifte shape1 til navn på spilleren eller noget #cleancode
     @FXML
     private AnchorPane scene1; // scene navn til navnet på det gældende rum
-    Collision collision = Keylistener.collision;
     private Keylistener keylistener = new Keylistener(scene1);
 
     @FXML
@@ -34,21 +33,20 @@ public class OutsideSDUController implements Initializable, iController {
     @Override
     public void addCollision() {
         int changer = -30;
-        for(int i = 0; i < 19; i++)
-        {
+        for (int i = 0; i < 19; i++) {
             collision.addCollision(-30, changer, STANDARD_LENGTH, STANDARD_LENGTH);
             collision.addCollision(690, changer, STANDARD_LENGTH, STANDARD_LENGTH);
             collision.addCollision(changer, -30, STANDARD_LENGTH, STANDARD_LENGTH);
             changer += 40;
         }
         changer = -30;
-        for(int i = 0; i < 9; i++)
-        {
-            collision.addCollision(changer, 690,STANDARD_LENGTH,STANDARD_LENGTH);
-            collision.addCollision(changer+400, 690, STANDARD_LENGTH,STANDARD_LENGTH);
+        for (int i = 0; i < 9; i++) {
+            collision.addCollision(changer, 690, STANDARD_LENGTH, STANDARD_LENGTH);
+            collision.addCollision(changer + 400, 690, STANDARD_LENGTH, STANDARD_LENGTH);
             changer += 40;
         }
         collision.showCollisionAreas(scene1);
+
         collision.addCollision(50, 50, STANDARD_LENGTH, STANDARD_LENGTH);
         collision.addCollision(90, 50, STANDARD_LENGTH, STANDARD_LENGTH);
         collision.addCollision(50, 90, STANDARD_LENGTH, STANDARD_LENGTH);

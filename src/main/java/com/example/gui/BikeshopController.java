@@ -43,16 +43,15 @@ public class BikeshopController  implements Initializable, iController {
             scene.setOnKeyPressed(new EventHandler<KeyEvent>() {
                 @Override
                 public void handle(KeyEvent keyEvent) {
-
                     keylistener.checkKeyInput(keyEvent, shape1);
                 }
             });
             if (shape1.getLayoutY() >= -40 && shape1.getLayoutY() <= 20 && shape1.getLayoutX() == 330 ){
                 try {
-                    Parent root = FXMLLoader.load(getClass().getResource("GYDEHUTTEN_N.fxml"));
+                    Parent root = FXMLLoader.load(getClass().getResource("GYDEHUTTEN_S.fxml"));
                     Stage window = (Stage) shape1.getScene().getWindow();
                     window.setScene(new Scene(root, 700, 700));
-                    window.setTitle("Gydehutten N");
+                    window.setTitle("Gydehutten S");
                     timer.stop();
                 } catch (IOException e) {
                     e.printStackTrace();

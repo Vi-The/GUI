@@ -20,16 +20,4 @@ public class StartController {
         window.setScene(new Scene(root, 700, 700));
         window.setTitle("Outside SDU");
     }
-/*
-    @FXML
-    ImageView myBike;
-
-    @Override
-    public void initialize (URL url, ResourceBundle rb) {
-
-    Image myImage = new Image(getClass().getResourceAsStream("Bike.jpg"));
-
-    myBike.setImage(image);
-    }
-    */
 }
