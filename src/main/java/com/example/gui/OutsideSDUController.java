@@ -33,6 +33,10 @@ public class OutsideSDUController implements Initializable, iController {
     @Override
     public void addCollision() {
 
+        collision.addCollision(50,50,STANDARD_LENGTH,STANDARD_LENGTH);
+        collision.addCollision(90,50,STANDARD_LENGTH,STANDARD_LENGTH);
+        collision.addCollision(50,90,STANDARD_LENGTH,STANDARD_LENGTH);
+        collision.showCollisionAreas(scene1);
     }
 
     AnimationTimer timer = new AnimationTimer() {
@@ -65,9 +69,7 @@ public class OutsideSDUController implements Initializable, iController {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        collision.addCollisionVertically(50,50,280,40);
-        collision.addCollisionHorizontally(50,210,40,240);
-        collision.showCollisionAreas(scene1);
+        addCollision();
 
         timer.start();
     }
