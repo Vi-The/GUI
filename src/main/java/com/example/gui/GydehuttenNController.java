@@ -35,93 +35,47 @@ public class GydehuttenNController implements Initializable, iController {
     @Override
     public void addCollision() {
         int changer = -30;
-        for(int i = 0; i < 9; i++)
-        {
+        for (int i = 0; i < 9; i++) {
             //To OutsideSDU
-            collision.addCollision(changer, -30,STANDARD_LENGTH,STANDARD_LENGTH);
-            collision.addCollision(changer+400, -30, STANDARD_LENGTH,STANDARD_LENGTH);
-            //To Gydehutten S
-            collision.addCollision(changer, 690,STANDARD_LENGTH,STANDARD_LENGTH);
-            collision.addCollision(changer+400, 690, STANDARD_LENGTH,STANDARD_LENGTH);
+            collision.addCollision(changer, -30, STANDARD_LENGTH, STANDARD_LENGTH);
+            collision.addCollision(changer + 400, -30, STANDARD_LENGTH, STANDARD_LENGTH);
+
+            if (i < 7) {//To Gydehutten S
+                collision.addCollision(changer, 690, STANDARD_LENGTH, STANDARD_LENGTH);
+                collision.addCollision(changer + 480, 690, STANDARD_LENGTH, STANDARD_LENGTH);
+            }
             //To Kantine
-            collision.addCollision(90, changer,STANDARD_LENGTH,STANDARD_LENGTH);
-            collision.addCollision(90, changer+400, STANDARD_LENGTH,STANDARD_LENGTH);
+            collision.addCollision(90, changer, STANDARD_LENGTH, STANDARD_LENGTH);
+            collision.addCollision(90, changer + 400, STANDARD_LENGTH, STANDARD_LENGTH);
             //To Classroom
-            collision.addCollision(570, changer,STANDARD_LENGTH,STANDARD_LENGTH);
-            collision.addCollision(570, changer+400, STANDARD_LENGTH,STANDARD_LENGTH);
+            collision.addCollision(570, changer, STANDARD_LENGTH, STANDARD_LENGTH);
+            collision.addCollision(570, changer + 400, STANDARD_LENGTH, STANDARD_LENGTH);
             changer += 40;
         }
         collision.showCollisionAreas(scene);
-
     }
 
     AnimationTimer timer = new AnimationTimer() {
         @Override
-        public void handle(long timestamp) { //switch case
+        public void handle(long timestamp) {
+            RoomChanger roomChanger = new RoomChanger(collision, timer);
             scene.setOnKeyPressed(new EventHandler<KeyEvent>() {
                 @Override
                 public void handle(KeyEvent keyEvent) {
-
                     keylistener.checkKeyInput(keyEvent, shape1);
                 }
             });
-           if (shape1.getLayoutX() == 90  && shape1.getLayoutY() == 330 ){
-                try {
-                    collision.removeCollision();
-                    Parent root = FXMLLoader.load(getClass().getResource("Kantine.fxml"));
-                    Stage window = (Stage) shape1.getScene().getWindow();
-                    window.setScene(new Scene(root, 700, 700));
-                    window.setTitle("Kantine");
-                    shape1.setLayoutY(631);
-                    shape1.setLayoutX(330);
-                    timer.stop();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-            else if (shape1.getLayoutY() == -30 && shape1.getLayoutX() == 330){
-                try {
-                    collision.removeCollision();
-                    Parent root = FXMLLoader.load(getClass().getResource("OUTSIDESDU.fxml"));
-                    Stage window = (Stage) shape1.getScene().getWindow();
-                    window.setScene(new Scene(root, 700, 700));
-                    window.setTitle("OUTSIDE SDU");
-                    timer.stop();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-           else if(shape1.getLayoutX() == 570 && shape1.getLayoutY() == 330 ){
-                try {
-                    collision.removeCollision();
-                    Parent root = FXMLLoader.load(getClass().getResource("Classroom.fxml"));
-                    Stage window = (Stage) shape1.getScene().getWindow();
-                    window.setScene(new Scene(root, 700, 700));
-                    window.setTitle("Classroom");
-                    timer.stop();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-            else if (shape1.getLayoutX() == 330 && shape1.getLayoutY() == 690){
-                try {
-                    collision.removeCollision();
-                    Parent root = FXMLLoader.load(getClass().getResource("Gydehutten_S.fxml"));
-                    Stage window = (Stage) shape1.getScene().getWindow();
-                    window.setScene(new Scene(root, 700, 700));
-                    window.setTitle("Gydehutten S");
-                    collision.removeCollision();
-                    timer.stop();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-
-
-
+            roomChanger.changeRoom(shape1, 90, 330, "Kantine", "SDU Kantine", true);
+            roomChanger.changeRoom(shape1, -30, 330, "OUTSIDESDU", "Outside SDU", true);
+            roomChanger.changeRoom(shape1, 570, 330, "Classroom", "Classroom", true);
+            //Adding doorroom to Gydehutten S
+            roomChanger.changeRoom(shape1, 250, 690, "Gydehutten_S", "Gydehutten Syd", true);
+            roomChanger.changeRoom(shape1, 290, 690, "Gydehutten_S", "Gydehutten Syd", true);
+            roomChanger.changeRoom(shape1, 330, 690, "Gydehutten_S", "Gydehutten Syd", true);
+            roomChanger.changeRoom(shape1, 370, 690, "Gydehutten_S", "Gydehutten Syd", true);
+            roomChanger.changeRoom(shape1, 410, 690, "Gydehutten_S", "Gydehutten Syd", true);
         }
     };
-
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -129,16 +83,3 @@ public class GydehuttenNController implements Initializable, iController {
         timer.start();
     }
 }
-
-/*
-    @Override
-    public void start(Stage primaryStage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("GYDEHUTTENS.fxml"));
-        primaryStage.setTitle("Gydehutten S");
-        primaryStage.setScene(new Scene(root, 700, 700));
-        primaryStage.show();
-    }
-
-}
-
-*/

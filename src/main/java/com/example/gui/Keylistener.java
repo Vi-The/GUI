@@ -8,6 +8,7 @@ public class Keylistener {
     private Rectangle shape;
     private AnchorPane scene;
     static Collision collision = new Collision();
+    private final Inventory inventory = new Inventory();
 
     Keylistener(AnchorPane scene)
     {
@@ -22,7 +23,7 @@ public class Keylistener {
             case S -> moveDown();
             case A -> moveLeft();
             case D -> moveRight();
-            case M -> System.out.println("X: "+shape.getLayoutX()+ " " + "Y: "+shape.getLayoutY());
+            case M -> System.out.println("X: "+shape.getLayoutX()+" Y: "+shape.getLayoutY());
             case I -> openInventory();
         }
     }
@@ -45,7 +46,6 @@ public class Keylistener {
 
     public void openInventory() {
         try {
-            Inventory inventory = new Inventory();
             inventory.openInv();
         } catch (Exception e) {
             e.printStackTrace();

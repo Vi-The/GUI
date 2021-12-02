@@ -4,24 +4,19 @@ import javafx.animation.AnimationTimer;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.shape.Rectangle;
-import javafx.stage.Stage;
 
-import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
 public class OutsideSDUController implements Initializable, iController {
     @FXML
-    private Rectangle shape1; // skifte shape1 til navn på spilleren eller noget #cleancode
+    private Rectangle shape1;
     @FXML
-    private AnchorPane scene1; // scene navn til navnet på det gældende rum
+    private AnchorPane scene1;
     private Keylistener keylistener = new Keylistener(scene1);
 
     @FXML
@@ -46,7 +41,7 @@ public class OutsideSDUController implements Initializable, iController {
             changer += 40;
         }
         collision.showCollisionAreas(scene1);
-
+        //Collision thats not the box
         collision.addCollision(50, 50, STANDARD_LENGTH, STANDARD_LENGTH);
         collision.addCollision(90, 50, STANDARD_LENGTH, STANDARD_LENGTH);
         collision.addCollision(50, 90, STANDARD_LENGTH, STANDARD_LENGTH);
@@ -56,25 +51,14 @@ public class OutsideSDUController implements Initializable, iController {
 
         @Override
         public void handle(long timestamp) {
+            RoomChanger roomChanger = new RoomChanger(collision, timer);
             scene1.setOnKeyPressed(new EventHandler<KeyEvent>() {
                 @Override
                 public void handle(KeyEvent keyEvent) {
                     keylistener.checkKeyInput(keyEvent, shape1);
                 }
             });
-            if (shape1.getLayoutX() < 350 && shape1.getLayoutX() > 300 && shape1.getLayoutY() == 690) { // skal ændres så det ikke kun er på det korrdinatsæt at blokken vil skifte rum
-                try {
-                    collision.removeCollision();
-                    Parent root = FXMLLoader.load(getClass().getResource("GYDEHUTTEN_N.fxml"));
-                    Stage window = (Stage) shape1.getScene().getWindow();
-                    window.setScene(new Scene(root, 700, 700));
-                    window.setTitle("Gydehutten N");
-                    collision.setDisableCollision(true);
-                    timer.stop();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
+            roomChanger.changeRoom(shape1, 330, 690,"GYDEHUTTEN_N","Gydehutten Nord", true);
         }
     };
 
@@ -83,5 +67,4 @@ public class OutsideSDUController implements Initializable, iController {
         addCollision();
         timer.start();
     }
-
 }

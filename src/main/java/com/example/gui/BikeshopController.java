@@ -39,24 +39,15 @@ public class BikeshopController  implements Initializable, iController {
 
     AnimationTimer timer = new AnimationTimer() {
         @Override
-        public void handle(long timestamp) { //switch case
+        public void handle(long timestamp) {
+            RoomChanger roomChanger = new RoomChanger(collision,timer);
             scene.setOnKeyPressed(new EventHandler<KeyEvent>() {
                 @Override
                 public void handle(KeyEvent keyEvent) {
                     keylistener.checkKeyInput(keyEvent, shape1);
                 }
             });
-            if (shape1.getLayoutY() >= -40 && shape1.getLayoutY() <= 20 && shape1.getLayoutX() == 330 ){
-                try {
-                    Parent root = FXMLLoader.load(getClass().getResource("GYDEHUTTEN_S.fxml"));
-                    Stage window = (Stage) shape1.getScene().getWindow();
-                    window.setScene(new Scene(root, 700, 700));
-                    window.setTitle("Gydehutten S");
-                    timer.stop();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
+            roomChanger.changeRoom(shape1, 330, -30, "Gydehutten_S", "Gydehutten Syd", true);
         }
     };
 
