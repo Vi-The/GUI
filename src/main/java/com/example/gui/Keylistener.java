@@ -22,7 +22,7 @@ public class Keylistener {
             case S -> moveDown();
             case A -> moveLeft();
             case D -> moveRight();
-            case M -> System.out.println(shape.getLayoutX()+ " " + shape.getLayoutY());
+            case M -> System.out.println("X: "+shape.getLayoutX()+ " " + "Y: "+shape.getLayoutY());
             case I -> openInventory();
         }
     }
