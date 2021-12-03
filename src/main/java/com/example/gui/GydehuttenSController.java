@@ -19,7 +19,7 @@ public class GydehuttenSController implements Initializable, iController {
 
     @FXML
     private AnchorPane scene;
-    private Keylistener keylistener = new Keylistener(scene);
+    private final Keylistener keylistener = new Keylistener(scene);
 
     @FXML
     public void start(ActionEvent event) {
