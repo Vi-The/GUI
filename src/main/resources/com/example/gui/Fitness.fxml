@@ -11,7 +11,7 @@
       <Rectangle arcHeight="5.0" arcWidth="5.0" height="700.0" stroke="BLACK" strokeType="INSIDE" width="700.0" />
       <ImageView fitHeight="700.0" fitWidth="700.0" layoutY="140.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../Assets/Background/pixil-frame-0%20(1).png" />
+            <Image url="@../../../Assets/Background/fitness.png" />
          </image>
       </ImageView>
       <Button layoutX="647.0" layoutY="677.0" mnemonicParsing="false" onAction="#start" text="Reset" />
