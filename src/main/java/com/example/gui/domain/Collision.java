@@ -1,4 +1,4 @@
-package com.example.gui;
+package com.example.gui.domain;
 
 import javafx.scene.Group;
 import javafx.scene.layout.AnchorPane;
@@ -11,7 +11,7 @@ public class Collision {
     private AnchorPane currentRoom;
     ArrayList<Rectangle> collisionContainer = new ArrayList<Rectangle>();
 
-    void addCollision(int startX, int startY, int Width, int Height) {
+    public void addCollision(int startX, int startY, int Width, int Height) {
         collisionContainer.add(new Rectangle(startX, startY, Width, Height));
     }
     boolean checkCollision_Yaxis(double dir, double noChange) {
@@ -39,7 +39,7 @@ public class Collision {
         }
     }
 
-    void showCollisionAreas(AnchorPane group) {
+    public void showCollisionAreas(AnchorPane group) {
         for (Rectangle rectangle : collisionContainer) {
             group.getChildren().add(rectangle);
         }

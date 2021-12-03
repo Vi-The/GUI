@@ -1,4 +1,4 @@
-package com.example.gui;
+package com.example.gui.domain;
 
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
@@ -7,10 +7,10 @@ import javafx.scene.shape.Rectangle;
 public class Keylistener {
     private Rectangle shape;
     private AnchorPane scene;
-    static Collision collision = new Collision();
+    public static Collision collision = new Collision();
     private final Inventory inventory = new Inventory();
 
-    Keylistener(AnchorPane scene)
+    public Keylistener(AnchorPane scene)
     {
         this.scene = scene;
     }
