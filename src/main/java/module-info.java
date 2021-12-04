@@ -7,5 +7,6 @@ module com.example.gui {
     requires org.kordamp.bootstrapfx.core;
 
     opens com.example.gui to javafx.fxml;
-    exports com.example.gui;
+    exports com.example.gui.domain;
+    exports com.example.gui.presentation;
 }
