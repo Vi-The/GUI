@@ -5,14 +5,17 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.shape.Rectangle;
 
 public class Keylistener {
+    private boolean shopChecker;
+    private String roomString;
     private Rectangle shape;
-    private AnchorPane scene;
     static Collision collision = new Collision();
     private final Inventory inventory = new Inventory();
+    private final Shop shop = new Shop();
 
-    Keylistener(AnchorPane scene)
+    Keylistener(AnchorPane scene, boolean shop, String roomString)
     {
-        this.scene = scene;
+        this.roomString = roomString;
+        this.shopChecker = shop;
     }
 
     public void checkKeyInput(KeyEvent event, Rectangle shape)
@@ -25,6 +28,7 @@ public class Keylistener {
             case D -> moveRight();
             case M -> System.out.println("X: "+shape.getLayoutX()+" Y: "+shape.getLayoutY());
             case I -> openInventory();
+            case K -> {if(shopChecker){shop.displayShop(shape, roomString);}}
         }
     }
     public void moveUp(){

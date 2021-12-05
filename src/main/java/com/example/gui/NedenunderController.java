@@ -19,7 +19,7 @@ public class NedenunderController  implements Initializable, iController {
 
     @FXML
     private AnchorPane scene; // scene navn til navnet på det gældende rum
-    private final Keylistener keylistener = new Keylistener(scene);
+    private final Keylistener keylistener = new Keylistener(scene, true, "Nedenunder");
 
     @FXML
     public void start(ActionEvent event) {
