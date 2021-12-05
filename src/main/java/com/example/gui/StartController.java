@@ -10,9 +10,10 @@ import javafx.stage.Stage;
 public class StartController {
     @FXML
     Button Startbutton;
+    static Parent root;
     //method
     public void clickStart() throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("OUTSIDESDU.fxml"));
+        root = FXMLLoader.load(getClass().getResource("OUTSIDESDU.fxml"));
         Stage window = (Stage) Startbutton.getScene().getWindow();
         window.setScene(new Scene(root, 700, 700));
         window.setTitle("Outside SDU");

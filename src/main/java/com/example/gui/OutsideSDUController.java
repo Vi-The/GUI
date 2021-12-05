@@ -18,6 +18,7 @@ public class OutsideSDUController implements Initializable, iController {
     @FXML
     private AnchorPane scene1;
     private final Keylistener keylistener = new Keylistener(scene1);
+    private Items items = new Items(StartController.root);
 
     @FXML
     public void start(ActionEvent event) {
@@ -30,22 +31,22 @@ public class OutsideSDUController implements Initializable, iController {
         int changer = -30;
         for (int i = 0; i < 19; i++)
         {
-            collision.addCollision(-30, changer, STANDARD_LENGTH, STANDARD_LENGTH);
-            collision.addCollision(690, changer, STANDARD_LENGTH, STANDARD_LENGTH);
-            collision.addCollision(changer, -30, STANDARD_LENGTH, STANDARD_LENGTH);
+            collision.addCollision(-30, changer);
+            collision.addCollision(690, changer);
+            collision.addCollision(changer, -30);
             changer += 40;
         }
         changer = -30;
         for (int i = 0; i < 9; i++) {
-            collision.addCollision(changer, 690, STANDARD_LENGTH, STANDARD_LENGTH);
-            collision.addCollision(changer + 400, 690, STANDARD_LENGTH, STANDARD_LENGTH);
+            collision.addCollision(changer, 690);
+            collision.addCollision(changer + 400, 690);
             changer += 40;
         }
         collision.showCollisionAreas(scene1);
         //Collision thats not the box
-        collision.addCollision(50, 50, STANDARD_LENGTH, STANDARD_LENGTH);
-        collision.addCollision(90, 50, STANDARD_LENGTH, STANDARD_LENGTH);
-        collision.addCollision(50, 90, STANDARD_LENGTH, STANDARD_LENGTH);
+        collision.addCollision(50, 50);
+        collision.addCollision(90, 50);
+        collision.addCollision(50, 90);
     }
 
     AnimationTimer timer = new AnimationTimer() {
@@ -66,6 +67,7 @@ public class OutsideSDUController implements Initializable, iController {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         addCollision();
+       // items.placeItem(50,150,"src/main/resources/Assets/Items/rat.jpg");
         timer.start();
     }
 }

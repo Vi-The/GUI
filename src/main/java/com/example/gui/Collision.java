@@ -1,6 +1,5 @@
 package com.example.gui;
 
-import javafx.scene.Group;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.shape.Rectangle;
 
@@ -8,11 +7,10 @@ import java.util.ArrayList;
 
 public class Collision {
     private boolean disableCollision;
-    private AnchorPane currentRoom;
-    ArrayList<Rectangle> collisionContainer = new ArrayList<Rectangle>();
+    private final ArrayList<Rectangle> collisionContainer = new ArrayList<Rectangle>();
 
-    void addCollision(int startX, int startY, int Width, int Height) {
-        collisionContainer.add(new Rectangle(startX, startY, Width, Height));
+    void addCollision(int startX, int startY) {
+        collisionContainer.add(new Rectangle(startX, startY, iController.STANDARD_LENGTH, iController.STANDARD_LENGTH));
     }
     boolean checkCollision_Yaxis(double dir, double noChange) {
         boolean checker = false;
@@ -32,13 +30,6 @@ public class Collision {
         }
         return !checker;
     }
-
-    void showCollisionAreas(Group group) {
-        for (Rectangle rectangle : collisionContainer) {
-            group.getChildren().add(rectangle);
-        }
-    }
-
     void showCollisionAreas(AnchorPane group) {
         for (Rectangle rectangle : collisionContainer) {
             group.getChildren().add(rectangle);

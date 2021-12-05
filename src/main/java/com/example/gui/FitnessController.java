@@ -31,16 +31,16 @@ public class FitnessController  implements Initializable, iController {
     public void addCollision() {
         int changer = -30;
         for(int i = 0; i < 19; i++) {
-            collision.addCollision(changer,90,STANDARD_LENGTH,STANDARD_LENGTH);
-            collision.addCollision(changer,570,STANDARD_LENGTH,STANDARD_LENGTH);
-            collision.addCollision(690,changer,STANDARD_LENGTH,STANDARD_LENGTH);
+            collision.addCollision(changer,90);
+            collision.addCollision(changer,570);
+            collision.addCollision(690,changer);
             changer += 40;
         }
         changer = -30;
         for(int i = 0; i < 9; i++) {
             //To Gydehytte N
-            collision.addCollision(-30, changer,STANDARD_LENGTH,STANDARD_LENGTH);
-            collision.addCollision(-30, changer+400, STANDARD_LENGTH,STANDARD_LENGTH);
+            collision.addCollision(-30, changer);
+            collision.addCollision(-30, changer+400);
             changer += 40;
         }
         collision.showCollisionAreas(scene);

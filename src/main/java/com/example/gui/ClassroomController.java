@@ -32,32 +32,32 @@ public class ClassroomController  implements Initializable, iController {
         int changer = -30;
         for (int i = 0; i < 19; i++)//collision uden dør
         {
-            collision.addCollision(changer,610, STANDARD_LENGTH, STANDARD_LENGTH);
-            collision.addCollision(690, changer, STANDARD_LENGTH, STANDARD_LENGTH);
-            collision.addCollision(changer, 50, STANDARD_LENGTH, STANDARD_LENGTH);
+            collision.addCollision(changer,610);
+            collision.addCollision(690, changer);
+            collision.addCollision(changer, 50);
             changer += 40;
         }
         changer = -30;
         for(int i = 0; i < 9; i++) {
             //To Gydehytte N
-            collision.addCollision(-30, changer,STANDARD_LENGTH,STANDARD_LENGTH);
-            collision.addCollision(-30, changer+400, STANDARD_LENGTH,STANDARD_LENGTH);
+            collision.addCollision(-30, changer);
+            collision.addCollision(-30, changer+400);
             changer += 40;
         }
         collision.showCollisionAreas(scene);
         changer = -30;
         for(int i = 0; i < 19; i++) {
-            collision.addCollision(changer, 130,STANDARD_LENGTH,STANDARD_LENGTH);
+            collision.addCollision(changer, 130);
             changer += 40;
         }
-        collision.addCollision(370, 170,STANDARD_LENGTH,STANDARD_LENGTH);
-        collision.addCollision(330, 170,STANDARD_LENGTH,STANDARD_LENGTH);
-        collision.addCollision(330, 210,STANDARD_LENGTH,STANDARD_LENGTH);
+        collision.addCollision(370, 170);
+        collision.addCollision(330, 170);
+        collision.addCollision(330, 210);
         int posX = 170;
         for(int x = 0; x < 9; x++){
             int posY = 290;
             for (int y = 0; y < 4; y++){
-                collision.addCollision(posX, posY,STANDARD_LENGTH,STANDARD_LENGTH);
+                collision.addCollision(posX, posY);
                 posY += 40;
             }
             posX += 40;
