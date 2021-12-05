@@ -26,10 +26,19 @@ public class Keylistener {
             case S -> moveDown();
             case A -> moveLeft();
             case D -> moveRight();
-            case M -> System.out.println("X: "+shape.getLayoutX()+" Y: "+shape.getLayoutY());
-            case I -> openInventory();
-            case K -> {if(shopChecker){shop.displayShop(shape, roomString);}}
+            case H -> help();
+            case E -> openInventory();
+            case R -> {if(shopChecker){shop.displayShop(shape, roomString);}}
+            case M -> System.out.println("Player location: X: "+shape.getLayoutX()+" Y: "+shape.getLayoutY());
+            case N -> System.out.println("Current room: "+roomString);
         }
+    }
+    public void help() {
+        System.out.println("E: Opens and closes players inventory");
+        System.out.println("M: Shows players coordinates");
+        System.out.println("R: Opens and closes shops");
+        System.out.println("N: Shows location");
+        System.out.println("H: Shows this menu");
     }
     public void moveUp(){
         if(collision.checkCollision_Yaxis(shape.getLayoutY() - 40, shape.getLayoutX()))

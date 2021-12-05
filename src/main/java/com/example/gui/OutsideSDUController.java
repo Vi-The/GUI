@@ -5,7 +5,6 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.shape.Rectangle;
@@ -19,7 +18,6 @@ public class OutsideSDUController implements Initializable, iController {
     @FXML
     private AnchorPane scene1;
     private final Keylistener keylistener = new Keylistener(scene1, true, "OutsideSDU");
-    private final Shop shop = new Shop();
 
     @FXML
     public void start(ActionEvent event) {
@@ -58,9 +56,6 @@ public class OutsideSDUController implements Initializable, iController {
             scene1.setOnKeyPressed(new EventHandler<KeyEvent>() {
                 @Override
                 public void handle(KeyEvent keyEvent) {
-                    if(keyEvent.getCode() == KeyCode.K) {
-                        //shop.displayShop(shape1);
-                    }
                     keylistener.checkKeyInput(keyEvent, shape1);
                 }
             });

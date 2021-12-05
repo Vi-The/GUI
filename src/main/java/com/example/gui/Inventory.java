@@ -41,7 +41,7 @@ public class Inventory {
     void closeInv() {
         try {
             scene.setOnKeyPressed(keyEvent -> {
-                if(keyEvent.getCode() == KeyCode.I)
+                if(keyEvent.getCode() == KeyCode.E)
                     stage.close();
             });
         } catch (Exception e) {
@@ -61,7 +61,6 @@ public class Inventory {
             if(posY == 300){
                 posX += 110; posY = 25;
             }
-            System.out.println(posX +" "+ posY);
         }
     }
     void addInv(String item) {
