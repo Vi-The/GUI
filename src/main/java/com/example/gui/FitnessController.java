@@ -12,7 +12,7 @@ import javafx.scene.shape.Rectangle;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class FitnessController  implements Initializable, iController {
+public class FitnessController implements Initializable, iController {
 
     @FXML
     private Rectangle shape1; // skifte shape1 til navn på spilleren eller noget #cleancode
@@ -30,17 +30,17 @@ public class FitnessController  implements Initializable, iController {
     @Override
     public void addCollision() {
         int changer = -30;
-        for(int i = 0; i < 19; i++) {
-            collision.addCollision(changer,90);
-            collision.addCollision(changer,570);
-            collision.addCollision(690,changer);
+        for (int i = 0; i < 19; i++) {
+            collision.addCollision(changer, 90);
+            collision.addCollision(changer, 570);
+            collision.addCollision(690, changer);
             changer += 40;
         }
         changer = -30;
-        for(int i = 0; i < 9; i++) {
+        for (int i = 0; i < 9; i++) {
             //To Gydehytte N
             collision.addCollision(-30, changer);
-            collision.addCollision(-30, changer+400);
+            collision.addCollision(-30, changer + 400);
             changer += 40;
         }
         collision.showCollisionAreas(scene);
@@ -64,8 +64,6 @@ public class FitnessController  implements Initializable, iController {
         collision.addCollision(530, 450);
         collision.addCollision(530, 490);
         collision.addCollision(530, 530);
-
-
     }
 
     AnimationTimer timer = new AnimationTimer() {
@@ -88,4 +86,3 @@ public class FitnessController  implements Initializable, iController {
         timer.start();
     }
 }
-

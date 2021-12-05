@@ -47,7 +47,7 @@ public class GydehuttenNController implements Initializable, iController {
             collision.addCollision(570, changer + 400);
             changer += 40;
         }
-        //collision.showCollisionAreas(scene);
+        collision.showCollisionAreas(scene);
         collision.addCollision(170, 170);
         collision.addCollision(130, 90);
         collision.addCollision(130, 50);
@@ -61,7 +61,6 @@ public class GydehuttenNController implements Initializable, iController {
         collision.addCollision(130, 450);
         collision.addCollision(530, 10);
         collision.addCollision(530, 50);
-        collision.showCollisionAreas(scene);
     }
 
     AnimationTimer timer = new AnimationTimer() {

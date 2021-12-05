@@ -44,7 +44,7 @@ public class KantineController implements Initializable, iController {
             collision.addCollision(690, changer + 360 );
             changer +=40;
         }
-        //collision.showCollisionAreas(scene);
+        collision.showCollisionAreas(scene);
         collision.addCollision(130, 130);
         collision.addCollision(90, 130);
         collision.addCollision(50, 130);
@@ -81,9 +81,6 @@ public class KantineController implements Initializable, iController {
         collision.addCollision(250, 130);
         collision.addCollision(450, 450);
         collision.addCollision(490, 450);
-        collision.showCollisionAreas(scene);
-
-
     }
 
     AnimationTimer timer = new AnimationTimer() {
