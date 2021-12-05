@@ -65,12 +65,14 @@ public class Shop {
                 shopItems.add("Sandwich");
                 shopItems.add("Energi Drik");
                 shopItems.add("Kage");
+                break;
             case "Bikeshop":
                 shopItems.add("Bike helmet");
                 shopItems.add("Bike chain");
                 shopItems.add("Bike lock");
                 shopItems.add("Yellow vest");
                 shopItems.add("Bike lights");
+                break;
         }
         showItems();
     }
