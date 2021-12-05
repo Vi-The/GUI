@@ -45,9 +45,26 @@ public class FitnessController  implements Initializable, iController {
         }
         collision.showCollisionAreas(scene);
 
+        // recptionen
         collision.addCollision(90, 290,STANDARD_LENGTH,STANDARD_LENGTH);
         collision.addCollision(90, 330,STANDARD_LENGTH,STANDARD_LENGTH);
         collision.addCollision(90, 370,STANDARD_LENGTH,STANDARD_LENGTH);
+
+        // vending machines
+        collision.addCollision(10, 170,STANDARD_LENGTH,STANDARD_LENGTH);
+        collision.addCollision(10, 130,STANDARD_LENGTH,STANDARD_LENGTH);
+        collision.addCollision(90, 170,STANDARD_LENGTH,STANDARD_LENGTH);
+        collision.addCollision(90, 130,STANDARD_LENGTH,STANDARD_LENGTH);
+
+        //Væg ved omklædningsrummet
+        collision.addCollision(530, 210,STANDARD_LENGTH,STANDARD_LENGTH);
+        collision.addCollision(530, 170,STANDARD_LENGTH,STANDARD_LENGTH);
+        collision.addCollision(530, 130,STANDARD_LENGTH,STANDARD_LENGTH);
+
+        collision.addCollision(530, 450,STANDARD_LENGTH,STANDARD_LENGTH);
+        collision.addCollision(530, 490,STANDARD_LENGTH,STANDARD_LENGTH);
+        collision.addCollision(530, 530,STANDARD_LENGTH,STANDARD_LENGTH);
+
 
     }
 
