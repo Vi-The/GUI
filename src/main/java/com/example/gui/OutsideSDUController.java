@@ -35,6 +35,7 @@ public class OutsideSDUController implements Initializable, iController {
             collision.addCollision(changer, -30);
             changer += 40;
         }
+
         changer = -30;
         for (int i = 0; i < 9; i++) {
             collision.addCollision(changer, 690);
@@ -46,6 +47,35 @@ public class OutsideSDUController implements Initializable, iController {
         collision.addCollision(50, 50);
         collision.addCollision(90, 50);
         collision.addCollision(50, 90);
+        //Collisions at the screen
+        collision.addCollision(570, 250);
+        collision.addCollision(530, 250);
+        collision.addCollision(530, 210);
+        collision.addCollision(570, 210);
+        collision.addCollision(570, 170);
+        collision.addCollision(530, 170);
+        collision.addCollision(10, 410);
+        collision.addCollision(50, 410);
+        collision.addCollision(90, 410);
+        collision.addCollision(130, 410);
+        collision.addCollision(170, 410);
+        collision.addCollision(210, 410);
+        collision.addCollision(250, 410);
+        collision.addCollision(290, 410);
+        collision.addCollision(290, 370);
+        collision.addCollision(290, 330);
+        collision.addCollision(290, 290);
+        collision.addCollision(290, 250);
+        collision.addCollision(290, 210);
+        collision.addCollision(290, 170);
+        collision.addCollision(290, 130);
+        collision.addCollision(250, 130);
+        collision.addCollision(210, 130);
+        collision.addCollision(170, 130);
+        collision.addCollision(130, 130);
+        collision.addCollision(90, 130);
+        collision.addCollision(50, 130);
+        collision.addCollision(10, 130);
     }
 
     AnimationTimer timer = new AnimationTimer() {
