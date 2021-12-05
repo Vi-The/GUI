@@ -4,16 +4,11 @@ import javafx.animation.AnimationTimer;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.shape.Rectangle;
-import javafx.stage.Stage;
 
-import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -24,7 +19,7 @@ public class GydehuttenNController implements Initializable, iController {
 
     @FXML
     private AnchorPane scene; // scene navn til navnet på det gældende rum
-    private Keylistener keylistener = new Keylistener(scene);
+    private final Keylistener keylistener = new Keylistener(scene);
 
     @FXML
     public void start(ActionEvent event) {
@@ -34,88 +29,66 @@ public class GydehuttenNController implements Initializable, iController {
 
     @Override
     public void addCollision() {
+        int changer = -30;
+        for (int i = 0; i < 9; i++) {
+            //To OutsideSDU
+            collision.addCollision(changer, -30, STANDARD_LENGTH, STANDARD_LENGTH);
+            collision.addCollision(changer + 400, -30, STANDARD_LENGTH, STANDARD_LENGTH);
 
+            if (i < 7) {//Toward Gydehutten S
+                collision.addCollision(changer, 690, STANDARD_LENGTH, STANDARD_LENGTH);
+                collision.addCollision(changer + 480, 690, STANDARD_LENGTH, STANDARD_LENGTH);
+            }
+            //Toward Kantine
+            collision.addCollision(90, changer, STANDARD_LENGTH, STANDARD_LENGTH);
+            collision.addCollision(90, changer + 400, STANDARD_LENGTH, STANDARD_LENGTH);
+            //Toward Classroom
+            collision.addCollision(570, changer, STANDARD_LENGTH, STANDARD_LENGTH);
+            collision.addCollision(570, changer + 400, STANDARD_LENGTH, STANDARD_LENGTH);
+            changer += 40;
+        }
+        //collision.showCollisionAreas(scene);
+        collision.addCollision(170, 170, STANDARD_LENGTH, STANDARD_LENGTH);
+        collision.addCollision(130, 90, STANDARD_LENGTH, STANDARD_LENGTH);
+        collision.addCollision(130, 50, STANDARD_LENGTH, STANDARD_LENGTH);
+        collision.addCollision(530, 130, STANDARD_LENGTH, STANDARD_LENGTH);
+        collision.addCollision(490, 410, STANDARD_LENGTH, STANDARD_LENGTH);
+        collision.addCollision(490, 450, STANDARD_LENGTH, STANDARD_LENGTH);
+        collision.addCollision(530, 490, STANDARD_LENGTH, STANDARD_LENGTH);
+        collision.addCollision(530, 530, STANDARD_LENGTH, STANDARD_LENGTH);
+        collision.addCollision(130, 490, STANDARD_LENGTH, STANDARD_LENGTH);
+        collision.addCollision(130, 530, STANDARD_LENGTH, STANDARD_LENGTH);
+        collision.addCollision(130, 450, STANDARD_LENGTH, STANDARD_LENGTH);
+        collision.addCollision(530, 10, STANDARD_LENGTH, STANDARD_LENGTH);
+        collision.addCollision(530, 50, STANDARD_LENGTH, STANDARD_LENGTH);
+        collision.showCollisionAreas(scene);
     }
 
     AnimationTimer timer = new AnimationTimer() {
         @Override
-        public void handle(long timestamp) { //switch case
+        public void handle(long timestamp) {
+            RoomChanger roomChanger = new RoomChanger(collision, timer);
             scene.setOnKeyPressed(new EventHandler<KeyEvent>() {
                 @Override
                 public void handle(KeyEvent keyEvent) {
-
                     keylistener.checkKeyInput(keyEvent, shape1);
                 }
             });
-           if (shape1.getLayoutX() >= 0 && shape1.getLayoutX() <= 160 && shape1.getLayoutY() == 330 ){
-                try {
-                    Parent root = FXMLLoader.load(getClass().getResource("Kantine.fxml"));
-                    Stage window = (Stage) shape1.getScene().getWindow();
-                    window.setScene(new Scene(root, 700, 700));
-                    window.setTitle("Kantine");
-                    shape1.setLayoutY(631);
-                    shape1.setLayoutX(330);
-                    timer.stop();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-            else if (shape1.getLayoutY() >= 0 && shape1.getLayoutY() <= 20 && shape1.getLayoutX() == 330 ){
-                try {
-                    Parent root = FXMLLoader.load(getClass().getResource("OUTSIDESDU.fxml"));
-                    Stage window = (Stage) shape1.getScene().getWindow();
-                    window.setScene(new Scene(root, 700, 700));
-                    window.setTitle("OUTSIDE SDU");
-                    timer.stop();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-           else if(shape1.getLayoutX() >= 520 && shape1.getLayoutX() <= 655 && shape1.getLayoutY() == 330 ){
-                try {
-                    Parent root = FXMLLoader.load(getClass().getResource("Classroom.fxml"));
-                    Stage window = (Stage) shape1.getScene().getWindow();
-                    window.setScene(new Scene(root, 700, 700));
-                    window.setTitle("Classroom");
-                    timer.stop();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-
-            }
-            else if (shape1.getLayoutX() < 350 && shape1.getLayoutX() > 300 && shape1.getLayoutY() >= 639){ // skal ændres så det ikke kun er på det korrdinatsæt at blokken vil skifte rum
-                try {
-                    Parent root = FXMLLoader.load(getClass().getResource("Gydehutten_S.fxml"));
-                    Stage window = (Stage) shape1.getScene().getWindow();
-                    window.setScene(new Scene(root, 700, 700));
-                    window.setTitle("Gydehutten S");
-                    timer.stop();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-
-
-
+            roomChanger.changeRoom(shape1, 90, 330, "Kantine", "SDU Kantine", true);
+            roomChanger.changeRoom(shape1, 330, -30, "OUTSIDESDU", "Outside SDU", true);
+            roomChanger.changeRoom(shape1, 570, 330, "Classroom", "Classroom", true);
+            //Adding bigger doors to Gydehutten S
+            roomChanger.changeRoom(shape1, 250, 690, "Gydehutten_S", "Gydehutten Syd", true);
+            roomChanger.changeRoom(shape1, 290, 690, "Gydehutten_S", "Gydehutten Syd", true);
+            roomChanger.changeRoom(shape1, 330, 690, "Gydehutten_S", "Gydehutten Syd", true);
+            roomChanger.changeRoom(shape1, 370, 690, "Gydehutten_S", "Gydehutten Syd", true);
+            roomChanger.changeRoom(shape1, 410, 690, "Gydehutten_S", "Gydehutten Syd", true);
         }
     };
 
-
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        addCollision();
         timer.start();
     }
 }
-
-/*
-    @Override
-    public void start(Stage primaryStage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("GYDEHUTTENS.fxml"));
-        primaryStage.setTitle("Gydehutten S");
-        primaryStage.setScene(new Scene(root, 700, 700));
-        primaryStage.show();
-    }
-
-}
-
-*/

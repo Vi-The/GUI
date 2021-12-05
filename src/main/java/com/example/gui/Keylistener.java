@@ -8,6 +8,7 @@ public class Keylistener {
     private Rectangle shape;
     private AnchorPane scene;
     static Collision collision = new Collision();
+    private final Inventory inventory = new Inventory();
 
     Keylistener(AnchorPane scene)
     {
@@ -22,30 +23,29 @@ public class Keylistener {
             case S -> moveDown();
             case A -> moveLeft();
             case D -> moveRight();
-            case M -> System.out.println(shape.getLayoutX()+ " " + shape.getLayoutY());
+            case M -> System.out.println("X: "+shape.getLayoutX()+" Y: "+shape.getLayoutY());
             case I -> openInventory();
         }
     }
     public void moveUp(){
-        if(!collision.checkCollisionY(shape.getLayoutY()-40,shape.getLayoutX()))
+        if(collision.checkCollision_Yaxis(shape.getLayoutY() - 40, shape.getLayoutX()))
             shape.setLayoutY(shape.getLayoutY()-40);
     }
     public void moveDown(){
-        if(!collision.checkCollisionY(shape.getLayoutY()+40,shape.getLayoutX()))
+        if(collision.checkCollision_Yaxis(shape.getLayoutY() + 40, shape.getLayoutX()))
             shape.setLayoutY(shape.getLayoutY()+40);
     }
     public void moveLeft(){
-        if(!collision.checkColliisonX(shape.getLayoutX()-40, shape.getLayoutY()))
+        if(collision.checkCollision_Xaxis(shape.getLayoutX() - 40, shape.getLayoutY()))
             shape.setLayoutX(shape.getLayoutX()-40);
     }
     public void moveRight(){
-        if(!collision.checkColliisonX(shape.getLayoutX()+40, shape.getLayoutY()))
+        if(collision.checkCollision_Xaxis(shape.getLayoutX() + 40, shape.getLayoutY()))
             shape.setLayoutX(shape.getLayoutX()+40);
     }
 
     public void openInventory() {
         try {
-            Inventory inventory = new Inventory();
             inventory.openInv();
         } catch (Exception e) {
             e.printStackTrace();
