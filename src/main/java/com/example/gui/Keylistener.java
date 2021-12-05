@@ -9,7 +9,7 @@ public class Keylistener {
     private String roomString;
     private Rectangle shape;
     static Collision collision = new Collision();
-    private final Inventory inventory = new Inventory();
+    static Inventory inventory = new Inventory();
     private final Shop shop = new Shop();
 
     Keylistener(AnchorPane scene, boolean shop, String roomString)

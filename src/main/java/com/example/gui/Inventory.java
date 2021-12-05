@@ -20,14 +20,14 @@ public class Inventory {
     Inventory(){
         inventory.add("Student ID");
         inventory.add("Books");
-        inventory.add("phone");
+        inventory.add("Phone");
         inventory.add("Laptop");
     }
 
     void openInv() {
         try {
             root = new Group();
-            Scene scene = new Scene(root,250,300);
+            Scene scene = new Scene(root,450,300);
             this.scene = scene;
             stage.setTitle("Inventory");
             stage.setScene(scene);
@@ -50,14 +50,18 @@ public class Inventory {
     }
 
     void showInv() {
-        int posX = 50; int posY = 50;
+        int posX = 20; int posY = 25;
         for(int i = 0; i < inventory.size(); i ++)
         {
             Text text = new Text(inventory.get(i));
             text.setX(posX); text.setY(posY);
             text.setFont(new Font(20));
             root.getChildren().add(text);
-            posY += 30;
+            posY += 25;
+            if(posY == 300){
+                posX += 110; posY = 25;
+            }
+            System.out.println(posX +" "+ posY);
         }
     }
     void addInv(String item) {
