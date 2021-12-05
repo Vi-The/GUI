@@ -17,7 +17,7 @@ public class OutsideSDUController implements Initializable, iController {
     private Rectangle shape1;
     @FXML
     private AnchorPane scene1;
-    private final Keylistener keylistener = new Keylistener(scene1);
+    private final Keylistener keylistener = new Keylistener(scene1, true, "OutsideSDU");
 
     @FXML
     public void start(ActionEvent event) {
