@@ -32,35 +32,35 @@ public class GydehuttenNController implements Initializable, iController {
         int changer = -30;
         for (int i = 0; i < 9; i++) {
             //To OutsideSDU
-            collision.addCollision(changer, -30, STANDARD_LENGTH, STANDARD_LENGTH);
-            collision.addCollision(changer + 400, -30, STANDARD_LENGTH, STANDARD_LENGTH);
+            collision.addCollision(changer, -30);
+            collision.addCollision(changer + 400, -30);
 
             if (i < 7) {//Toward Gydehutten S
-                collision.addCollision(changer, 690, STANDARD_LENGTH, STANDARD_LENGTH);
-                collision.addCollision(changer + 480, 690, STANDARD_LENGTH, STANDARD_LENGTH);
+                collision.addCollision(changer, 690);
+                collision.addCollision(changer + 480, 690);
             }
             //Toward Kantine
-            collision.addCollision(90, changer, STANDARD_LENGTH, STANDARD_LENGTH);
-            collision.addCollision(90, changer + 400, STANDARD_LENGTH, STANDARD_LENGTH);
+            collision.addCollision(90, changer);
+            collision.addCollision(90, changer + 400);
             //Toward Classroom
-            collision.addCollision(570, changer, STANDARD_LENGTH, STANDARD_LENGTH);
-            collision.addCollision(570, changer + 400, STANDARD_LENGTH, STANDARD_LENGTH);
+            collision.addCollision(570, changer);
+            collision.addCollision(570, changer + 400);
             changer += 40;
         }
         //collision.showCollisionAreas(scene);
-        collision.addCollision(170, 170, STANDARD_LENGTH, STANDARD_LENGTH);
-        collision.addCollision(130, 90, STANDARD_LENGTH, STANDARD_LENGTH);
-        collision.addCollision(130, 50, STANDARD_LENGTH, STANDARD_LENGTH);
-        collision.addCollision(530, 130, STANDARD_LENGTH, STANDARD_LENGTH);
-        collision.addCollision(490, 410, STANDARD_LENGTH, STANDARD_LENGTH);
-        collision.addCollision(490, 450, STANDARD_LENGTH, STANDARD_LENGTH);
-        collision.addCollision(530, 490, STANDARD_LENGTH, STANDARD_LENGTH);
-        collision.addCollision(530, 530, STANDARD_LENGTH, STANDARD_LENGTH);
-        collision.addCollision(130, 490, STANDARD_LENGTH, STANDARD_LENGTH);
-        collision.addCollision(130, 530, STANDARD_LENGTH, STANDARD_LENGTH);
-        collision.addCollision(130, 450, STANDARD_LENGTH, STANDARD_LENGTH);
-        collision.addCollision(530, 10, STANDARD_LENGTH, STANDARD_LENGTH);
-        collision.addCollision(530, 50, STANDARD_LENGTH, STANDARD_LENGTH);
+        collision.addCollision(170, 170);
+        collision.addCollision(130, 90);
+        collision.addCollision(130, 50);
+        collision.addCollision(530, 130);
+        collision.addCollision(490, 410);
+        collision.addCollision(490, 450);
+        collision.addCollision(530, 490);
+        collision.addCollision(530, 530);
+        collision.addCollision(130, 490);
+        collision.addCollision(130, 530);
+        collision.addCollision(130, 450);
+        collision.addCollision(530, 10);
+        collision.addCollision(530, 50);
         collision.showCollisionAreas(scene);
     }
 

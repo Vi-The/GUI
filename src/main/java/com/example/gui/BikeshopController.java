@@ -31,32 +31,32 @@ public class BikeshopController implements Initializable, iController {
     public void addCollision() {
         int changer = -30;
         for (int i = 0; i < 19; i++) {
-            collision.addCollision(-30, changer, STANDARD_LENGTH, STANDARD_LENGTH);
-            collision.addCollision(690, changer, STANDARD_LENGTH, STANDARD_LENGTH);
-            collision.addCollision(changer, 490, STANDARD_LENGTH, STANDARD_LENGTH);
+            collision.addCollision(-30, changer);
+            collision.addCollision(690, changer);
+            collision.addCollision(changer, 490);
             changer += 40;
         }
         collision.showCollisionAreas(scene);
         changer = -30;
         for (int i = 0; i < 7; i++) {
-            collision.addCollision(changer, 210, STANDARD_LENGTH, STANDARD_LENGTH);
+            collision.addCollision(changer, 210);
             changer += 40;
         }
         changer = 330;
         for (int i = 0; i < 9; i++) {
-            collision.addCollision(changer, 210, STANDARD_LENGTH, STANDARD_LENGTH);
+            collision.addCollision(changer, 210);
             changer += 40;
         }
-        collision.addCollision(10, 250, STANDARD_LENGTH, STANDARD_LENGTH);
-        collision.addCollision(450, 250, STANDARD_LENGTH, STANDARD_LENGTH);
-        collision.addCollision(490, 290, STANDARD_LENGTH, STANDARD_LENGTH);
-        collision.addCollision(450, 290, STANDARD_LENGTH, STANDARD_LENGTH);
-        collision.addCollision(410, 290, STANDARD_LENGTH, STANDARD_LENGTH);
+        collision.addCollision(10, 250);
+        collision.addCollision(450, 250);
+        collision.addCollision(490, 290);
+        collision.addCollision(450, 290);
+        collision.addCollision(410, 290);
         int posX = 90;
         for (int x = 0; x < 4; x++) {
             int posY = 330;
             for (int y = 0; y < 3; y++) {
-                collision.addCollision(posX, posY, STANDARD_LENGTH, STANDARD_LENGTH);
+                collision.addCollision(posX, posY);
                 posY += 40;
             }
             posX += 40;
