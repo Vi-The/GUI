@@ -8,11 +8,10 @@ import java.util.ArrayList;
 
 public class Collision {
     private boolean disableCollision;
-    private AnchorPane currentRoom;
     ArrayList<Rectangle> collisionContainer = new ArrayList<Rectangle>();
 
-    void addCollision(int startX, int startY, int Width, int Height) {
-        collisionContainer.add(new Rectangle(startX, startY, Width, Height));
+    void addCollision(int startX, int startY) {
+        collisionContainer.add(new Rectangle(startX, startY, iController.STANDARD_LENGTH, iController.STANDARD_LENGTH));
     }
     boolean checkCollision_Yaxis(double dir, double noChange) {
         boolean checker = false;
