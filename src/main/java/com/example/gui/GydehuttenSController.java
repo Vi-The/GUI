@@ -88,5 +88,3 @@ public class GydehuttenSController implements Initializable, iController {
         timer.start();
     }
 }
-
-

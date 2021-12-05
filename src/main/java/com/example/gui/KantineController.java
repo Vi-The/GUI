@@ -15,7 +15,7 @@ import java.util.ResourceBundle;
 public class KantineController implements Initializable, iController {
 
     @FXML
-    private Rectangle shape1; // skifte shape1 til navn på spilleren eller noget #cleancode
+    private Rectangle shape1;
 
     @FXML
     private AnchorPane scene; // scene navn til navnet på det gældende rum
@@ -103,5 +103,3 @@ public class KantineController implements Initializable, iController {
         addCollision();
     }
 }
-
-
