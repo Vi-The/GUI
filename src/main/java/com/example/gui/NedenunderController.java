@@ -32,55 +32,55 @@ public class NedenunderController  implements Initializable, iController {
         int changer = -30;
         for (int i = 0; i < 19; i++) {
             //Outer frame - ensures that we can't go out of the frame.
-            collision.addCollision(-30, changer, STANDARD_LENGTH, STANDARD_LENGTH); //Dette er siden modsat Gydehutten
-            collision.addCollision(690, changer, STANDARD_LENGTH, STANDARD_LENGTH); //Dette er siden ud mod Gydehutten S
-            collision.addCollision(changer, -30, STANDARD_LENGTH, STANDARD_LENGTH); //Dette er siden op mod Kantinan
-            collision.addCollision(changer, 530, STANDARD_LENGTH, STANDARD_LENGTH); //Dette er siden ned mod bikeshop.
+            collision.addCollision(-30, changer ); //Dette er siden modsat Gydehutten
+            collision.addCollision(690, changer ); //Dette er siden ud mod Gydehutten S
+            collision.addCollision(changer, -30 ); //Dette er siden op mod Kantinan
+            collision.addCollision(changer, 530 ); //Dette er siden ned mod bikeshop.
             changer += 40;
         }
 
         //collision.showCollisionAreas(scene);
 
-        collision.addCollision(570, 330, STANDARD_LENGTH, STANDARD_LENGTH);
-        collision.addCollision(530, 330, STANDARD_LENGTH, STANDARD_LENGTH);
-        collision.addCollision(570, 410, STANDARD_LENGTH, STANDARD_LENGTH);
-        collision.addCollision(530, 410, STANDARD_LENGTH, STANDARD_LENGTH);
-        collision.addCollision(490, 450, STANDARD_LENGTH, STANDARD_LENGTH);
-        collision.addCollision(450, 450, STANDARD_LENGTH, STANDARD_LENGTH);
-        collision.addCollision(410, 450, STANDARD_LENGTH, STANDARD_LENGTH);
-        collision.addCollision(490, 410, STANDARD_LENGTH, STANDARD_LENGTH);
-        collision.addCollision(450, 410, STANDARD_LENGTH, STANDARD_LENGTH);
-        collision.addCollision(410, 410, STANDARD_LENGTH, STANDARD_LENGTH);
-        collision.addCollision(410, 370, STANDARD_LENGTH, STANDARD_LENGTH);
-        collision.addCollision(250, 410, STANDARD_LENGTH, STANDARD_LENGTH);
-        collision.addCollision(210, 410, STANDARD_LENGTH, STANDARD_LENGTH);
-        collision.addCollision(170, 410, STANDARD_LENGTH, STANDARD_LENGTH);
-        collision.addCollision(130, 410, STANDARD_LENGTH, STANDARD_LENGTH);
-        collision.addCollision(170, 290, STANDARD_LENGTH, STANDARD_LENGTH);
-        collision.addCollision(130, 290, STANDARD_LENGTH, STANDARD_LENGTH);
-        collision.addCollision(90, 290, STANDARD_LENGTH, STANDARD_LENGTH);
-        collision.addCollision(50, 290, STANDARD_LENGTH, STANDARD_LENGTH);
-        collision.addCollision(50, 210, STANDARD_LENGTH, STANDARD_LENGTH);
-        collision.addCollision(90, 210, STANDARD_LENGTH, STANDARD_LENGTH);
-        collision.addCollision(210, 170, STANDARD_LENGTH, STANDARD_LENGTH);
-        collision.addCollision(250, 170, STANDARD_LENGTH, STANDARD_LENGTH);
-        collision.addCollision(290, 170, STANDARD_LENGTH, STANDARD_LENGTH);
-        collision.addCollision(290, 170, STANDARD_LENGTH, STANDARD_LENGTH);
-        collision.addCollision(330, 170, STANDARD_LENGTH, STANDARD_LENGTH);
-        collision.addCollision(370, 170, STANDARD_LENGTH, STANDARD_LENGTH);
-        collision.addCollision(410, 170, STANDARD_LENGTH, STANDARD_LENGTH);
-        collision.addCollision(450, 170, STANDARD_LENGTH, STANDARD_LENGTH);
-        collision.addCollision(370, 130, STANDARD_LENGTH, STANDARD_LENGTH);
-        collision.addCollision(570, 130, STANDARD_LENGTH, STANDARD_LENGTH);
-        collision.addCollision(570, 170, STANDARD_LENGTH, STANDARD_LENGTH);
-        collision.addCollision(530, 170, STANDARD_LENGTH, STANDARD_LENGTH);
-        collision.addCollision(450, 210, STANDARD_LENGTH, STANDARD_LENGTH);
-        collision.addCollision(410, 210, STANDARD_LENGTH, STANDARD_LENGTH);
-        collision.addCollision(370, 210, STANDARD_LENGTH, STANDARD_LENGTH);
-        collision.addCollision(330, 210, STANDARD_LENGTH, STANDARD_LENGTH);
-        collision.addCollision(290, 210, STANDARD_LENGTH, STANDARD_LENGTH);
-        collision.addCollision(250, 210, STANDARD_LENGTH, STANDARD_LENGTH);
-        collision.addCollision(210, 210, STANDARD_LENGTH, STANDARD_LENGTH);
+        collision.addCollision(570, 330 );
+        collision.addCollision(530, 330 );
+        collision.addCollision(570, 410 );
+        collision.addCollision(530, 410 );
+        collision.addCollision(490, 450 );
+        collision.addCollision(450, 450 );
+        collision.addCollision(410, 450 );
+        collision.addCollision(490, 410 );
+        collision.addCollision(450, 410 );
+        collision.addCollision(410, 410 );
+        collision.addCollision(410, 370 );
+        collision.addCollision(250, 410 );
+        collision.addCollision(210, 410 );
+        collision.addCollision(170, 410 );
+        collision.addCollision(130, 410 );
+        collision.addCollision(170, 290 );
+        collision.addCollision(130, 290 );
+        collision.addCollision(90, 290 );
+        collision.addCollision(50, 290 );
+        collision.addCollision(50, 210 );
+        collision.addCollision(90, 210 );
+        collision.addCollision(210, 170 );
+        collision.addCollision(250, 170 );
+        collision.addCollision(290, 170 );
+        collision.addCollision(290, 170 );
+        collision.addCollision(330, 170 );
+        collision.addCollision(370, 170 );
+        collision.addCollision(410, 170 );
+        collision.addCollision(450, 170 );
+        collision.addCollision(370, 130 );
+        collision.addCollision(570, 130 );
+        collision.addCollision(570, 170 );
+        collision.addCollision(530, 170 );
+        collision.addCollision(450, 210 );
+        collision.addCollision(410, 210 );
+        collision.addCollision(370, 210 );
+        collision.addCollision(330, 210 );
+        collision.addCollision(290, 210 );
+        collision.addCollision(250, 210 );
+        collision.addCollision(210, 210 );
         //collision.showCollisionAreas(scene);
 
     }
