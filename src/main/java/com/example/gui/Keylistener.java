@@ -35,6 +35,8 @@ public class Keylistener {
             case N -> System.out.println("Current room: "+roomString);
             case M -> openMap();
             case T -> interaction.openTextbox(shape,roomString);
+
+
         }
     }
 
