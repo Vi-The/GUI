@@ -18,13 +18,11 @@ public class Map {
     private Group root;
     private Stage stage = new Stage();
 
-    public void addImage(int posX, int posY, String path, int Height, int Width) throws FileNotFoundException {
+    public void addImage() throws FileNotFoundException {
         Image Map = new Image(new FileInputStream("src/Assets/Map til spil v2.png"));
         ImageView image = new ImageView(Map);
-        image.setX(posX);
-        image.setY(posY);
-        image.setFitHeight();
-        image.setFitWidth();
+        image.setX(0);
+        image.setY(0);
         root.getChildren().add(image);
     }
 
@@ -32,10 +30,11 @@ public class Map {
     void openMap() {
         try {
             root = new Group();
-            Scene scene = new Scene(root,450,300);
+            Scene scene = new Scene(root,300,300);
             this.scene = scene;
             stage.setTitle("Map");
             stage.setScene(scene);
+            addImage();
             stage.show();
             closeMap();
         } catch (Exception e) {
