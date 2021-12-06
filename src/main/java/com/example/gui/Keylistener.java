@@ -11,6 +11,7 @@ public class Keylistener {
     static Inventory inventory = new Inventory();
     static Help help = new Help();
     private final Shop shop = new Shop();
+    static Map map = new Map();
 
     Keylistener(boolean shop, String roomString)
     {
@@ -29,11 +30,13 @@ public class Keylistener {
             case H -> openH();
             case E -> openInventory();
             case R -> {if(shopChecker){shop.displayShop(shape, roomString);}}
-            case M -> System.out.println("Player location: X: "+shape.getLayoutX()+" Y: "+shape.getLayoutY());
+            case C -> System.out.println("Player location: X: "+shape.getLayoutX()+" Y: "+shape.getLayoutY());
             case N -> System.out.println("Current room: "+roomString);
             case T -> System.out.println("Talk");
+            case M -> openMap();
         }
     }
+
 
     private void moveUp(){
         if(collision.checkCollision_Yaxis(shape.getLayoutY() - 40, shape.getLayoutX()))
@@ -60,9 +63,19 @@ public class Keylistener {
         }
     }
 
-    private void openH (){
+
+    private void openH () {
         try {
             help.openHelp();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    private void openMap() {
+        try {
+            map.openMap();
         } catch (Exception e) {
             e.printStackTrace();
         }
