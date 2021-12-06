@@ -32,6 +32,7 @@ public class Keylistener {
             case M -> System.out.println("Player location: X: "+shape.getLayoutX()+" Y: "+shape.getLayoutY());
             case N -> System.out.println("Current room: "+roomString);
             case T -> System.out.println("Talk");
+
         }
     }
 
