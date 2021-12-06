@@ -14,6 +14,16 @@
             <Image url="@../../../Assets/Background/Gydehytte-S.png" />
          </image>
       </ImageView>
+      <ImageView layoutX="538.0" layoutY="326.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Assets/Items/måtte1.png" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="130.0" layoutY="326.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Assets/Items/måtte1.png" />
+         </image>
+      </ImageView>
       <Button layoutX="637.0" layoutY="667.0" mnemonicParsing="false" onAction="#start" text="Reset" />
       <Rectangle fx:id="shape1" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="40.0" layoutX="330.0" layoutY="330.0" stroke="BLACK" strokeType="INSIDE" width="40.0" />
    </children>
