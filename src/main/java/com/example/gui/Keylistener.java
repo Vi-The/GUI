@@ -9,9 +9,10 @@ public class Keylistener {
     private Rectangle shape;
     static Collision collision = new Collision();
     static Inventory inventory = new Inventory();
-    static Help help = new Help();
+    private final Help help = new Help();
     private final Shop shop = new Shop();
-    static Map map = new Map();
+    private final Map map = new Map();
+    private final Interaction interaction = new Interaction();
 
     Keylistener(boolean shop, String roomString)
     {
@@ -32,7 +33,7 @@ public class Keylistener {
             case R -> {if(shopChecker){shop.displayShop(shape, roomString);}}
             case C -> System.out.println("Player location: X: "+shape.getLayoutX()+" Y: "+shape.getLayoutY());
             case N -> System.out.println("Current room: "+roomString);
-            case T -> System.out.println("Talk");
+            case T -> interaction.openTextbox(shape,roomString);
             case M -> openMap();
         }
     }
