@@ -73,14 +73,19 @@ public class Interaction {
             case "Professor":
                 text = new Text(getTextFromFile(NPC));
                 break;
-            case "Karen":
-                text = new Text("");
+            case "Male":
+                int randomQoute = (int) (Math.random()*10);
+                text = new Text(getTextFromFile(String.valueOf(randomQoute)));
+                break;
+            case "Female":
+                randomQoute = (int) (1+Math.random()*13);
+                text = new Text(getTextFromFile(String.valueOf(randomQoute)));
                 break;
             default:
                 throw new IllegalStateException("Unexpected value: " + NPC);
         }
 
-        text.setX(20); text.setY(20);
+        text.setX(20); text.setY(40);
         text.setFont(new Font(20));
         root.getChildren().add(text);
     }
