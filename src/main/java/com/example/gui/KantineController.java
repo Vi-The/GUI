@@ -38,7 +38,7 @@ public class KantineController implements Initializable, iController {
             changer += 40;
         }
         changer = -30;
-        for (int i = 0; i < 8; i++) { //9 har noget med størrelsen af skærmen at gøre.
+        for (int i = 0; i < 8; i++) {
             //To Gydehutten N
             collision.addCollision(690, changer);
             collision.addCollision(690, changer + 360 );

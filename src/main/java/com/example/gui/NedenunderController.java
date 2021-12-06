@@ -33,13 +33,20 @@ public class NedenunderController  implements Initializable, iController {
         for (int i = 0; i < 19; i++) {
             //Outer frame - ensures that we can't go out of the frame.
             collision.addCollision(-30, changer ); //Dette er siden modsat Gydehutten
-            collision.addCollision(690, changer ); //Dette er siden ud mod Gydehutten S
+            //collision.addCollision(690, changer ); //Dette er siden ud mod Gydehutten S
             collision.addCollision(changer, -30 ); //Dette er siden op mod Kantinan
             collision.addCollision(changer, 530 ); //Dette er siden ned mod bikeshop.
             changer += 40;
         }
+        changer = -30;
+        for (int i = 0; i < 9; i++) {
+            //To Gydehutten S
+            collision.addCollision(690, changer);
+            collision.addCollision(690, changer + 400 );
+            changer +=40;
+        }
 
-        //collision.showCollisionAreas(scene);
+        collision.showCollisionAreas(scene);
 
         collision.addCollision(570, 330 );
         collision.addCollision(530, 330 );
@@ -96,7 +103,7 @@ public class NedenunderController  implements Initializable, iController {
                     keylistener.checkKeyInput(keyEvent, shape1);
                 }
             });
-            roomChanger.changeRoom(shape1, 690, 330, "Gydehutten_S", "Gydehutten Syd", true);
+            roomChanger.changeRoom(shape1, 650, 330, "Gydehutten_S", "Gydehutten Syd", true);
         }
     };
 
