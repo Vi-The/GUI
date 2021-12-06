@@ -9,13 +9,12 @@
 <AnchorPane fx:id="scene1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gui.OutsideSDUController">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" height="700.0" stroke="BLACK" strokeType="INSIDE" width="700.0" />
-      <Rectangle fx:id="imgMenuUser" />
       <ImageView fitHeight="700.0" fitWidth="700.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../Assets/Background/OutsideSDU.png" />
          </image>
       </ImageView>
-      <Rectangle fx:id="shape1" accessibleRole="IMAGE_VIEW" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="40.0" layoutX="330.0" layoutY="330.0" stroke="BLACK" strokeType="INSIDE" width="40.0" />
+      <Rectangle fx:id="shape1" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="40.0" layoutX="330.0" layoutY="330.0" stroke="BLACK" strokeType="INSIDE" width="40.0" />
       <Button layoutX="640.0" layoutY="659.0" mnemonicParsing="false" onAction="#start" prefHeight="33.0" prefWidth="52.0" text="Reset" />
    </children>
 </AnchorPane>
