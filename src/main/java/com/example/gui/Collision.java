@@ -1,13 +1,11 @@
 package com.example.gui;
 
-import javafx.scene.Group;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.shape.Rectangle;
 
 import java.util.ArrayList;
 
 public class Collision {
-    private boolean disableCollision;
     ArrayList<Rectangle> collisionContainer = new ArrayList<Rectangle>();
 
     void addCollision(int startX, int startY) {
@@ -32,12 +30,6 @@ public class Collision {
         return !checker;
     }
 
-    void showCollisionAreas(Group group) {
-        for (Rectangle rectangle : collisionContainer) {
-            group.getChildren().add(rectangle);
-        }
-    }
-
     void showCollisionAreas(AnchorPane group) {
         for (Rectangle rectangle : collisionContainer) {
             group.getChildren().add(rectangle);
@@ -45,7 +37,6 @@ public class Collision {
     }
 
     void setDisableCollision(boolean notCollision) {
-        disableCollision = notCollision;
     }
     void removeCollision() {
         collisionContainer.clear();
