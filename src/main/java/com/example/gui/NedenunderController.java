@@ -103,7 +103,7 @@ public class NedenunderController  implements Initializable, iController {
                     keylistener.checkKeyInput(keyEvent, shape1);
                 }
             });
-            roomChanger.changeRoom(shape1, 650, 330, "Gydehutten_S", "Gydehutten Syd", true);
+            roomChanger.changeRoom(shape1, 690, 330, "Gydehutten_S", "Gydehutten Syd", true);
         }
     };
 
