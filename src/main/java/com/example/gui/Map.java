@@ -9,6 +9,9 @@ import javafx.stage.Stage;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 
+
+
+
 public class Map {
 
     Scene scene;
@@ -22,6 +25,7 @@ public class Map {
         image.setY(0);
         root.getChildren().add(image);
     }
+
 
     void openMap() {
         try {
@@ -47,4 +51,8 @@ public class Map {
             e.printStackTrace();
         }
     }
+
+
+
 }
+

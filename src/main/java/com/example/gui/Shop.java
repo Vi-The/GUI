@@ -99,14 +99,10 @@ public class Shop {
             button.setLayoutX(posX);
             button.setLayoutY(posY);
             button.setMinHeight(20);
-            button.setMinWidth(120);
+            button.setMinWidth(150);
             button.setOnAction(e -> buttonlistener.getActionForButton(button.getText()));
             root.getChildren().add(button);
             posY += 30;
-            System.out.println(posY);
-            if(posY == 260) {
-                posX += 130; posY = 50;
-            }
         }
     }
 }

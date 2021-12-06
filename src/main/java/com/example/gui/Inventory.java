@@ -10,7 +10,7 @@ import javafx.stage.Stage;
 
 import java.util.ArrayList;
 
-public class Inventory{
+public class Inventory {
 
     Scene scene;
     private Group root;
