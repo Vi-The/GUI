@@ -19,7 +19,7 @@ public class KantineController implements Initializable, iController {
 
     @FXML
     private AnchorPane scene; // scene navn til navnet på det gældende rum
-    private final Keylistener keylistener = new Keylistener(scene, true, "Kantine");
+    private final Keylistener keylistener = new Keylistener(true, "Kantine");
 
     @FXML
     public void start(ActionEvent event) {
