@@ -5,8 +5,10 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.image.Image;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Rectangle;
 
 import java.net.URL;
@@ -82,6 +84,8 @@ public class FitnessController implements Initializable, iController {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        Image Samuel = new Image(getClass().getResourceAsStream("/Assets/Characters/SamuelNyNy.png"));
+        shape1.setFill(new ImagePattern(Samuel));
         addCollision();
         timer.start();
     }
