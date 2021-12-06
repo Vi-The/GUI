@@ -6,6 +6,7 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.shape.Rectangle;
@@ -28,7 +29,7 @@ public class OutsideSDUController implements Initializable, iController {
     @FXML
     private Rectangle rectangle;
     Image img = new Image("src/main/resources/Assets/Characters/SamuelFront.png");
-    rectangle.setFill(new ImagePattern(img));
+    //rectangle.setFill(new ImagePattern(img));
 
     @Override
     public void addCollision() {
