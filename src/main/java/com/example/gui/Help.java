@@ -20,10 +20,12 @@ public class Help {
 
     Help(){
         help.add("E: Opens and closes players inventory");
-        help.add("M: Shows players coordinates");
-        help.add("R: Opens and closes shops");
+        help.add("M: Shows the map");
+        help.add("R: Shows which items you can buy");
         help.add("N: Shows location");
         help.add("H: Shows this menu");
+        help.add("T: To talk");
+
         help.add("\n");
         help.add("   Quest:   ");
         help.add("1. Køb en kaffe");
@@ -38,7 +40,7 @@ public class Help {
     void openHelp() {
         try {
             root = new Group();
-            Scene scene = new Scene(root, 450, 320);
+            Scene scene = new Scene(root, 450, 340);
             this.scene = scene;
             stage.setTitle("Help");
             stage.setScene(scene);
