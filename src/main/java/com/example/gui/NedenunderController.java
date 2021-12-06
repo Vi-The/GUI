@@ -83,7 +83,6 @@ public class NedenunderController  implements Initializable, iController {
         collision.addCollision(530, 170 );
         collision.addCollision(450, 210 );
         collision.addCollision(410, 210 );
-        collision.addCollision(370, 210 );
         collision.addCollision(330, 210 );
         collision.addCollision(290, 210 );
         collision.addCollision(250, 210 );

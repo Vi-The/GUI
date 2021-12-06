@@ -28,6 +28,9 @@ public class Shop {
         else if(shape.getLayoutX() == 450 && shape.getLayoutY() == 330){
             openShop();
         }
+        else if(shape.getLayoutX() == 370 && shape.getLayoutY() == 210) {
+            openShop();
+        }
     }
 
     void openShop() {
@@ -72,6 +75,16 @@ public class Shop {
                 shopItems.add("Bike lock");
                 shopItems.add("Yellow vest");
                 shopItems.add("Bike lights");
+                break;
+            case "Nedenunder":
+                shopItems.add("Odense Pilsner");
+                shopItems.add("Odense Classic");
+                shopItems.add("Mokai");
+                shopItems.add("Cult Shaker");
+                shopItems.add("Flügel");
+                shopItems.add("Pepsi Max");
+                shopItems.add("Faxe Kondi");
+                shopItems.add("Vodka Redbull");
                 break;
         }
         showItems();
