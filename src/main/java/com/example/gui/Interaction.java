@@ -8,6 +8,10 @@ import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
 public class Interaction {
     Scene scene;
     private Group root;
@@ -67,7 +71,7 @@ public class Interaction {
         Text text;
         switch (NPC) {
             case "Professor":
-                text = new Text("Test");
+                text = new Text(getTextFromFile(NPC));
                 break;
             case "Karen":
                 text = new Text("");
@@ -79,6 +83,24 @@ public class Interaction {
         text.setX(20); text.setY(20);
         text.setFont(new Font(20));
         root.getChildren().add(text);
+    }
+    String getTextFromFile(String NPC){
+        StringBuilder text = new StringBuilder();
+        try {
+            File file = new File("src/main/java/udtalelser.txt");
+            Scanner fileReader = new Scanner(file);
+            while (fileReader.hasNextLine()) {
+                text.append(fileReader.nextLine());
+                text.append("\n");
+            }
+            fileReader.close();
+        } catch (FileNotFoundException e) {
+            System.out.println("Error");
+            e.printStackTrace();
+        }
+        int start = text.indexOf("</Start: " + NPC + "/>");
+        int end = text.indexOf("</End: " + NPC + "/>");
+        return text.substring(start+ NPC.length()+11, end);
     }
 
     void closeText() {
