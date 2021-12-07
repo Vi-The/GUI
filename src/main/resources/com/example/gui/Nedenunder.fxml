@@ -16,5 +16,20 @@
       </ImageView>
       <Button layoutX="657.0" layoutY="687.0" mnemonicParsing="false" onAction="#start" text="Reset" />
       <Rectangle fx:id="shape1" arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="40.0" layoutX="650.0" layoutY="330.0" stroke="#ffffff00" strokeType="INSIDE" width="40.0" />
+      <ImageView fx:id="Karen" fitHeight="77.0" fitWidth="74.0" layoutX="72.0" layoutY="258.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Assets/Characters/Karen.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="Victoria" fitHeight="102.0" fitWidth="134.0" layoutX="134.0" layoutY="281.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Assets/Characters/Victoria.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="102.0" fitWidth="108.0" layoutX="102.0" layoutY="295.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Assets/Characters/Mads.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

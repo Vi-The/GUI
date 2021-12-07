@@ -28,8 +28,9 @@ public class Interaction {
         switch (room) {
             //Lav en if-stamement for positionen af spilleren og bed programmet om at kører openWindow(room)
             case "Hovedindgangen SDU":
-                if(shape.getLayoutX() == 570 && shape.getLayoutY() == 410)
-                    openWindow("Karen");
+                if (shape.getLayoutX() == 570 && shape.getLayoutY() == 410) {
+                    openWindow("Karen-Hovedindgang");
+                }
                 break;
             case "Gydehutten Nord":
                 break;
@@ -43,6 +44,12 @@ public class Interaction {
             case "Gydehutten Syd":
                 break;
             case "Nedenunder":
+                if (shape.getLayoutX() == 210 && shape.getLayoutY() == 290 || shape.getLayoutX() == 210 && shape.getLayoutY() == 330) {
+                    openWindow("Gutterne");
+                } else if (shape.getLayoutX() == 90 && shape.getLayoutY() == 250){
+                        openWindow("Karen-Nedenunder");
+                }
+
                 break;
             case "Fitness":
                 if (shape.getLayoutX() == 130 && shape.getLayoutY() == 410 ) {
@@ -62,7 +69,7 @@ public class Interaction {
             else if (character == "Female")
                 title = names.Females();
             root = new Group();
-            Scene scene = new Scene(root, 700, 450);
+            Scene scene = new Scene(root, 700, 600);
             this.scene = scene;
             stage.setTitle(title);
             stage.setScene(scene);
@@ -78,8 +85,16 @@ public class Interaction {
         Text text;
         switch (NPC) {
             case "Professor":
-            case "Karen":
+            case "Karen-Hovedindgang":
+                text = new Text(getTextFromFile(NPC));
+                break;
             case "Bryce":
+                text = new Text(getTextFromFile(NPC));
+                break;
+            case "Gutterne":
+                text = new Text(getTextFromFile(NPC));
+                break;
+            case "Karen-Nedenunder":
                 text = new Text(getTextFromFile(NPC));
                 break;
             case "Male":
