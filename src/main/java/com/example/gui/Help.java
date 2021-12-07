@@ -18,14 +18,14 @@ public class Help  {
     ArrayList<String> help = new ArrayList<String>();
 
     Help(){
-        help.add("E: Opens and closes players inventory");
-        help.add("M: Shows the map");
-        help.add("R: Opens and closes shops");
-        help.add("N: Shows location");
-        help.add("H: Shows this menu");
-        help.add("T: To talk");
+        help.add("E: Åbner og lukker Samuels inventarliste");
+        help.add("M: Viser et kort over spillet");
+        help.add("R: Åbner og lukker dine købsmuligheder");
+        help.add("N: Viser hvilket rum du befinder dig i");
+        help.add("H: Viser denne menu");
+        help.add("T: Sådan taler du med folk");
         help.add("\n");
-        help.add("   Quest:   ");
+        help.add("   Opgaver:   ");
         help.add("1. Køb en kaffe");
         help.add("2. Tag til foreslæsningen");
         help.add("3. Tag ned og træn i SDU Fitness");
