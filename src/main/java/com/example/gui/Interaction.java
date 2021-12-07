@@ -57,10 +57,8 @@ public class Interaction {
                 }
                 break;
             case "Cykelforhandler":
-                if (shape.getLayoutX() == 130 && shape.getLayoutY() == 290 ) {
-                    openWindow("Karen.");
-                } else  if (shape.getLayoutX() == 450 && shape.getLayoutY() == 330 ) {
-                    openWindow("Cykelforhandleren");
+                if (shape.getLayoutX() == 450 && shape.getLayoutY() == 330 ) {
+                    openWindow("Karen-Cykelhandler");
                 }
 
                 break;
@@ -90,8 +88,7 @@ public class Interaction {
     void getText(String NPC) {
         Text text;
         switch (NPC) {
-            case "Karen.":
-            case "Cykelforhandleren":
+            case "Karen-Cykelhandler":
             case "Professor":
             case "Karen-Hovedindgang":
                 text = new Text(getTextFromFile(NPC));
