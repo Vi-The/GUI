@@ -6,6 +6,8 @@ en hjelm var man bare en idiot</End: Professor/>
 
 </Start: Karen/> Test test </End: Karen/>
 
+</Start: Bryce/> Test test </End: Bryce/>
+
 </Start: 1/>Lægen sagde hvis det var mit kranie
 der var skadet på samme måde som mit
 underben havde jeg været død på stedet</End: 1/>
@@ -33,7 +35,7 @@ for vane</End: 7/>
 </Start: 8/>Jeg bruger cykelhjelm, fordi jeg ikke tør lade
 være</End: 8/>
 
-</Start: 9/>Jeg bruger cykelhjelm for sikkerhedens skyld.
+</Start:  9/>Jeg bruger cykelhjelm for sikkerhedens skyld.
 Jeg har set hvor galt det kan gå ved ulykker,
 hvor cyklister ikke har anvendt cykelhjelm, og
 ønsker ikke at havne i en sådan situation dvs.

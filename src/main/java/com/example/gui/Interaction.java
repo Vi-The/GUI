@@ -45,8 +45,7 @@ public class Interaction {
                 break;
             case "Fitness":
                 if (shape.getLayoutX() == 130 && shape.getLayoutY() == 410 ) {
-                    System.out.println("test");
-                    openWindow("Male");
+                    openWindow("Bryce");
                 }
                 break;
             case "Bikeshop":
@@ -79,6 +78,7 @@ public class Interaction {
         switch (NPC) {
             case "Professor":
             case "Karen":
+            case "Bryce":
                 text = new Text(getTextFromFile(NPC));
                 break;
             case "Male":
