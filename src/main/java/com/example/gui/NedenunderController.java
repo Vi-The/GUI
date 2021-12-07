@@ -36,8 +36,8 @@ public class NedenunderController  implements Initializable, iController {
             //Outer frame - ensures that we can't go out of the frame.
             collision.addCollision(-30, changer ); //Dette er siden modsat Gydehutten
             //collision.addCollision(690, changer ); //Dette er siden ud mod Gydehutten S
-            collision.addCollision(changer, -30 ); //Dette er siden op mod Kantinan
-            collision.addCollision(changer, 530 ); //Dette er siden ned mod bikeshop.
+            collision.addCollision(changer, 50 ); //Dette er siden op mod Kantinan
+            collision.addCollision(changer, 490 ); //Dette er siden ned mod bikeshop.
             changer += 40;
         }
         changer = -30;
@@ -49,7 +49,15 @@ public class NedenunderController  implements Initializable, iController {
         }
 
         collision.showCollisionAreas(scene);
-
+        int posX = 210;
+        for(int x = 0; x < 7; x++){
+            int posY = 170;
+            for (int y = 0; y < 1; y++){
+                collision.addCollision(posX, posY);
+                posY += 40;
+            }
+            posX += 40;
+        }
         collision.addCollision(570, 330 );
         collision.addCollision(530, 330 );
         collision.addCollision(570, 410 );
@@ -71,14 +79,6 @@ public class NedenunderController  implements Initializable, iController {
         collision.addCollision(50, 290 );
         collision.addCollision(50, 210 );
         collision.addCollision(90, 210 );
-        collision.addCollision(210, 170 );
-        collision.addCollision(250, 170 );
-        collision.addCollision(290, 170 );
-        collision.addCollision(290, 170 );
-        collision.addCollision(330, 170 );
-        collision.addCollision(370, 170 );
-        collision.addCollision(410, 170 );
-        collision.addCollision(450, 170 );
         collision.addCollision(370, 130 );
         collision.addCollision(570, 130 );
         collision.addCollision(570, 170 );
