@@ -21,7 +21,7 @@ public class BikeshopController implements Initializable, iController {
 
     @FXML
     private AnchorPane scene;
-    private final Keylistener keylistener = new Keylistener(true, "Bikeshop");
+    private final Keylistener keylistener = new Keylistener(true, "Cykelforhandler");
 
     @FXML
     public void start(ActionEvent event) {
