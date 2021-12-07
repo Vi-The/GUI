@@ -1,6 +1,5 @@
 package com.example.gui;
 
-import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.input.KeyCode;
@@ -16,6 +15,7 @@ public class Help  {
     private Group root;
     private Stage stage = new Stage();
     ArrayList<String> help = new ArrayList<String>();
+    QuestChecker questChecker = iController.questChecker;
 
     Help(){
         help.add("E: Åbner og lukker Samuels inventarliste");
@@ -26,11 +26,7 @@ public class Help  {
         help.add("T: Sådan taler du med folk");
         help.add("\n");
         help.add("   Opgaver:   ");
-        help.add("1. Køb en kaffe");
-        help.add("2. Tag til foreslæsningen");
-        help.add("3. Tag ned og træn i SDU Fitness");
-        help.add("4. Smut forbi Nedenunder");
-        help.add("5. Gå ned til cykelhandleren med Karen");
+        help.add(QuestChecker.CurrentQ);
     }
 
 
