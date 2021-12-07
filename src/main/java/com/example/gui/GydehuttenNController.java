@@ -21,7 +21,7 @@ public class GydehuttenNController implements Initializable, iController {
 
     @FXML
     private AnchorPane scene; // scene navn til navnet på det gældende rum
-    private final Keylistener keylistener =  new Keylistener(false, "Gydehutten Nord");
+    private final Keylistener keylistener = new Keylistener(false, "Gydehutten Nord");
 
     @FXML
     public void start(ActionEvent event) {
@@ -77,20 +77,17 @@ public class GydehuttenNController implements Initializable, iController {
             });
             roomChanger.changeRoom(shape1, 90, 330, "Kantine", "SDU Kantine", true);
             roomChanger.changeRoom(shape1, 330, -30, "OUTSIDESDU", "Hovedindgangen SDU", true);
+            roomChanger.changeRoom(shape1, 250, 690, "Gydehutten_S", "Gydehutten Syd", true);
+            roomChanger.changeRoom(shape1, 290, 690, "Gydehutten_S", "Gydehutten Syd", true);
+            roomChanger.changeRoom(shape1, 330, 690, "Gydehutten_S", "Gydehutten Syd", true);
+            roomChanger.changeRoom(shape1, 370, 690, "Gydehutten_S", "Gydehutten Syd", true);
+            roomChanger.changeRoom(shape1, 410, 690, "Gydehutten_S", "Gydehutten Syd", true);
 
-            if(questChecker.boughtCoffee){ {
-                roomChanger.changeRoom(shape1, 570, 330, "Classroom", "Klasselokale", true);
-            }
-                if(questChecker.talkedToProfessor){
-                    roomChanger.changeRoom(shape1, 250, 690, "Gydehutten_S", "Gydehutten Syd", true);
-                    roomChanger.changeRoom(shape1, 290, 690, "Gydehutten_S", "Gydehutten Syd", true);
-                    roomChanger.changeRoom(shape1, 330, 690, "Gydehutten_S", "Gydehutten Syd", true);
-                    roomChanger.changeRoom(shape1, 370, 690, "Gydehutten_S", "Gydehutten Syd", true);
-                    roomChanger.changeRoom(shape1, 410, 690, "Gydehutten_S", "Gydehutten Syd", true);
-                }
+            if (questChecker.boughtCoffee) {
+                    roomChanger.changeRoom(shape1, 570, 330, "Classroom", "Klasselokale", true);
             }
             //Adding bigger doors to Gydehutten S
-            }
+        }
     };
 
     @Override

@@ -72,16 +72,20 @@ public class GydehuttenSController implements Initializable, iController {
                     keylistener.checkKeyInput(keyEvent, shape1);
                 }
             });
-            roomChanger.changeRoom(shape1, 90, 330, "Nedenunder", "SDU Fredagsbar: Nedenunder", true);
-            roomChanger.changeRoom(shape1, 570, 330, "Fitness", "Fitness", true);
-            roomChanger.changeRoom(shape1, 330, 690, "Bikeshop", "Cykelforhandler", true);
-            //Adding doorroom to Gydehutten S
+            if(questChecker.talkedToProfessor)
+                roomChanger.changeRoom(shape1, 570, 330, "Fitness", "Fitness", true);
             roomChanger.changeRoom(shape1, 250, -30, "GYDEHUTTEN_N", "Gydehutten Nord", true);
             roomChanger.changeRoom(shape1, 290, -30, "GYDEHUTTEN_N", "Gydehutten Nord", true);
             roomChanger.changeRoom(shape1, 330, -30, "GYDEHUTTEN_N", "Gydehutten Nord", true);
             roomChanger.changeRoom(shape1, 370, -30, "GYDEHUTTEN_N", "Gydehutten Nord", true);
             roomChanger.changeRoom(shape1, 410, -30, "GYDEHUTTEN_N", "Gydehutten Nord", true);
-        }
+
+            if(questChecker.talkedToBryce)
+                roomChanger.changeRoom(shape1, 90, 330, "Nedenunder", "SDU Fredagsbar: Nedenunder", true);
+            if(questChecker.boughtBeer)
+                roomChanger.changeRoom(shape1, 330, 690, "Bikeshop", "Cykelforhandler", true);
+            //Adding doorroom to Gydehutten S
+                }
     };
 
     @Override

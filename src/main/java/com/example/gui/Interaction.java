@@ -52,6 +52,7 @@ public class Interaction {
             case "Fitness":
                 if (shape.getLayoutX() == 130 && shape.getLayoutY() == 410 ) {
                     openWindow("Bryce");
+                    questChecker.talkedToBryce = true;
                 }
                 break;
             case "Cykelforhandler":
