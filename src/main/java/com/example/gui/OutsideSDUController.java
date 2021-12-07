@@ -35,6 +35,7 @@ public class OutsideSDUController implements Initializable, iController {
             collision.addCollision(-30, changer);
             collision.addCollision(690, changer);
             collision.addCollision(changer, 50);
+            collision.addCollision(changer, 530);
             changer += 40;
         }
 
@@ -89,7 +90,8 @@ public class OutsideSDUController implements Initializable, iController {
                     keylistener.checkKeyInput(keyEvent, shape1);
                 }
             });
-            roomChanger.changeRoom(shape1, 330, 490,"GYDEHUTTEN_N","Gydehutten Nord", true);
+            if(questChecker.talkedToKaren)
+                roomChanger.changeRoom(shape1, 330, 490,"GYDEHUTTEN_N","Gydehutten Nord", true);
         }
     };
 

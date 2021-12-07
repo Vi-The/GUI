@@ -9,6 +9,7 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class Inventory {
 
@@ -16,6 +17,7 @@ public class Inventory {
     private Group root;
     private Stage stage = new Stage();
     ArrayList<String> inventory = new ArrayList<String>();
+    QuestChecker questChecker = iController.questChecker;
 
     Inventory(){
         inventory.add("Studiekort");
@@ -65,6 +67,13 @@ public class Inventory {
     }
     void addInv(String item) {
         inventory.add(item);
+        if(Objects.equals(item, "Kaffe")){
+            questChecker.boughtCoffee = true;
+            questChecker.UpdateQuest();
+        } if(Objects.equals(item, "Odense Classic") || Objects.equals(item, "Odense Pilsner")){
+            questChecker.boughtBeer = true;
+            questChecker.UpdateQuest();
+        }
     }
     void removeInv(String item) {
         inventory.remove(item);

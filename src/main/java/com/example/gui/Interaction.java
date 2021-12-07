@@ -11,7 +11,6 @@ import javafx.stage.Stage;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
-import java.util.concurrent.TimeUnit;
 
 public class Interaction {
     Scene scene;
@@ -19,6 +18,7 @@ public class Interaction {
     private Rectangle shape;
     private final Stage stage = new Stage();
     private final Names names = new Names();
+    QuestChecker questChecker = iController.questChecker;
     String room;
 
     void openTextbox(Rectangle shape, String room) {
@@ -28,8 +28,9 @@ public class Interaction {
         switch (room) {
             //Lav en if-stamement for positionen af spilleren og bed programmet om at kører openWindow(room)
             case "Hovedindgangen SDU":
-                if (shape.getLayoutX() == 570 && shape.getLayoutY() == 410) {
-                    openWindow("Karen-Hovedindgang");
+                if(shape.getLayoutX() == 570 && shape.getLayoutY() == 410){
+                    openWindow("Karen");
+                    questChecker.talkedToKaren = true;
                 }
                 break;
             case "Gydehutten Nord":
@@ -39,6 +40,7 @@ public class Interaction {
             case "Klasselokale":
                 if (shape.getLayoutX() == 370 && shape.getLayoutY() == 210) {
                     openWindow("Professor");
+                    questChecker.talkedToProfessor = true;
                 }
                 break;
             case "Gydehutten Syd":
@@ -54,6 +56,7 @@ public class Interaction {
             case "Fitness":
                 if (shape.getLayoutX() == 130 && shape.getLayoutY() == 410 ) {
                     openWindow("Bryce");
+                    questChecker.talkedToBryce = true;
                 }
                 break;
             case "Cykelforhandler":
@@ -63,6 +66,7 @@ public class Interaction {
 
                 break;
         }
+        questChecker.UpdateQuest();
     }
 
     void openWindow(String character) {
