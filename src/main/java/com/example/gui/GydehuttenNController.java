@@ -76,7 +76,14 @@ public class GydehuttenNController implements Initializable, iController {
                 }
             });
             roomChanger.changeRoom(shape1, 90, 330, "Kantine", "SDU Kantine", true);
-            roomChanger.changeRoom(shape1, 330, -30, "OUTSIDESDU", "Hovedindgangen SDU", true);
+
+
+            if(!questChecker.talkedToFriends)
+                roomChanger.changeRoom(shape1, 330, -30, "OUTSIDESDU", "Hovedindgangen SDU", true);
+            else if(questChecker.talkedToFriends && !questChecker.boughtBikeHelmet)
+                roomChanger.changeRoom(shape1,330,-30,"badEnding","Du har fået den dårlige slutning", true);
+            else if(questChecker.boughtBikeHelmet)
+                System.out.println("God sluting");
             roomChanger.changeRoom(shape1, 250, 690, "Gydehutten_S", "Gydehutten Syd", true);
             roomChanger.changeRoom(shape1, 290, 690, "Gydehutten_S", "Gydehutten Syd", true);
             roomChanger.changeRoom(shape1, 330, 690, "Gydehutten_S", "Gydehutten Syd", true);
