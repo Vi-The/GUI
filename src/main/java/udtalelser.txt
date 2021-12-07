@@ -1,29 +1,105 @@
-</Start: Professor/>Vidste du godt at i vikingetiden bar man altid
-hjelm, selvom man havde været på rov 50
-gange. Dengang var der ikke nogle
-undskyldninger hvis man dengang ikke bar
-en hjelm var man bare en idiot</End: Professor/>
+</Start: Professor/> Vikingerne kommer – på med hjelmen!
 
-</Start: Karen/> Test test </End: Karen/>
+Hjelmen har beskyttet vores forfædre i årtusinder
+og det har alle dage været en god idé at tage en hjelm på,
+når man skulle ud i situationer, hvor det var vigtigt at beskytte sit hoved.
+
+I dag bruger kun 31% af unge mellem 16-25 år hjelm når de cykler
+ifølge Rådet for Sikker Trafik.
+
+Husk hjelmen, næste gang du svinger dig op på jernhesten!
+
+Tak fordi i gad at lytte med i dag.
+
+Du overvejer et kort sekund, hvad du skal bruge de næste to timer på
+inden fredagsbaren åbner, da en af dine studiekammerater
+spørger dig om du vil med ned og træne i fitness.
+
+</End: Professor/>
+
+
+
+</Start: Karen-Hovedindgang/>
+* Karen: HEY SAMUEL!
+* Dig: God morgen Karen, hvordan var din cykeltur?
+* Karen: Den var fin, udover ham tossen der valgte at køre ud lige foran mig,
+         så jeg blev nødt til at bremse så hårdt op, hvilket resulterede i, at
+         ham bagved kørte ind i mig. Fordi det er så glat, væltede vi begge to
+         men heldig hvis havde vi cykelhjelm på, så der skete ikke så meget.
+* Dig: Selvom jeg ikke selv kan lide at have cykelhjelm på, er jeg glad for
+        at du havde din på.
+* Karen: Det er jeg godt nok også. Hvorfor kan du egentlig ikke det?
+* Dig: Jeg føler ikke jeg ser super sej ud med cykelhjelm på.
+* Karen: Du må godt nok have dårlig selvtillid, hvis du er bange for at folk
+         syntes du ikke ser sej ud med cykelhjelm på. Jeg bruger min fordi den
+         nedsætter risikoen for hovedskader, da man jo aldrig ved hvornår man
+         kommer ud for en ulykke.
+         En ting er, at jeg synes jeg er en god cyklist, men jeg kan jo
+         ikke tænke for alle andre i trafikken..
+* Dig: Hvorfor skal du altid være så klog?... Jeg skal lige i kantinen og
+       købe min morgenkaffe, men vi ses til forlæsningen!
+</End: Karen-Hovedindgang/>
 
 </Start: Bryce/>
  * Bryce: Yo Samuel, den der foredragsholder har faktisk fat i noget,
           når det kommer til at have cykelheljm på!
 
- * Dig: Hvad mener du med det? Det var en kedelig forelæsning.
 
  * Bryce: Forestil dig at du efter træningen her cyklede hjem, og kom ud i en ulykke
           som du ikke selv kunne kontrollere,
           og du endte med at komme slem til skade,
           fordi du netop ikke gad at bære cykelhjelm.
 
- Samtalen sætter ting hos dig til eftertanke mens i træner videre.
 
  I har nu færdiggjort jeres træning,
  hvilket passer perfekt med at fredagsbaren Nedenunder nu er åbnet.
 
 
- </End: Bryce/>
+</End: Bryce/>
+
+</Start: Gutterne/>
+ * Tristan: Hvad så Samuel... Hvad synes du om det professoren sagde i dag?
+ * Dig:  Lidt kedeligt, jeg må indrømme at jeg zonede ud undervejs..
+ * Tristan: Jeg synes bare det er sindssygt fedt, at tænke på at en cykelhjelm
+            måske stammer fra vikinghjelme.
+            Måske det er lidt nørdet men det lægen sagde til mig dengang jeg
+            brækkede mit underben har virkelig sat sine spor i mig.
+ * Dig:  Hvad sagde lægen da?
+ * Tristan: Da han fik billederne tilbage fra røngten spurgte han mig om jeg
+            cyklede med cykelhjelm og da jeg sagde nej sagde
+            han hvis det var mit kranie der var skadet på samme måde som mit
+            underben havde jeg været død på stedet.
+            Det satte altså nogle tanker i gang hos mig og derfor cykler jeg
+            med cykelhjelm i dag.
+ * Dig:  Hold da op, det er lidt som om det er meget mere skræmmende når
+            det er en læge der siger det..
+ * Victoria: Jeg bruger cykelhjelm fordi den jeg har købt er guld og efter jeg
+            har fået den har jeg simpelthen fået så mange komplimenter.
+ * Morten:  Jeg bruger cykelhjelm fordi når jeg er fuld så vælter jeg ofte og
+            fordi engang da jeg væltede uden og slog jeg mit hoved ret meget.
+ * Anders:  Jeg er mors dreng og jeg bruger den fordi min mor siger det er en
+            god idé.
+
+</End: Gutterne/>
+
+</Start: Karen-Nedenunder/>
+* Karen:  Samu...
+* Dig: Jaaa?
+* Karen:  Jeg synes virkelig vi burde gå forbi bikeshoppen og købe en cykelhjelm
+          til dig. Jeg ville blive enormt ked af det, hvis der skete dig noget
+          på vejen hjem da jeg virkelig holder af dig.
+</End: Karen-Nedenunder/>
+
+</Start: Karen-Cykelhandler/>
+* Cykelsmeden: Kan jeg hjælpe med noget?
+* Karen: Vi står lige og kigger på en bike-helmet til min ven her.
+* Cykelsmed: Ja, det er jo altid en god ide. I må sige til hvis jeg kan hjælpe.
+* Dig: Tak, det skal vi nok.
+* Karen: Hvad syntes du så, skal du have en bike-helmet eller hvad?
+* Karen: Under alle omstændigheder bliver jeg nødt til a smutte nu, håber du træffer
+          det rigtige valg. Vi ses.
+* Dig: Vi ses, kom godt hjem.
+</End: Karen-Cykelhandler/>
 
 </Start: 1/>Lægen sagde hvis det var mit kranie
 der var skadet på samme måde som mit
@@ -75,3 +151,6 @@ hoved, således at jeg er "mig" i længst mulig
 ttid, hvis der skulle gå hen og ske noget</End: 13/>
 
 
+</Start: Karen./> Test test </End: Karen./>
+
+</Start: Cykelforhandleren/> Test test </End: Cykelforhandleren/>

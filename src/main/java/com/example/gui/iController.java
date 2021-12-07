@@ -7,4 +7,5 @@ public interface iController{
     void addCollision();
     int STANDARD_LENGTH = 40;
     Collision collision = Keylistener.collision;
+    QuestChecker questChecker = new QuestChecker();
 }
