@@ -27,6 +27,8 @@ public class Interaction {
         switch (room) {
             //Lav en if-stamement for positionen af spilleren og bed programmet om at kører openWindow(room)
             case "OutsideSDU":
+                if(shape.getLayoutX() == 570 && shape.getLayoutY() == 410)
+                        openWindow("Karen");
                 break;
             case "Gydehutten Nord":
                 break;
@@ -71,15 +73,16 @@ public class Interaction {
         Text text;
         switch (NPC) {
             case "Professor":
+            case "Karen":
                 text = new Text(getTextFromFile(NPC));
                 break;
             case "Male":
-                int randomQoute = (int) (Math.random()*10);
-                text = new Text(getTextFromFile(String.valueOf(randomQoute)));
+                int randomQuote = (int) (Math.random()*15);
+                text = new Text(getTextFromFile(String.valueOf(randomQuote)));
                 break;
             case "Female":
-                randomQoute = (int) (1+Math.random()*13);
-                text = new Text(getTextFromFile(String.valueOf(randomQoute)));
+                randomQuote = (int) (1+Math.random()*15);
+                text = new Text(getTextFromFile(String.valueOf(randomQuote)));
                 break;
             default:
                 throw new IllegalStateException("Unexpected value: " + NPC);
@@ -111,7 +114,7 @@ public class Interaction {
     void closeText() {
         try {
             scene.setOnKeyPressed(keyEvent -> {
-                if (keyEvent.getCode() == KeyCode.T)
+                if (keyEvent.getCode() == KeyCode.T || keyEvent.getCode() == KeyCode.ESCAPE)
                     stage.close();
             });
         } catch (Exception e) {
