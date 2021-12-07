@@ -47,19 +47,7 @@ public class KantineController implements Initializable, iController {
             changer +=40;
         }
         collision.showCollisionAreas(scene);
-        collision.addCollision(130, 130);
-        collision.addCollision(90, 130);
-        collision.addCollision(50, 130);
-        collision.addCollision(90, 90);
-        collision.addCollision(10, 290);
-        collision.addCollision(10, 330);
-        collision.addCollision(10, 370);
-        collision.addCollision(170, 330);
-        collision.addCollision(610, 130);
-        collision.addCollision(530, 330);
-        collision.addCollision(450, 450);
-        collision.addCollision(490, 450);
-      int posX = 250;
+        int posX = 250;
         for(int x = 0; x < 8; x++){
             int posY = 130;
             for (int y = 0; y < 1; y++){
@@ -86,6 +74,18 @@ public class KantineController implements Initializable, iController {
             }
             posX += 40;
         }
+        collision.addCollision(130, 130);
+        collision.addCollision(90, 130);
+        collision.addCollision(50, 130);
+        collision.addCollision(90, 90);
+        collision.addCollision(10, 290);
+        collision.addCollision(10, 330);
+        collision.addCollision(10, 370);
+        collision.addCollision(170, 330);
+        collision.addCollision(610, 130);
+        collision.addCollision(530, 330);
+        collision.addCollision(450, 450);
+        collision.addCollision(490, 450);
     }
 
     AnimationTimer timer = new AnimationTimer() {
