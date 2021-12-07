@@ -27,15 +27,15 @@ public class Interaction {
 
         switch (room) {
             //Lav en if-stamement for positionen af spilleren og bed programmet om at kører openWindow(room)
-            case "OutsideSDU":
+            case "Hovedindgangen SDU":
                 if(shape.getLayoutX() == 570 && shape.getLayoutY() == 410)
-                        openWindow("Karen");
+                    openWindow("Karen");
                 break;
             case "Gydehutten Nord":
                 break;
             case "Kantine":
                 break;
-            case "Classroom":
+            case "Klasselokale":
                 if (shape.getLayoutX() == 370 && shape.getLayoutY() == 210) {
                     openWindow("Professor");
                 }
@@ -49,7 +49,7 @@ public class Interaction {
                     openWindow("Bryce");
                 }
                 break;
-            case "Bikeshop":
+            case "Cykelforhandler":
                 break;
         }
     }

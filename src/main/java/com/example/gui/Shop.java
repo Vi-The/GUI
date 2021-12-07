@@ -38,7 +38,7 @@ public class Shop {
             root = new Group();
             Scene scene = new Scene(root, 500, 300);
             this.shopScene = scene;
-            stage.setTitle(shopName + " Shop");
+            stage.setTitle(shopName + " Køb");
             stage.setScene(scene);
             loadShop(shopName);
             stage.show();
@@ -69,12 +69,12 @@ public class Shop {
                 shopItems.add("Energi Drik");
                 shopItems.add("Kage");
                 break;
-            case "Bikeshop":
-                shopItems.add("Bike helmet");
-                shopItems.add("Bike chain");
-                shopItems.add("Bike lock");
-                shopItems.add("Yellow vest");
-                shopItems.add("Bike lights");
+            case "Cykelforhandler":
+                shopItems.add("Cykelhjelm");
+                shopItems.add("Kæde");
+                shopItems.add("Cykellås");
+                shopItems.add("Gul vest");
+                shopItems.add("Lygter");
                 break;
             case "Nedenunder":
                 shopItems.add("Odense Pilsner");

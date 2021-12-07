@@ -76,8 +76,8 @@ public class GydehuttenNController implements Initializable, iController {
                 }
             });
             roomChanger.changeRoom(shape1, 90, 330, "Kantine", "SDU Kantine", true);
-            roomChanger.changeRoom(shape1, 330, -30, "OUTSIDESDU", "Outside SDU", true);
-            roomChanger.changeRoom(shape1, 570, 330, "Classroom", "Classroom", true);
+            roomChanger.changeRoom(shape1, 330, -30, "OUTSIDESDU", "Hovedindgangen SDU", true);
+            roomChanger.changeRoom(shape1, 570, 330, "Classroom", "Klasselokale", true);
             //Adding bigger doors to Gydehutten S
             roomChanger.changeRoom(shape1, 250, 690, "Gydehutten_S", "Gydehutten Syd", true);
             roomChanger.changeRoom(shape1, 290, 690, "Gydehutten_S", "Gydehutten Syd", true);

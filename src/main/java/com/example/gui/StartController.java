@@ -15,6 +15,6 @@ public class StartController {
         Parent root = FXMLLoader.load(getClass().getResource("OUTSIDESDU.fxml"));
         Stage window = (Stage) Startbutton.getScene().getWindow();
         window.setScene(new Scene(root, 700, 700));
-        window.setTitle("Outside SDU");
+        window.setTitle("Hovedindgangen SDU");
     }
 }
