@@ -1,16 +1,18 @@
-</Start: Professor/>
+</Start: Professor/> Vikingerne kommer – på med hjelmen!
 
-   Vikingerne kommer – på med hjelmen!
+Hjelmen har beskyttet vores forfædre i årtusinder
+og det har alle dage været en god idé at tage en hjelm på,
+når man skulle ud i situationer, hvor det var vigtigt at beskytte sit hoved.
 
-Hjelmen har beskyttet vores forfædre i årtusinder og det har alle dage været en god idé at tage en hjelm på,
-når man skulle ud i situationer, hvor det var vigtigt at beskytte sit hoved. I dag bruger kun 31% af
-unge mellem 16-25 år hjelm når de cykler ifølge Rådet for Sikker Trafik.
+I dag bruger kun 31% af unge mellem 16-25 år hjelm når de cykler
+ifølge Rådet for Sikker Trafik.
 
 Husk hjelmen, næste gang du svinger dig op på jernhesten!
 
 Tak fordi i gad at lytte med i dag.
 
-Du overvejer et kort sekund, hvad du skal bruge de næste to timer på inden fredagsbaren åbner, da en af dine studiekammerater
+Du overvejer et kort sekund, hvad du skal bruge de næste to timer på
+inden fredagsbaren åbner, da en af dine studiekammerater
 spørger dig om du vil med ned og træne i fitness.
 
 </End: Professor/>
