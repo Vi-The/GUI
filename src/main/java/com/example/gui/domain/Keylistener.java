@@ -1,4 +1,4 @@
-package com.example.gui;
+package com.example.gui.domain;
 
 import javafx.scene.input.KeyEvent;
 import javafx.scene.shape.Rectangle;
@@ -7,14 +7,14 @@ public class Keylistener {
     private final boolean shopChecker;
     private final String roomString;
     private Rectangle shape;
-    static Collision collision = new Collision();
+    public static Collision collision = new Collision();
     static Inventory inventory = new Inventory();
     private final Help help = new Help();
     private final Shop shop = new Shop();
     private final Map map = new Map();
     private final Interaction interaction = new Interaction();
 
-    Keylistener(boolean shop, String roomString)
+    public Keylistener(boolean shop, String roomString)
     {
         this.roomString = roomString;
         this.shopChecker = shop;

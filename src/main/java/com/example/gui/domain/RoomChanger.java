@@ -1,4 +1,4 @@
-package com.example.gui;
+package com.example.gui.domain;
 
 import javafx.animation.AnimationTimer;
 import javafx.fxml.FXMLLoader;
@@ -12,12 +12,12 @@ import java.io.IOException;
 public class RoomChanger {
     Collision collision;
     AnimationTimer timer;
-    RoomChanger(Collision collision, AnimationTimer timer)
+    public RoomChanger(Collision collision, AnimationTimer timer)
     {
         this.collision = collision;
         this.timer = timer;
     }
-    void changeRoom(Rectangle player, int doorXasis, int doorYaxis, String fxmlMail, String roomTitle, boolean disabledCollision) {
+    public void changeRoom(Rectangle player, int doorXasis, int doorYaxis, String fxmlMail, String roomTitle, boolean disabledCollision) {
         if (player.getLayoutX() == doorXasis && player.getLayoutY() == doorYaxis) {
             try {
                 collision.removeCollision();

@@ -1,4 +1,4 @@
-package com.example.gui;
+package com.example.gui.domain;
 
 public class Buttonlistener {
 
