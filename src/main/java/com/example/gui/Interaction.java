@@ -69,9 +69,10 @@ public class Interaction {
                     openWindow("Bryce");
                     questChecker.talkedToBryce = true;
                 }
+
                 break;
             case "Cykelforhandler":
-                if (shape.getLayoutX() == 450 && shape.getLayoutY() == 330 ) {
+                if (shape.getLayoutX() == 490 && shape.getLayoutY() == 330 || shape.getLayoutX() == 530 && shape.getLayoutY() == 330 || shape.getLayoutX() == 570 && shape.getLayoutY() == 330) {
                     openWindow("Karen-Cykelhandler");
                 }
 

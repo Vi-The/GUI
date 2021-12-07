@@ -8,11 +8,12 @@ public class QuestChecker {
     public boolean talkedToFriends = false;
     public boolean boughtBikeHelmet = false;
 
-    public String CoffeeQ = "Gå til kantinen og køb kaffe";
-    public String ProfessorQ = "Gå ind i klasselokalet og snak med professoren";
-    public String BryceQ = "Gå ned til Bryce i fitnesslokalet";
-    public String BarQ = "Mød dine venner i Nedenunder";
-    public String BikeQ = "Gå med Karen til Cykelhandleren eller tag hjem";
+    private String CoffeeQ = "Gå til kantinen og køb kaffe";
+    private String ProfessorQ = "Gå ind i klasselokalet og snak med professoren";
+    private String BryceQ = "Gå ned til Bryce i fitnesslokalet";
+    private String BarQ = "Mød dine venner i Nedenunder";
+    private String BikeQ = "Gå med Karen til Cykelhandleren eller tag hjem";
+    private String HomeQ = "Gå tilbage til Hovedindgangen til SDU";
     public static String CurrentQ = "Snak med Karen og gå ind på Gydehutten";
 
     void UpdateQuest(){
@@ -26,5 +27,7 @@ public class QuestChecker {
             CurrentQ = BarQ;
         if(talkedToFriends)
             CurrentQ = BikeQ;
+        if(boughtBikeHelmet)
+            CurrentQ = HomeQ;
     }
 }

@@ -15,11 +15,11 @@ public class Inventory {
 
     Scene scene;
     private Group root;
-    private Stage stage = new Stage();
+    private final Stage stage = new Stage();
     ArrayList<String> inventory = new ArrayList<String>();
     QuestChecker questChecker = iController.questChecker;
 
-    Inventory(){
+    Inventory() {
         inventory.add("Studiekort");
         inventory.add("Bøger");
         inventory.add("Telefon");
@@ -29,7 +29,7 @@ public class Inventory {
     void openInv() {
         try {
             root = new Group();
-            Scene scene = new Scene(root,450,300);
+            Scene scene = new Scene(root, 450, 300);
             this.scene = scene;
             stage.setTitle("Inventarliste");
             stage.setScene(scene);
@@ -40,10 +40,11 @@ public class Inventory {
             e.printStackTrace();
         }
     }
+
     void closeInv() {
         try {
             scene.setOnKeyPressed(keyEvent -> {
-                if(keyEvent.getCode() == KeyCode.E)
+                if (keyEvent.getCode() == KeyCode.E)
                     stage.close();
             });
         } catch (Exception e) {
@@ -52,26 +53,31 @@ public class Inventory {
     }
 
     void showInv() {
-        int posX = 20; int posY = 25;
-        for(int i = 0; i < inventory.size(); i ++)
-        {
+        int posX = 20;
+        int posY = 25;
+        for (int i = 0; i < inventory.size(); i++) {
             Text text = new Text(inventory.get(i));
-            text.setX(posX); text.setY(posY);
+            text.setX(posX);
+            text.setY(posY);
             text.setFont(new Font(20));
             root.getChildren().add(text);
             posY += 25;
-            if(posY == 300){
-                posX += 110; posY = 25;
+            if (posY == 300) {
+                posX += 110;
+                posY = 25;
             }
         }
     }
+
     void addInv(String item) {
         inventory.add(item);
-        if(Objects.equals(item, "Kaffe")){
+        if (Objects.equals(item, "Kaffe"))
             questChecker.boughtCoffee = true;
-            questChecker.UpdateQuest();
-        }
+        if (Objects.equals(item, "Cykelhjelm"))
+            questChecker.boughtBikeHelmet = true;
+        questChecker.UpdateQuest();
     }
+
     void removeInv(String item) {
         inventory.remove(item);
     }
