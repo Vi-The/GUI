@@ -82,7 +82,7 @@ public class GydehuttenSController implements Initializable, iController {
 
             if(questChecker.talkedToBryce)
                 roomChanger.changeRoom(shape1, 90, 330, "Nedenunder", "SDU Fredagsbar: Nedenunder", true);
-            if(questChecker.boughtBeer)
+            if(questChecker.talkedToFriends)
                 roomChanger.changeRoom(shape1, 330, 690, "Bikeshop", "Cykelforhandler", true);
             //Adding doorroom to Gydehutten S
                 }

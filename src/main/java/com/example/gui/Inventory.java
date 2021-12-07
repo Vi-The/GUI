@@ -70,9 +70,6 @@ public class Inventory {
         if(Objects.equals(item, "Kaffe")){
             questChecker.boughtCoffee = true;
             questChecker.UpdateQuest();
-        } if(Objects.equals(item, "Odense Classic") || Objects.equals(item, "Odense Pilsner")){
-            questChecker.boughtBeer = true;
-            questChecker.UpdateQuest();
         }
     }
     void removeInv(String item) {

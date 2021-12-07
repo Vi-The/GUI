@@ -5,7 +5,7 @@ public class QuestChecker {
     public boolean boughtCoffee = false;
     public boolean talkedToProfessor = false;
     public boolean talkedToBryce = false;
-    public boolean boughtBeer = false;
+    public boolean talkedToFriends = false;
     public boolean boughtBikeHelmet = false;
 
     public String CoffeeQ = "Gå til kantinen og køb kaffe";
@@ -24,7 +24,7 @@ public class QuestChecker {
             CurrentQ = BryceQ;
         if(talkedToBryce)
             CurrentQ = BarQ;
-        if(boughtBeer)
+        if(talkedToFriends)
             CurrentQ = BikeQ;
     }
 }

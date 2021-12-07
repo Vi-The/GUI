@@ -18,6 +18,8 @@ public class Interaction {
     private Rectangle shape;
     private final Stage stage = new Stage();
     private final Names names = new Names();
+    boolean gutterne = false;
+    boolean karen = false;
     QuestChecker questChecker = iController.questChecker;
     String room;
 
@@ -29,7 +31,7 @@ public class Interaction {
             //Lav en if-stamement for positionen af spilleren og bed programmet om at kører openWindow(room)
             case "Hovedindgangen SDU":
                 if(shape.getLayoutX() == 570 && shape.getLayoutY() == 410){
-                    openWindow("Karen");
+                    openWindow("Karen-Hovedindgang");
                     questChecker.talkedToKaren = true;
                 }
                 break;
@@ -48,10 +50,13 @@ public class Interaction {
             case "Nedenunder":
                 if (shape.getLayoutX() == 210 && shape.getLayoutY() == 290 || shape.getLayoutX() == 210 && shape.getLayoutY() == 330) {
                     openWindow("Gutterne");
+                    gutterne = true;
                 } else if (shape.getLayoutX() == 90 && shape.getLayoutY() == 250){
                         openWindow("Karen-Nedenunder");
+                        karen = true;
                 }
-
+                if(gutterne && karen)
+                    questChecker.talkedToFriends = true;
                 break;
             case "Fitness":
                 if (shape.getLayoutX() == 130 && shape.getLayoutY() == 410 ) {
