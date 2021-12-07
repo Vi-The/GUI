@@ -55,11 +55,9 @@ public class BikeshopController implements Initializable, iController {
         collision.addCollision(450, 290);
         collision.addCollision(410, 290);
 
-        collision.addCollision(90, 250);
-        collision.addCollision(90, 290);
-        collision.addCollision(50, 290);
-        collision.addCollision(50, 250);
-
+        //Collision on Karen
+        collision.addCollision(530,290);
+        collision.addCollision(530,250);
 
         int posX = 90;
         for (int x = 0; x < 4; x++) {
