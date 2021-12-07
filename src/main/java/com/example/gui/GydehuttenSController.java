@@ -60,6 +60,7 @@ public class GydehuttenSController implements Initializable, iController {
         collision.addCollision(530, 530);
         collision.addCollision(530, 10);
         collision.addCollision(530, 50);
+        collision.addCollision(90,330);
     }
 
     AnimationTimer timer = new AnimationTimer() {
