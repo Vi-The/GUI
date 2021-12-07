@@ -11,6 +11,7 @@ import javafx.stage.Stage;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
+import java.util.concurrent.TimeUnit;
 
 public class Interaction {
     Scene scene;
@@ -26,15 +27,15 @@ public class Interaction {
 
         switch (room) {
             //Lav en if-stamement for positionen af spilleren og bed programmet om at kører openWindow(room)
-            case "OutsideSDU":
+            case "Hovedindgangen SDU":
                 if(shape.getLayoutX() == 570 && shape.getLayoutY() == 410)
-                        openWindow("Karen");
+                    openWindow("Karen");
                 break;
             case "Gydehutten Nord":
                 break;
             case "Kantine":
                 break;
-            case "Classroom":
+            case "Klasselokale":
                 if (shape.getLayoutX() == 370 && shape.getLayoutY() == 210) {
                     openWindow("Professor");
                 }
@@ -44,22 +45,26 @@ public class Interaction {
             case "Nedenunder":
                 break;
             case "Fitness":
+                if (shape.getLayoutX() == 130 && shape.getLayoutY() == 410 ) {
+                    openWindow("Bryce");
+                }
                 break;
-            case "Bikeshop":
+            case "Cykelforhandler":
                 break;
         }
     }
 
     void openWindow(String character) {
         try {
+            String title = character;
             if (character == "Male")
-                character = names.Males();
+                title = names.Males();
             else if (character == "Female")
-                character = names.Females();
+                title = names.Females();
             root = new Group();
-            Scene scene = new Scene(root, 450, 300);
+            Scene scene = new Scene(root, 700, 450);
             this.scene = scene;
-            stage.setTitle(character);
+            stage.setTitle(title);
             stage.setScene(scene);
             getText(character);
             stage.show();
@@ -74,10 +79,11 @@ public class Interaction {
         switch (NPC) {
             case "Professor":
             case "Karen":
+            case "Bryce":
                 text = new Text(getTextFromFile(NPC));
                 break;
             case "Male":
-                int randomQuote = (int) (Math.random()*15);
+                int randomQuote = (int) (1*Math.random()*13);
                 text = new Text(getTextFromFile(String.valueOf(randomQuote)));
                 break;
             case "Female":

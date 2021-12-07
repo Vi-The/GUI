@@ -66,6 +66,11 @@ public class FitnessController implements Initializable, iController {
         collision.addCollision(530, 450);
         collision.addCollision(530, 490);
         collision.addCollision(530, 530);
+
+        //Bryce
+
+        collision.addCollision(170, 410);
+        collision.addCollision(170,370);
     }
 
     AnimationTimer timer = new AnimationTimer() {

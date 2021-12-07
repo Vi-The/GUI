@@ -32,7 +32,7 @@ public class Map {
             root = new Group();
             Scene scene = new Scene(root,300,300);
             this.scene = scene;
-            stage.setTitle("Map");
+            stage.setTitle("Kort over spillet");
             stage.setScene(scene);
             addImage();
             stage.show();
