@@ -44,6 +44,10 @@ public class Interaction {
             case "Nedenunder":
                 break;
             case "Fitness":
+                if (shape.getLayoutX() == 130 && shape.getLayoutY() == 410 ) {
+                    System.out.println("test");
+                    openWindow("Male");
+                }
                 break;
             case "Bikeshop":
                 break;
@@ -52,14 +56,15 @@ public class Interaction {
 
     void openWindow(String character) {
         try {
+            String title = character;
             if (character == "Male")
-                character = names.Males();
+                title = names.Males();
             else if (character == "Female")
-                character = names.Females();
+                title = names.Females();
             root = new Group();
             Scene scene = new Scene(root, 450, 300);
             this.scene = scene;
-            stage.setTitle(character);
+            stage.setTitle(title);
             stage.setScene(scene);
             getText(character);
             stage.show();
@@ -77,7 +82,7 @@ public class Interaction {
                 text = new Text(getTextFromFile(NPC));
                 break;
             case "Male":
-                int randomQuote = (int) (Math.random()*15);
+                int randomQuote = (int) (1*Math.random()*13);
                 text = new Text(getTextFromFile(String.valueOf(randomQuote)));
                 break;
             case "Female":
