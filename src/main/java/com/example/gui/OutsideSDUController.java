@@ -34,7 +34,7 @@ public class OutsideSDUController implements Initializable, iController {
         {
             collision.addCollision(-30, changer);
             collision.addCollision(690, changer);
-            collision.addCollision(changer, -30);
+            collision.addCollision(changer, 50);
             changer += 40;
         }
 
@@ -45,10 +45,6 @@ public class OutsideSDUController implements Initializable, iController {
             changer += 40;
         }
         collision.showCollisionAreas(scene1);
-        //Collision thats not the box
-        collision.addCollision(50, 50);
-        collision.addCollision(90, 50);
-        collision.addCollision(50, 90);
         //Collisions at the screen
         collision.addCollision(570, 250);
         collision.addCollision(530, 250);
@@ -78,6 +74,8 @@ public class OutsideSDUController implements Initializable, iController {
         collision.addCollision(90, 130);
         collision.addCollision(50, 130);
         collision.addCollision(10, 130);
+        //Karen
+        collision.addCollision(570,370);
     }
 
     AnimationTimer timer = new AnimationTimer() {
