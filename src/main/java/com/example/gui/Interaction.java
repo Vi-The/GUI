@@ -50,6 +50,12 @@ public class Interaction {
                 }
                 break;
             case "Cykelforhandler":
+                if (shape.getLayoutX() == 130 && shape.getLayoutY() == 290 ) {
+                    openWindow("Karen.");
+                } else  if (shape.getLayoutX() == 450 && shape.getLayoutY() == 330 ) {
+                    openWindow("Cykelforhandleren");
+                }
+
                 break;
         }
     }
@@ -77,6 +83,8 @@ public class Interaction {
     void getText(String NPC) {
         Text text;
         switch (NPC) {
+            case "Karen.":
+            case "Cykelforhandleren":
             case "Professor":
             case "Karen":
             case "Bryce":
