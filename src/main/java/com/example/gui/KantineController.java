@@ -35,8 +35,8 @@ public class KantineController implements Initializable, iController {
         for (int i = 0; i < 19; i++) {
             //Outer frame - ensures that we can't go out of the frame.
             collision.addCollision(-30, changer); //Dette er siden modsat Gydehutten
-            collision.addCollision(changer, -30); //Dette er siden op mod OUTsideSDU
-            collision.addCollision(changer, 530); //Dette er siden ned mod nedenunder.
+            collision.addCollision(changer, 50); //Dette er siden op mod OUTsideSDU
+            collision.addCollision(changer, 490); //Dette er siden ned mod nedenunder.
             changer += 40;
         }
         changer = -30;
@@ -55,34 +55,37 @@ public class KantineController implements Initializable, iController {
         collision.addCollision(10, 330);
         collision.addCollision(10, 370);
         collision.addCollision(170, 330);
-        collision.addCollision(290, 130);
-        collision.addCollision(330, 130);
-        collision.addCollision(370, 130);
-        collision.addCollision(410, 130);
-        collision.addCollision(450, 130);
-        collision.addCollision(490, 130);
-        collision.addCollision(530, 130);
         collision.addCollision(610, 130);
-        collision.addCollision(530, 250);
-        collision.addCollision(490, 250);
-        collision.addCollision(450, 250);
-        collision.addCollision(410, 250);
-        collision.addCollision(370, 250);
-        collision.addCollision(330, 250);
-        collision.addCollision(290, 250);
-        collision.addCollision(250, 250);
-        collision.addCollision(250, 370);
-        collision.addCollision(290, 370);
-        collision.addCollision(330, 370);
-        collision.addCollision(370, 370);
-        collision.addCollision(410, 370);
-        collision.addCollision(450, 370);
-        collision.addCollision(490, 370);
-        collision.addCollision(530, 370);
         collision.addCollision(530, 330);
-        collision.addCollision(250, 130);
         collision.addCollision(450, 450);
         collision.addCollision(490, 450);
+      int posX = 250;
+        for(int x = 0; x < 8; x++){
+            int posY = 130;
+            for (int y = 0; y < 1; y++){
+                collision.addCollision(posX, posY);
+                posY += 40;
+            }
+            posX += 40;
+        }
+        posX = 250;
+        for(int x = 0; x < 8; x++){
+            int posY = 250;
+            for (int y = 0; y < 1; y++){
+                collision.addCollision(posX, posY);
+                posY += 40;
+            }
+            posX += 40;
+        }
+        posX = 250;
+        for(int x = 0; x < 8; x++){
+            int posY = 370;
+            for (int y = 0; y < 1; y++){
+                collision.addCollision(posX, posY);
+                posY += 40;
+            }
+            posX += 40;
+        }
     }
 
     AnimationTimer timer = new AnimationTimer() {
