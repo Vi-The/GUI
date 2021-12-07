@@ -40,7 +40,7 @@ public class Help  {
             root = new Group();
             Scene scene = new Scene(root, 450, 420);
             this.scene = scene;
-            stage.setTitle("Help");
+            stage.setTitle("Hjælpemenu");
             stage.setScene(scene);
             showHelp();
             stage.show();

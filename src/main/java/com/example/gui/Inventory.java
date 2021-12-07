@@ -18,10 +18,10 @@ public class Inventory {
     ArrayList<String> inventory = new ArrayList<String>();
 
     Inventory(){
-        inventory.add("Student ID");
-        inventory.add("Books");
-        inventory.add("Phone");
-        inventory.add("Laptop");
+        inventory.add("Studiekort");
+        inventory.add("Bøger");
+        inventory.add("Telefon");
+        inventory.add("Computer");
     }
 
     void openInv() {
@@ -29,7 +29,7 @@ public class Inventory {
             root = new Group();
             Scene scene = new Scene(root,450,300);
             this.scene = scene;
-            stage.setTitle("Inventory");
+            stage.setTitle("Inventarliste");
             stage.setScene(scene);
             showInv();
             stage.show();

@@ -31,8 +31,8 @@ public class Keylistener {
             case H -> openH();
             case E -> openInventory();
             case R -> {if(shopChecker){shop.displayShop(shape, roomString);}}
-            case C -> System.out.println("Player location: X: "+shape.getLayoutX()+" Y: "+shape.getLayoutY());
-            case N -> System.out.println("Current room: "+roomString);
+            case C -> System.out.println("Spillerens lokation: X: "+shape.getLayoutX()+" Y: "+shape.getLayoutY());
+            case N -> System.out.println("Nuværende rum: "+roomString);
             case T -> interaction.openTextbox(shape,roomString);
             case M -> openMap();
         }

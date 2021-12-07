@@ -74,7 +74,7 @@ public class GydehuttenSController implements Initializable, iController {
             });
             roomChanger.changeRoom(shape1, 90, 330, "Nedenunder", "SDU Fredagsbar: Nedenunder", true);
             roomChanger.changeRoom(shape1, 570, 330, "Fitness", "Fitness", true);
-            roomChanger.changeRoom(shape1, 330, 690, "Bikeshop", "Bikeshop", true);
+            roomChanger.changeRoom(shape1, 330, 690, "Bikeshop", "Cykelforhandler", true);
             //Adding doorroom to Gydehutten S
             roomChanger.changeRoom(shape1, 250, -30, "GYDEHUTTEN_N", "Gydehutten Nord", true);
             roomChanger.changeRoom(shape1, 290, -30, "GYDEHUTTEN_N", "Gydehutten Nord", true);
