@@ -1,6 +1,6 @@
-package com.example.gui.domain;
+package com.example.domain;
 
-import com.example.gui.presentation.iController;
+import com.example.gui.iController;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.shape.Rectangle;
 

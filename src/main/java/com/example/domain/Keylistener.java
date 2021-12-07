@@ -1,4 +1,4 @@
-package com.example.gui.domain;
+package com.example.domain;
 
 import javafx.scene.input.KeyEvent;
 import javafx.scene.shape.Rectangle;

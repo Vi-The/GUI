@@ -1,7 +1,7 @@
-package com.example.gui.presentation;
+package com.example.gui;
 
-import com.example.gui.domain.Keylistener;
-import com.example.gui.domain.RoomChanger;
+import com.example.domain.Keylistener;
+import com.example.domain.RoomChanger;
 import javafx.animation.AnimationTimer;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;

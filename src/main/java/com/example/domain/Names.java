@@ -1,4 +1,4 @@
-package com.example.gui.domain;
+package com.example.domain;
 
 public class Names {
     String Females() {

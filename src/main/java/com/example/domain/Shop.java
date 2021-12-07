@@ -1,4 +1,4 @@
-package com.example.gui.domain;
+package com.example.domain;
 
 import javafx.scene.Group;
 import javafx.scene.Scene;

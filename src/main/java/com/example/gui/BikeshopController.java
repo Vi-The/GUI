@@ -1,7 +1,7 @@
-package com.example.gui.presentation;
+package com.example.gui;
 
-import com.example.gui.domain.Keylistener;
-import com.example.gui.domain.RoomChanger;
+import com.example.domain.Keylistener;
+import com.example.domain.RoomChanger;
 import javafx.animation.AnimationTimer;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -16,14 +16,14 @@ import javafx.scene.shape.Rectangle;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class ClassroomController  implements Initializable, iController {
+public class BikeshopController implements Initializable, iController {
 
     @FXML
-    private Rectangle shape1; // skifte shape1 til navn på spilleren eller noget #cleancode
+    private Rectangle shape1;
 
     @FXML
-    private AnchorPane scene; // scene navn til navnet på det gældende rum
-    private final Keylistener keylistener = new Keylistener(false, "Classroom");
+    private AnchorPane scene;
+    private final Keylistener keylistener = new Keylistener(true, "Bikeshop");
 
     @FXML
     public void start(ActionEvent event) {
@@ -34,33 +34,32 @@ public class ClassroomController  implements Initializable, iController {
     @Override
     public void addCollision() {
         int changer = -30;
-        for (int i = 0; i < 19; i++)//collision uden dør
-        {
-            collision.addCollision(changer,610);
-            collision.addCollision(690, changer);
-            collision.addCollision(changer, 50);
-            changer += 40;
-        }
-        changer = -30;
-        for(int i = 0; i < 9; i++) {
-            //To Gydehytte N
+        for (int i = 0; i < 19; i++) {
             collision.addCollision(-30, changer);
-            collision.addCollision(-30, changer+400);
+            collision.addCollision(690, changer);
+            collision.addCollision(changer, 490);
             changer += 40;
         }
         collision.showCollisionAreas(scene);
         changer = -30;
-        for(int i = 0; i < 19; i++) {
-            collision.addCollision(changer, 130);
+        for (int i = 0; i < 7; i++) {
+            collision.addCollision(changer, 210);
             changer += 40;
         }
-        collision.addCollision(370, 170);
-        collision.addCollision(330, 170);
-        collision.addCollision(330, 210);
-        int posX = 170;
-        for(int x = 0; x < 9; x++){
-            int posY = 290;
-            for (int y = 0; y < 4; y++){
+        changer = 330;
+        for (int i = 0; i < 9; i++) {
+            collision.addCollision(changer, 210);
+            changer += 40;
+        }
+        collision.addCollision(10, 250);
+        collision.addCollision(450, 250);
+        collision.addCollision(490, 290);
+        collision.addCollision(450, 290);
+        collision.addCollision(410, 290);
+        int posX = 90;
+        for (int x = 0; x < 4; x++) {
+            int posY = 330;
+            for (int y = 0; y < 3; y++) {
                 collision.addCollision(posX, posY);
                 posY += 40;
             }
@@ -70,15 +69,16 @@ public class ClassroomController  implements Initializable, iController {
 
     AnimationTimer timer = new AnimationTimer() {
         @Override
-        public void handle(long timestamp) { //switch case
-            RoomChanger roomChanger = new RoomChanger(collision,timer);
+        public void handle(long timestamp) {
+            RoomChanger roomChanger = new RoomChanger(collision, timer);
             scene.setOnKeyPressed(new EventHandler<KeyEvent>() {
                 @Override
                 public void handle(KeyEvent keyEvent) {
                     keylistener.checkKeyInput(keyEvent, shape1);
                 }
             });
-            roomChanger.changeRoom(shape1, -30, 330, "GYDEHUTTEN_N", "Gydehutten Nord", true);
+            roomChanger.changeRoom(shape1, 290, 210, "Gydehutten_S", "Gydehutten Syd", true);
+            roomChanger.changeRoom(shape1, 250, 210, "Gydehutten_S", "Gydehutten Syd", true);
         }
     };
 
@@ -90,3 +90,5 @@ public class ClassroomController  implements Initializable, iController {
         timer.start();
     }
 }
+
+

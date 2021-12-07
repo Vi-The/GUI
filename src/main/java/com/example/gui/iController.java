@@ -1,7 +1,7 @@
-package com.example.gui.presentation;
+package com.example.gui;
 
-import com.example.gui.domain.Collision;
-import com.example.gui.domain.Keylistener;
+import com.example.domain.Collision;
+import com.example.domain.Keylistener;
 import javafx.event.ActionEvent;
 
 public interface iController{
