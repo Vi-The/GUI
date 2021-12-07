@@ -31,7 +31,6 @@ public class Interaction {
                 if(shape.getLayoutX() == 570 && shape.getLayoutY() == 410){
                     openWindow("Karen");
                     questChecker.talkedToKaren = true;
-                    questChecker.UpdateQuest();
                 }
                 break;
             case "Gydehutten Nord":
@@ -42,7 +41,6 @@ public class Interaction {
                 if (shape.getLayoutX() == 370 && shape.getLayoutY() == 210) {
                     openWindow("Professor");
                     questChecker.talkedToProfessor = true;
-                    questChecker.UpdateQuest();
                 }
                 break;
             case "Gydehutten Syd":
@@ -58,6 +56,7 @@ public class Interaction {
             case "Cykelforhandler":
                 break;
         }
+        questChecker.UpdateQuest();
     }
 
     void openWindow(String character) {
