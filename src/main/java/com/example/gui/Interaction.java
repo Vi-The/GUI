@@ -11,6 +11,7 @@ import javafx.stage.Stage;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
+import java.util.concurrent.TimeUnit;
 
 public class Interaction {
     Scene scene;
@@ -61,7 +62,7 @@ public class Interaction {
             else if (character == "Female")
                 title = names.Females();
             root = new Group();
-            Scene scene = new Scene(root, 450, 300);
+            Scene scene = new Scene(root, 700, 450);
             this.scene = scene;
             stage.setTitle(title);
             stage.setScene(scene);
