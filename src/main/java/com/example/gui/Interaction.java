@@ -30,7 +30,7 @@ public class Interaction {
         switch (room) {
             //Lav en if-stamement for positionen af spilleren og bed programmet om at kører openWindow(room)
             case "Hovedindgangen SDU":
-                if(shape.getLayoutX() == 570 && shape.getLayoutY() == 410){
+                if(shape.getLayoutX() == 570 && shape.getLayoutY() == 410  || shape.getLayoutX() == 530 && shape.getLayoutY() == 370 || shape.getLayoutX() == 610 && shape.getLayoutY() == 370){
                     openWindow("Karen-Hovedindgang");
                     questChecker.talkedToKaren = true;
                 }
@@ -40,7 +40,7 @@ public class Interaction {
             case "Kantine":
                 break;
             case "Klasselokale":
-                if (shape.getLayoutX() == 370 && shape.getLayoutY() == 210) {
+                if (shape.getLayoutX() == 370 && shape.getLayoutY() == 210 || shape.getLayoutX() == 410 && shape.getLayoutY() == 170) {
                     openWindow("Professor");
                     questChecker.talkedToProfessor = true;
                 }
@@ -59,13 +59,13 @@ public class Interaction {
                     questChecker.talkedToFriends = true;
                 break;
             case "Fitness":
-                if (shape.getLayoutX() == 130 && shape.getLayoutY() == 410 ) {
+                if (shape.getLayoutX() == 130 && shape.getLayoutY() == 410) {
                     openWindow("Bryce");
                     questChecker.talkedToBryce = true;
                 }
                 break;
             case "Cykelforhandler":
-                if (shape.getLayoutX() == 450 && shape.getLayoutY() == 330 ) {
+                if (shape.getLayoutX() == 490 && shape.getLayoutY() == 330 || shape.getLayoutX() == 530 && shape.getLayoutY() == 330 || shape.getLayoutX() == 570 && shape.getLayoutY() == 330) {
                     openWindow("Karen-Cykelhandler");
                 }
 
