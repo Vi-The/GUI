@@ -16,5 +16,6 @@ public class StartController {
         Stage window = (Stage) Startbutton.getScene().getWindow();
         window.setScene(new Scene(root, 700, 700));
         window.setTitle("Hovedindgangen SDU");
+        window.setResizable(false);
     }
 }
