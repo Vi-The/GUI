@@ -17,6 +17,7 @@ public class RoomChanger {
         this.collision = collision;
         this.timer = timer;
     }
+
     void changeRoom(Rectangle player, int doorXasis, int doorYaxis, String fxmlMail, String roomTitle, boolean disabledCollision) {
         if (player.getLayoutX() == doorXasis && player.getLayoutY() == doorYaxis) {
             try {

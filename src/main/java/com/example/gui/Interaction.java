@@ -27,6 +27,8 @@ public class Interaction {
         this.room = room;
         this.shape = shape;
 
+
+
         switch (room) {
             //Lav en if-stamement for positionen af spilleren og bed programmet om at kører openWindow(room)
             case "Hovedindgangen SDU":
@@ -59,10 +61,15 @@ public class Interaction {
                     questChecker.talkedToFriends = true;
                 break;
             case "Fitness":
-                if (shape.getLayoutX() == 130 && shape.getLayoutY() == 410) {
+                if (shape.getLayoutX() == 130 && shape.getLayoutY() == 410 ||
+                        shape.getLayoutX() == 210 && shape.getLayoutY() == 370 ||
+                        shape.getLayoutX() == 170 && shape.getLayoutY() == 450
+                        || shape.getLayoutX() == 210 && shape.getLayoutY() == 410
+                        || shape.getLayoutX() == 210 && shape.getLayoutY() == 370) {
                     openWindow("Bryce");
                     questChecker.talkedToBryce = true;
                 }
+
                 break;
             case "Cykelforhandler":
                 if (shape.getLayoutX() == 490 && shape.getLayoutY() == 330 || shape.getLayoutX() == 530 && shape.getLayoutY() == 330 || shape.getLayoutX() == 570 && shape.getLayoutY() == 330) {
