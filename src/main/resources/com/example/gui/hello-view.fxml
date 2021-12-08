@@ -27,12 +27,13 @@
          <Font size="24.0" />
       </font></Label>
     <Button fx:id="Startbutton" onAction="#clickStart" prefHeight="38.0" prefWidth="87.0" text="Start">
-      <font>
-         <Font size="18.0" />
-      </font></Button>
+        <font>
+            <Font size="18.0" />
+        </font></Button>
    <Label text="Du bevæger dig med tasterne W, A, S, D">
       <font>
          <Font size="18.0" />
       </font>
    </Label>
+   <Button fx:id="Featured" mnemonicParsing="false" onAction="#clickFeatured" prefHeight="38.0" prefWidth="87.0" text="Featured" />
 </VBox>
