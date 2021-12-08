@@ -27,8 +27,6 @@ public class Interaction {
         this.room = room;
         this.shape = shape;
 
-
-
         switch (room) {
             //Lav en if-stamement for positionen af spilleren og bed programmet om at kører openWindow(room)
             case "Hovedindgangen SDU":
@@ -56,7 +54,31 @@ public class Interaction {
                 } else if (shape.getLayoutX() == 90 && shape.getLayoutY() == 250){
                         openWindow("Karen-Nedenunder");
                         karen = true;
+                } else if (shape.getLayoutX() == 610 && shape.getLayoutY() == 130){
+                    openWindow("Male");
+                } else if (shape.getLayoutX() == 570 && shape.getLayoutY() == 370){
+                    openWindow("Male");
+                } else if (shape.getLayoutX() == 530 && shape.getLayoutY() == 370){
+                    openWindow("Female");
+                } else if (shape.getLayoutX() == 450 && shape.getLayoutY() == 370){
+                    openWindow("Female");
+                } else if (shape.getLayoutX() == 410 && shape.getLayoutY() == 330){
+                    openWindow("Female");
+                } else if (shape.getLayoutX() == 370 && shape.getLayoutY() == 370) {
+                    openWindow("Female");
+                } else if (shape.getLayoutX() == 130 && shape.getLayoutY() == 370){
+                    openWindow("Male");
+                } else if (shape.getLayoutX() == 90 && shape.getLayoutY() == 410){
+                    openWindow("Male");
+                } else if (shape.getLayoutX() == 90 && shape.getLayoutY() == 450){
+                    openWindow("Male");
+                } else if (shape.getLayoutX() == 610 && shape.getLayoutY() == 450){
+                    openWindow("Male");
+                } else if (shape.getLayoutX() == 610 && shape.getLayoutY() == 450){
+                    openWindow("Male");
                 }
+
+
                 if(gutterne && karen)
                     questChecker.talkedToFriends = true;
                 break;

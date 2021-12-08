@@ -91,7 +91,8 @@
 * Dig: Vi ses, kom godt hjem, Karen.
 </End: Karen-Cykelhandler/>
 
-</Start: 1/>Lægen sagde hvis det var mit kranie
+</Start: 1/>Da jeg brækkede benet sagde lægen
+ vis det var mit kranie
 der var skadet på samme måde som mit
 underben havde jeg været død på stedet</End: 1/>
 
@@ -132,9 +133,10 @@ blade eller frostveje.</End: 10/>
 
 </Start: 11/>Jeg cykler ikke med cykelhjelm fordi jeg har en
 skaterhjelm. Og jeg cykler fordi jeg ikke har
-tttet skateboard.</End: 11/>
+et skateboard.</End: 11/>
 
-</Start: 12/>Jeg bruger cykelhjelm fordi min mor siger at det er en god ide og fordi den er guld</End: 12/>
+</Start: 12/>Jeg bruger cykelhjelm fordi min mor siger at det er en god ide
+og fordi den er guld</End: 12/>
 
 </Start: 13/>Jeg bruger cykelhjelm, for at passe på mit
 hoved, således at jeg er "mig" i længst mulig
