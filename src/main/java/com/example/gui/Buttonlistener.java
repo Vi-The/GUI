@@ -14,7 +14,6 @@ public class Buttonlistener {
         rectangle.setFill(Color.WHITE);
         group.getChildren().add(rectangle);
         Text text = new Text("Du har købt 1 "+button);
-        System.out.println(text.getText());
         text.setX(300); text.setY(250);
         group.getChildren().add(text);
     }
