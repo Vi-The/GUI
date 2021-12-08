@@ -129,14 +129,8 @@ public class Interaction {
             case "Karen-Cykelhandler":
             case "Professor":
             case "Karen-Hovedindgang":
-                text = new Text(getTextFromFile(NPC));
-                break;
             case "Bryce":
-                text = new Text(getTextFromFile(NPC));
-                break;
             case "Gutterne":
-                text = new Text(getTextFromFile(NPC));
-                break;
             case "Karen-Nedenunder":
                 text = new Text(getTextFromFile(NPC));
                 break;
