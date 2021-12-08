@@ -17,6 +17,11 @@
          <Image url="@../../../Assets/Background/TilStartSkærm.png" />
       </image>
    </ImageView>
+   <Label prefHeight="29.0" prefWidth="450.0" text="Når du starter spillet tryk på H for at få hjælp">
+      <font>
+         <Font name="Arial Black" size="18.0" />
+      </font>
+   </Label>
    <Label layoutX="184.0" layoutY="125.0" text="Tryk på start for at starte spillet">
       <font>
          <Font size="24.0" />
@@ -25,7 +30,7 @@
       <font>
          <Font size="18.0" />
       </font></Button>
-   <Label text="Når du har startet spillet tryk på H for at få hjælp">
+   <Label text="Du bevæger dig med tasterne W, A, S, D">
       <font>
          <Font size="18.0" />
       </font>
