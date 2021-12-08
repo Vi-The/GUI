@@ -102,6 +102,20 @@ public class Interaction {
                         || shape.getLayoutX() == 210 && shape.getLayoutY() == 370) {
                     openWindow("Bryce");
                     questChecker.talkedToBryce = true;
+                } else if (shape.getLayoutX() == 10 && shape.getLayoutY() == 450) {
+                    openWindow("Female");
+                } else if (shape.getLayoutX() == 90 && shape.getLayoutY() == 490 || shape.getLayoutX() == 90 && shape.getLayoutY() == 450) {
+                    openWindow("Female");
+                } else if (shape.getLayoutX() == 130 && shape.getLayoutY() == 330) {
+                    openWindow("Female");
+                } else if(shape.getLayoutX() == 130 && shape.getLayoutY() == 250) {
+                    openWindow("Male");
+                } else if (shape.getLayoutX() == 50 && shape.getLayoutY() == 170) {
+                    openWindow("Male");
+                } else if (shape.getLayoutX() == 450 && shape.getLayoutY() == 210) {
+                    openWindow("Male");
+                } else if (shape.getLayoutX() == 610 && shape.getLayoutY() == 450 || shape.getLayoutX() == 650 && shape.getLayoutY() == 450) {
+                    openWindow("Male");
                 }
 
                 break;
