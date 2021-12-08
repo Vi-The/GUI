@@ -15,7 +15,6 @@ public class Help  {
     private Group root;
     private Stage stage = new Stage();
     ArrayList<String> help = new ArrayList<String>();
-    QuestChecker questChecker = iController.questChecker;
 
     Help(){
         help.add("E: Åbner og lukker inventarlisten");
