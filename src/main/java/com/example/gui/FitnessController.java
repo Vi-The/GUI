@@ -60,12 +60,7 @@ public class FitnessController implements Initializable, iController {
 
         //Væg ved omklædningsrummet
         collision.addCollision(530, 210);
-        collision.addCollision(530, 170);
-        collision.addCollision(530, 130);
-
         collision.addCollision(530, 450);
-        collision.addCollision(530, 490);
-        collision.addCollision(530, 530);
 
         //Bryce
 
@@ -82,17 +77,39 @@ public class FitnessController implements Initializable, iController {
         collision.addCollision(210, 170);
         collision.addCollision(210, 130);
 
-        collision.addCollision(330, 490);
-        collision.addCollision(330, 530);
+        collision.addCollision(450,290);
+        collision.addCollision(450,330);
+        collision.addCollision(490,290);
+        collision.addCollision(490,330);
 
-        collision.addCollision(170, 490);
-        collision.addCollision(170, 530);
-        collision.addCollision(210, 530);
-        collision.addCollision(210, 490);
-        collision.addCollision(250, 490);
-        collision.addCollision(250, 530);
-
-
+        int posX = 170;
+        for(int x = 0; x < 5; x++){
+            int posY = 490;
+            for (int y = 0; y < 2; y++){
+                collision.addCollision(posX, posY);
+                posY += 40;
+            }
+            posX += 40;
+        }
+        posX = 450;
+        for(int x = 0; x < 6; x++){
+            int posY = 490;
+            for (int y = 0; y < 2; y++){
+                collision.addCollision(posX, posY);
+                posY += 40;
+            }
+            posX += 40;
+        }
+        posX = 450;
+        for(int x = 0; x < 6; x++){
+            int posY = 130;
+            for (int y = 0; y < 2; y++){
+                collision.addCollision(posX, posY);
+                posY += 40;
+            }
+            posX += 40;
+        }
+        
     }
 
     AnimationTimer timer = new AnimationTimer() {
