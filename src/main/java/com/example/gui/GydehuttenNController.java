@@ -82,9 +82,9 @@ public class GydehuttenNController implements Initializable, iController {
             if(!questChecker.talkedToFriends)
                 roomChanger.changeRoom(shape1, 330, -30, "OUTSIDESDU", "Hovedindgangen SDU", true);
             else if(questChecker.talkedToFriends && !questChecker.boughtBikeHelmet)
-                roomChanger.changeRoom(shape1,330,-30,"badEnding","Du har fået den dårlige slutning", true);
+                roomChanger.changeRoom(shape1,330,-30,"badEnding","Du er desværre blevet ramt af en bil på vejen hjem", true);
             else if(questChecker.boughtBikeHelmet)
-                roomChanger.changeRoom(shape1,330,-30,"goodEnding","Tillykke du ikke død :)",true);
+                roomChanger.changeRoom(shape1,330,-30,"goodEnding","Tillykke du er kommet sikkert hjem",true);
 
             roomChanger.changeRoom(shape1, 250, 690, "Gydehutten_S", "Gydehutten Syd", true);
             roomChanger.changeRoom(shape1, 290, 690, "Gydehutten_S", "Gydehutten Syd", true);

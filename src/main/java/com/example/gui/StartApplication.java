@@ -6,13 +6,11 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-import java.io.IOException;
-
 public class StartApplication extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("hello-view.fxml"));
-        primaryStage.setTitle("SPILLET");
+        primaryStage.setTitle("Cykelhjem spil");
         primaryStage.setScene(new Scene(root, 700, 700));
         primaryStage.show();
     }
