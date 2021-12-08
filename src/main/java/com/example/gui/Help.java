@@ -15,14 +15,13 @@ public class Help  {
     private Group root;
     private Stage stage = new Stage();
     ArrayList<String> help = new ArrayList<String>();
-    QuestChecker questChecker = iController.questChecker;
 
     Help(){
         help.add("E: Åbner og lukker Samuels inventarliste");
         help.add("M: Viser et kort over spillet");
         help.add("R: Åbner og lukker dine købsmuligheder");
         help.add("N: Viser hvilket rum du befinder dig i");
-        help.add("H: Viser denne menu");
+        help.add("H: Åbner denne hjælpe menu");
         help.add("T: Sådan taler du med folk");
         help.add("\n");
         help.add("   Opgaver:   ");
