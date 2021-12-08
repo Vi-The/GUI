@@ -10,17 +10,17 @@
              I dag bruger kun 31% af unge mellem 16-25 år hjelm når de cykler
              ifølge Rådet for Sikker Trafik.
              Husk hjelmen, næste gang du svinger dig op på jernhesten!
-* Dig: Ret fede fact. Jeg tror jeg vil smutte ned og træne i fitness nu.
+* Dig: Ret fede facts. Jeg tror jeg vil smutte ned og træne i fitness nu.
 </End: Professor/>
 
 
 </Start: Karen-Hovedindgang/>
 * Karen: HEY SAMUEL!
-* Dig: God morgen Karen, hvordan var din cykeltur?
+* Dig: Godmorgen Karen, hvordan var din cykeltur?
 * Karen: Den var fin, udover ham tossen der valgte at køre ud lige foran mig,
          så jeg blev nødt til at bremse så hårdt op, hvilket resulterede i, at
          ham bagved kørte ind i mig og fordi det er så glat, væltede vi begge to
-         men heldig hvis havde vi cykelhjelm på, så der skete ikke så meget.
+         men heldigvis havde vi cykelhjelm på, så der skete ikke så meget.
 * Dig: Selvom jeg ikke selv kan lide at have cykelhjelm på, er jeg glad for
         at du havde din på.
 * Karen: Det er jeg godt nok også. Hvorfor kan du egentlig ikke det?
@@ -86,7 +86,7 @@
                    jeg kan hjælpe.
 * Dig: Tak, det skal vi nok.
 * Karen: Hvad synes du så, skal du have en cykelhjelm eller hvad?
-* Karen: Under alle omstændigheder bliver jeg nødt til a smutte nu,
+* Karen: Under alle omstændigheder bliver jeg nødt til at smutte nu,
           håber du træffer det rigtige valg. Vi ses.
 * Dig: Vi ses, kom godt hjem, Karen.
 </End: Karen-Cykelhandler/>
