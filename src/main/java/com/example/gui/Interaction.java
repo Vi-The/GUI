@@ -91,8 +91,6 @@ public class Interaction {
                 } else if (shape.getLayoutX() == 610 && shape.getLayoutY() == 450){
                     openWindow("Male");
                 }
-
-
                 if(gutterne && karen)
                     questChecker.talkedToFriends = true;
                 break;
