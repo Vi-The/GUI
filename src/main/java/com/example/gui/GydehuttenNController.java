@@ -63,7 +63,7 @@ public class GydehuttenNController implements Initializable, iController {
         collision.addCollision(130, 450);
         collision.addCollision(530, 10);
         collision.addCollision(530, 50);
-        collision.addCollision(570,330);
+        collision.addCollision(610,330);
     }
 
     AnimationTimer timer = new AnimationTimer() {
@@ -77,7 +77,15 @@ public class GydehuttenNController implements Initializable, iController {
                 }
             });
             roomChanger.changeRoom(shape1, 90, 330, "Kantine", "SDU Kantine", true);
-            roomChanger.changeRoom(shape1, 330, -30, "OUTSIDESDU", "Hovedindgangen SDU", true);
+
+
+            if(!questChecker.talkedToFriends)
+                roomChanger.changeRoom(shape1, 330, -30, "OUTSIDESDU", "Hovedindgangen SDU", true);
+            else if(questChecker.talkedToFriends && !questChecker.boughtBikeHelmet)
+                roomChanger.changeRoom(shape1,330,-30,"badEnding","Du har fået den dårlige slutning", true);
+            else if(questChecker.boughtBikeHelmet)
+                roomChanger.changeRoom(shape1,330,-30,"goodEnding","Tillykke du ikke død :)",true);
+
             roomChanger.changeRoom(shape1, 250, 690, "Gydehutten_S", "Gydehutten Syd", true);
             roomChanger.changeRoom(shape1, 290, 690, "Gydehutten_S", "Gydehutten Syd", true);
             roomChanger.changeRoom(shape1, 330, 690, "Gydehutten_S", "Gydehutten Syd", true);
