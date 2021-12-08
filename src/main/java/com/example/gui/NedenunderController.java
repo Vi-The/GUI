@@ -89,10 +89,10 @@ public class NedenunderController  implements Initializable, iController {
         collision.addCollision(290, 210 );
         collision.addCollision(250, 210 );
         collision.addCollision(210, 210 );
+        //Sørger for man ikke går ud i 'void' hvis man ikke har åbnet op for rummet
         collision.addCollision(130, 330);
         collision.addCollision(170,330);
         //collision.showCollisionAreas(scene);
-
     }
 
     AnimationTimer timer = new AnimationTimer() {
@@ -102,7 +102,6 @@ public class NedenunderController  implements Initializable, iController {
             scene.setOnKeyPressed(new EventHandler<KeyEvent>() {
                 @Override
                 public void handle(KeyEvent keyEvent) {
-
                     keylistener.checkKeyInput(keyEvent, shape1);
                 }
             });
@@ -118,5 +117,3 @@ public class NedenunderController  implements Initializable, iController {
         addCollision();
     }
 }
-
-
