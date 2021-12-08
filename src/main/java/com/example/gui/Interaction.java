@@ -38,6 +38,20 @@ public class Interaction {
             case "Gydehutten Nord":
                 break;
             case "Kantine":
+                if(shape.getLayoutX() == 650 && shape.getLayoutY() == 130 ||
+                        shape.getLayoutX() == 610 && shape.getLayoutY() == 170 ||
+                        shape.getLayoutX() == 570 && shape.getLayoutY() == 130) {
+                    openWindow("Female");
+                } else if (shape.getLayoutX() == 170 && shape.getLayoutY() == 290 ||
+                        shape.getLayoutX() == 130 && shape.getLayoutY() == 330 ||
+                        shape.getLayoutX() == 210 && shape.getLayoutY() == 330 ||
+                        shape.getLayoutX() == 210 && shape.getLayoutY() == 290) {
+                    openWindow("Male");
+                } else if (shape.getLayoutX() == 410 && shape.getLayoutY() == 450 ||
+                        shape.getLayoutX() == 450 && shape.getLayoutY() == 410 ||
+                        shape.getLayoutX() == 490 && shape.getLayoutY() == 410) {
+                    openWindow("Female");
+                }
                 break;
             case "Klasselokale":
                 if (shape.getLayoutX() == 370 && shape.getLayoutY() == 210 || shape.getLayoutX() == 410 && shape.getLayoutY() == 170) {
@@ -135,11 +149,11 @@ public class Interaction {
                 text = new Text(getTextFromFile(NPC));
                 break;
             case "Male":
-                int randomQuote = (int) (1*Math.random()*13);
+                int randomQuote = (int) (Math.random()*15);
                 text = new Text(getTextFromFile(String.valueOf(randomQuote)));
                 break;
             case "Female":
-                randomQuote = (int) (1+Math.random()*15);
+                randomQuote = (int) (Math.random()*15);
                 text = new Text(getTextFromFile(String.valueOf(randomQuote)));
                 break;
             default:
