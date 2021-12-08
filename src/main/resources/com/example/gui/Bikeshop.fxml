@@ -19,6 +19,11 @@
             <Image url="@../../../Assets/Characters/Karen.png" />
          </image>
       </ImageView>
+      <ImageView fitHeight="57.0" fitWidth="40.0" layoutX="450.0" layoutY="330.0" pickOnBounds="true" preserveRatio="true" rotate="90.0">
+         <image>
+            <Image url="@../../../Assets/Items/måtte1.png" />
+         </image>
+      </ImageView>
       <Rectangle fx:id="shape1" arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="40.0" layoutX="290.0" layoutY="250.0" stroke="#fffdfd00" strokeType="INSIDE" width="40.0" />
       <Button layoutX="667.0" layoutY="697.0" mnemonicParsing="false" onAction="#start" text="Reset" />
    </children>
