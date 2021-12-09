@@ -8,6 +8,7 @@
 
 <AnchorPane fx:id="scene" prefHeight="700.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gui.FitnessController">
    <children>
+      <Button layoutX="640.0" layoutY="660.0" mnemonicParsing="false" onAction="#start" text="Reset" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" height="700.0" stroke="BLACK" strokeType="INSIDE" width="700.0" />
       <ImageView fitHeight="700.0" fitWidth="700.0" layoutY="140.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -19,7 +20,6 @@
             <Image url="@../../../Assets/Characters/Bryce.png" />
          </image>
       </ImageView>
-      <Button layoutX="647.0" layoutY="677.0" mnemonicParsing="false" onAction="#start" text="Reset" />
       <Rectangle fx:id="shape1" arcHeight="5.0" arcWidth="5.0" fill="#ffffff02" height="40.0" layoutX="10.0" layoutY="330.0" stroke="#ffffff00" strokeType="INSIDE" width="40.0" />
    </children>
 </AnchorPane>
