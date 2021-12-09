@@ -8,13 +8,13 @@
 
 <AnchorPane fx:id="scene" prefHeight="700.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gui.NedenunderController">
    <children>
+      <Button layoutX="647.0" layoutY="656.0" mnemonicParsing="false" onAction="#start" text="Reset" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" height="700.0" stroke="BLACK" strokeType="INSIDE" width="700.0" />
       <ImageView fitHeight="700.0" fitWidth="700.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../Assets/Background/NedenunderSDU.png" />
          </image>
       </ImageView>
-      <Button layoutX="657.0" layoutY="687.0" mnemonicParsing="false" onAction="#start" text="Reset" />
       <ImageView fitHeight="55.0" fitWidth="40.0" layoutX="382.0" layoutY="220.0" pickOnBounds="true" preserveRatio="true" rotate="90.0">
          <image>
             <Image url="@../../../Assets/Items/måtte1.png" />

@@ -8,6 +8,7 @@
 
 <AnchorPane fx:id="scene1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gui.OutsideSDUController">
    <children>
+      <Button layoutX="640.0" layoutY="659.0" mnemonicParsing="false" onAction="#start" prefHeight="33.0" prefWidth="52.0" text="Reset" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" height="700.0" stroke="BLACK" strokeType="INSIDE" width="700.0" />
       <ImageView fitHeight="700.0" fitWidth="700.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -15,7 +16,6 @@
          </image>
       </ImageView>
       <Rectangle fx:id="shape1" arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="40.0" layoutX="330.0" layoutY="330.0" stroke="#ffffff00" strokeType="INSIDE" width="40.0" />
-      <Button layoutX="640.0" layoutY="659.0" mnemonicParsing="false" onAction="#start" prefHeight="33.0" prefWidth="52.0" text="Reset" />
       <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="565.0" layoutY="370.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../Assets/Characters/Karen.png" />

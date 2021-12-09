@@ -8,6 +8,7 @@
 
 <AnchorPane fx:id="scene" prefHeight="700.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gui.KantineController">
    <children>
+      <Button layoutX="647.0" layoutY="648.0" mnemonicParsing="false" onAction="#start" text="Reset" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" height="700.0" stroke="BLACK" strokeType="INSIDE" width="700.0" />
       <ImageView fitHeight="700.0" fitWidth="700.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -20,6 +21,5 @@
          </image>
       </ImageView>
       <Rectangle fx:id="shape1" arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="40.0" layoutX="650.0" layoutY="290.0" stroke="#ffffff00" strokeType="INSIDE" width="40.0" />
-      <Button layoutX="650.0" layoutY="674.0" mnemonicParsing="false" onAction="#start" text="Reset" />
    </children>
 </AnchorPane>
