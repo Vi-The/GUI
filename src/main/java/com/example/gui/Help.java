@@ -22,7 +22,7 @@ public class Help {
         help.add("M: Åbner og lukker kort over spillet");
         help.add("R: Åbner og lukker dine købsmuligheder");
         help.add("H: Åbner og lukker denne menu");
-        help.add("T: Sådan taler du med folk");
+        help.add("T: For at snakke med folk");
         help.add("\n");
         help.add("Opgaver:   ");
         help.add(QuestChecker.CurrentQ);

@@ -11,7 +11,7 @@ public class QuestChecker {
     private String CoffeeQ = "Gå i kantinen og køb kaffe fra kantinedamen";
     private String ProfessorQ = "Gå ind i klasselokalet og snak med professoren";
     private String BryceQ = "Gå ned til Bryce i fitnesslokalet";
-    private String BarQ = "Mød dine venner i Nedenunder. Snak med dem og derefter Karen";
+    private String BarQ = "Mød dine venner i Nedenunder. Snak med dem \n og derefter Karen";
     private String BikeQ = "Gå med Karen til Cykelhandleren eller tag hjem";
     private String HomeQ = "Gå tilbage til hovedindgangen på SDU";
     public static String CurrentQ = "Snak med Karen og gå ind på Gydehutten";
