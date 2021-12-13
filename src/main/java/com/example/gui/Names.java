@@ -1,6 +1,6 @@
 package com.example.gui;
 
-public class Names {
+public class Names { //Laver et array af navne og returer et tilfældigt navn.
     String Females() {
         String[] names = {
                 "Emma",

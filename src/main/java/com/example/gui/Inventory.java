@@ -69,7 +69,7 @@ public class Inventory {
         }
     }
 
-    void addInv(String item) {
+    void addInv(String item) { //Når vi køber noget så tilføjer den det til vores inventory og hvis det relaterer sig til vores quest sætter den det sandt.
         inventory.add(item);
         if (Objects.equals(item, "Kaffe"))
             questChecker.boughtCoffee = true;

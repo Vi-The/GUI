@@ -17,7 +17,7 @@ public class Help {
     ArrayList<String> help = new ArrayList<String>();
 
 
-    Help(){
+    Help(){ //Fungerer på samme måde som shop
         help.add("E: Åbner og lukker inventarlisten");
         help.add("M: Åbner og lukker kort over spillet");
         help.add("R: Åbner og lukker dine købsmuligheder");

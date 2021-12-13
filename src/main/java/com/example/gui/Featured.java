@@ -9,7 +9,7 @@ import javafx.stage.Stage;
 
 import java.util.ArrayList;
 
-public class Featured {
+public class Featured { //Åbner nyt vindue når man klikker på featured. Navnene er tilføjet i fxml filen, fordi vi ikke vidste at de skulle tilhøre anchorpane for at vi kunne tilgå children (vores navne).
     @FXML
     Button tilbage;
     private ArrayList<String> featured = new ArrayList<>();

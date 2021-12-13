@@ -10,58 +10,58 @@ import javafx.stage.Stage;
 import java.util.ArrayList;
 
 public class Shop {
-    private Rectangle shape;
-    private String shopName;
-    private Buttonlistener buttonlistener = new Buttonlistener();
-    private Group root;
-    Stage stage = new Stage();
-    Scene shopScene;
-    ArrayList<String> shopItems = new ArrayList<>();
+    private Rectangle shape; //player (Samuel)
+    private String shopName; // Navnet på shoppen - som giver os navnet på de rum der har en shop.
+    private Buttonlistener buttonlistener = new Buttonlistener(); //Hvis du trykker på en knap, så udfører den en handling. Så hvis vi klikker på et vilkårlig item i shopitem så tilføjer den det til vores inventory.
+    private Group root; //Sikrer at vi kunne få fat i children til at tilføje shopmuligheder.
+    Stage stage = new Stage(); //Laver et stage / nyt vindue til vores købmuligheder
+    Scene shopScene; //Loader vores købsmuligheder ind i vinduet, så fx i kantinen sørger den for at vi kan købe kaffe, kage, energidrik og sandwich.
+    ArrayList<String> shopItems = new ArrayList<>(); //Sikrer at vi kan tilføje købsmuligheder en en shop.
 
 
-    void displayShop(Rectangle shape, String shopName) {
+    void displayShop(Rectangle shape, String shopName) { //Denne metode viser vores shop, hvis vi står indenfor det rette koordinat. Vi har dog glemt at holde det op i mod shopnavnet. #KendtFejl
         this.shopName = shopName;
         this.shape = shape;
-        if ((shape.getLayoutX() == 90 && shape.getLayoutY() == 170) || (shape.getLayoutX() == 130 && shape.getLayoutY() == 170)) {
+        if ((shape.getLayoutX() == 90 && shape.getLayoutY() == 170) || (shape.getLayoutX() == 130 && shape.getLayoutY() == 170)) { //Kantinens shopkoordinater
             openShop();
         }
-        else if(shape.getLayoutX() == 450 && shape.getLayoutY() == 330){
+        else if(shape.getLayoutX() == 450 && shape.getLayoutY() == 330){ //Bikeshops shopkoordinater
             openShop();
         }
-        else if(shape.getLayoutX() == 370 && shape.getLayoutY() == 210) {
-            openShop();
+        else if(shape.getLayoutX() == 370 && shape.getLayoutY() == 210) { //Fredagsbarens shopkoordinater
+            openShop(); //Hvis man står på koordinaterne kaldes metoden så shoppen åbnes.
         }
     }
 
-    void openShop() {
+    void openShop() { //Metode der åbner vinduet og laver vores shop.
         try {
-            root = new Group();
-            Scene scene = new Scene(root, 500, 300);
-            this.shopScene = scene;
-            stage.setTitle(shopName + " Køb");
-            stage.setScene(scene);
-            loadShop(shopName);
-            stage.show();
-            closeShop();
+            root = new Group(); //Group sikrer at hvis vi vil tilføje både knapper, taster osv. så vi har en container der indeholder alle vores komponenter og gør at vi kan kalde denne group/dette objekt hver gang.
+            Scene scene = new Scene(root, 500, 300); //Mål på vinduet
+            this.shopScene = scene; //Denne shopscene er lig med vores scene så vi kan få fat i den samme scene i alle metoder.
+            stage.setTitle(shopName + " Køb"); //Navnet på vinduet.
+            stage.setScene(scene); //Sætter scenen
+            loadShop(shopName); //Kalder metoden loadshop, finder ud af hvilken shop der er tale om og henter de shopmuligheder.
+            stage.show(); //Viser vinduet
+            closeShop(); //Kalder metoden closeshop som lukker vinduet når man trykker på r.
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    void closeShop() {
+    void closeShop() { //Hvis vi trykker på r, så rydder den arraylisten og lukker staget.
         try {
-            shopScene.setOnKeyPressed(keyEvent -> {
-                if (keyEvent.getCode() == KeyCode.R) {
-                    shopItems.clear();
+            shopScene.setOnKeyPressed(keyEvent -> { //-> = lambda som gør at vi ikke behøver at tjekke for alle keyevents, den ved bare at den skal gå alle ting i arrayet. Tager imod et parameter og returnere en værdi. Ligesom en metode.
+                if (keyEvent.getCode() == KeyCode.R) { //Hvis keyinput er R, så lukker den staget.
+                    shopItems.clear(); //Rydder arrayet.
                     stage.close();
                 }
-            });
+            }); //Vi har ) her fordi lambda opererer på samme måde som en metode.
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    void loadShop(String shop) {
+    void loadShop(String shop) { //Switch case tjekker om shoppens navn er en af de 3 cases og tilføjer tilhørende shopitems til arraylisten.
         switch (shop) {
             case "Kantine":
                 shopItems.add("Kaffe");
@@ -90,7 +90,7 @@ public class Shop {
         showItems();
     }
 
-    void showItems() {
+    void showItems() { //Viser knapperne. Bestemmer hvordan de skal se ud med størrelse og position via et for-loop.
         int posX = 50;
         int posY = 50;
         for (int i = 0; i < shopItems.size(); i++) {
@@ -100,9 +100,9 @@ public class Shop {
             button.setLayoutY(posY);
             button.setMinHeight(20);
             button.setMinWidth(150);
-            button.setOnAction(e -> buttonlistener.getActionForButton(button.getText(),root));
-            root.getChildren().add(button);
-            posY += 30;
+            button.setOnAction(e -> buttonlistener.getActionForButton(button.getText(),root)); //Gør at når man trykker på knappen går den ind i buttonlistner og tilføjer metoden til knappens action. Hver gang vi trykker på knappen så finder den ud af hvilken action den skal foretage sig.
+            root.getChildren().add(button); //Tilføjer knappen til gruppen.
+            posY += 30; //For at knapperne ikke står oven i hinanden.
         }
     }
 }

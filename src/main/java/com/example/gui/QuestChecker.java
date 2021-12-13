@@ -8,8 +8,9 @@ public class QuestChecker {
     public boolean talkedToFriends = false;
     public boolean boughtBikeHelmet = false;
     public static String CurrentQ = "Snak med Karen og gå ind på Gydehutten";
+    //Alle booleans er uløste quests til at starte med. CurrentQ giver os teksten til nuværende quest.
 
-    void UpdateQuest(){
+    void UpdateQuest(){ //Metode der tjekker om vi har klaret questen og hvis vi har det, så sætter den næste quest lig med current quests så vi kun har en ad gangen.
         String coffeeQ = "Gå i kantinen og køb kaffe fra kantinedamen";
         if(talkedToKaren)
             CurrentQ = coffeeQ;

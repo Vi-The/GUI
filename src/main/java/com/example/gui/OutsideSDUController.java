@@ -17,19 +17,19 @@ import java.util.ResourceBundle;
 
 public class OutsideSDUController implements Initializable, iController {
     @FXML
-    private Rectangle shape1;
+    private Rectangle shape1; //Player
     @FXML
-    private AnchorPane scene1;
-    private final Keylistener keylistener = new Keylistener(true, "Hovedindgangen SDU");
+    private AnchorPane scene1; //Alt indholdet i fxml filen. Bl.a. imageview
+    private final Keylistener keylistener = new Keylistener(true, "Hovedindgangen SDU"); //Tilføjer knapper til det givende rum. Kendt fejl, vi kan åbne shoppen udenfor tiltrods for at den er tom. Var vores test rum.
 
     @FXML
-    public void start(ActionEvent event) {
+    public void start(ActionEvent event) { //Start position i rummet.
         shape1.setLayoutY(330);
         shape1.setLayoutX(330);
     }
 
     @Override
-    public void addCollision() {
+    public void addCollision() { //Tilføjer vores collisions.
         int changer = -30;
         for (int i = 0; i < 19; i++)
         {
@@ -37,7 +37,7 @@ public class OutsideSDUController implements Initializable, iController {
             collision.addCollision(690, changer);
             collision.addCollision(changer, 50);
             collision.addCollision(changer, 530);
-            changer += 40;
+            changer += 40; //Værdien stiger med 40.
         }
 
         changer = -30;
@@ -76,14 +76,14 @@ public class OutsideSDUController implements Initializable, iController {
         collision.addCollision(90, 130);
         collision.addCollision(50, 130);
         collision.addCollision(10, 130);
-        //Karen
+        //Collision så vi ikke kan gå ind i Karen
         collision.addCollision(570,370);
     }
 
     AnimationTimer timer = new AnimationTimer() {
 
         @Override
-        public void handle(long timestamp) {
+        public void handle(long timestamp) { //Så længe timeren kører så kører den indholdet af timeren som gør at vi kan bevæge os og udføre quests.
             RoomChanger roomChanger = new RoomChanger(collision, timer);
             scene1.setOnKeyPressed(new EventHandler<KeyEvent>() {
                 @Override
@@ -97,9 +97,9 @@ public class OutsideSDUController implements Initializable, iController {
     };
 
     @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
+    public void initialize(URL url, ResourceBundle resourceBundle) { //Initialize er et must for javafx programmer. Ellers kan de ikke køre.
         Image Samuel = new Image(getClass().getResourceAsStream("/Assets/Characters/SamuelNyNy.png"));
-        shape1.setFill(new ImagePattern(Samuel));
+        shape1.setFill(new ImagePattern(Samuel)); //Sætter samuel på vores firkant.
         addCollision();
         timer.start();
     }

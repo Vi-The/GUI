@@ -27,7 +27,7 @@ public class Interaction {
         this.room = room;
         this.shape = shape;
 
-        switch (room) {
+        switch (room) { //Switch case som tjekker hvilket rum du er i og om du står på en position hvor du kan snakke med en NPC.
             //Lav en if-stamement for positionen af spilleren og bed programmet om at kører openWindow(room)
             case "Hovedindgangen SDU":
                 if(shape.getLayoutX() == 570 && shape.getLayoutY() == 410  || shape.getLayoutX() == 530 && shape.getLayoutY() == 370 || shape.getLayoutX() == 610 && shape.getLayoutY() == 370){
@@ -149,7 +149,7 @@ public class Interaction {
         }
     }
 
-    void getText(String NPC) {
+    void getText(String NPC) { //Ved de samtaler der relaterer sig til en quest, så skal den hente den specifikke samtale og ved male og female, genererer den et tilfældigt citat.
         Text text;
         switch (NPC) {
             case "Karen-Cykelhandler":
@@ -161,7 +161,7 @@ public class Interaction {
                 text = new Text(getTextFromFile(NPC));
                 break;
             case "Male":
-                int randomQuote = (int) (Math.random()*15);
+                int randomQuote = (int) (Math.random()*15); //Vi har 16 citater derfor *15.
                 text = new Text(getTextFromFile(String.valueOf(randomQuote)));
                 break;
             case "Female":
@@ -169,15 +169,15 @@ public class Interaction {
                 text = new Text(getTextFromFile(String.valueOf(randomQuote)));
                 break;
             default:
-                throw new IllegalStateException("Unexpected value: " + NPC);
+                throw new IllegalStateException("Unexpected value: " + NPC); //Hvis den ikke kan finde ud af hvad en NPC er, så kommer der en exception.
         }
 
         text.setX(20); text.setY(40);
         text.setFont(new Font(20));
-        root.getChildren().add(text);
+        root.getChildren().add(text); //Sætter teksten i en position i vinduet.
     }
-    String getTextFromFile(String NPC){
-        StringBuilder text = new StringBuilder();
+    String getTextFromFile(String NPC){ //Læser fra vores txt fil.
+        StringBuilder text = new StringBuilder(); //Sørger for vi kan bygge på en string.
         try {
             File file = new File("src/main/java/udtalelser.txt");
             Scanner fileReader = new Scanner(file);
@@ -187,12 +187,12 @@ public class Interaction {
             }
             fileReader.close();
         } catch (FileNotFoundException e) {
-            System.out.println("Error");
+            System.out.println("Error"); //Kunne have været "Kan ikke finde filen"
             e.printStackTrace();
         }
         int start = text.indexOf("</Start: " + NPC + "/>");
         int end = text.indexOf("</End: " + NPC + "/>");
-        return text.substring(start+ NPC.length()+11, end);
+        return text.substring(start+ NPC.length()+11, end); //+11 er tilføjet fordi følgende er 11 karakterer langt - </Start: /> og ellers ville teksten se fuckt ud.
     }
 
     void closeText() {
