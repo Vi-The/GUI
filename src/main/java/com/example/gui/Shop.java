@@ -63,20 +63,20 @@ public class Shop {
 
     void loadShop(String shop) {
         switch (shop) {
-            case "Kantine":
+            case "Kantine" -> {
                 shopItems.add("Kaffe");
                 shopItems.add("Sandwich");
                 shopItems.add("Energi Drik");
                 shopItems.add("Kage");
-                break;
-            case "Cykelforhandler":
+            }
+            case "Cykelforhandler" -> {
                 shopItems.add("Cykelhjelm");
                 shopItems.add("Kæde");
                 shopItems.add("Cykellås");
                 shopItems.add("Gul vest");
                 shopItems.add("Lygter");
-                break;
-            case "Nedenunder":
+            }
+            case "Nedenunder" -> {
                 shopItems.add("Odense Pilsner");
                 shopItems.add("Odense Classic");
                 shopItems.add("Mokai");
@@ -85,7 +85,7 @@ public class Shop {
                 shopItems.add("Pepsi Max");
                 shopItems.add("Faxe Kondi");
                 shopItems.add("Vodka Redbull");
-                break;
+            }
         }
         showItems();
     }
