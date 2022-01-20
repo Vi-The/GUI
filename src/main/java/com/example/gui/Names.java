@@ -19,7 +19,7 @@ public class Names { //Laver et array af navne og returer et tilfældigt navn.
                 "Luna",
                 "Olivia",
         };
-        return names[(int) (Math.random()* names.length-1)];
+        return names[(int) (Math.random()* names.length-1)]; //-1 fordi vi starter ved index 0.
     }
     String Males() {
         String[] names = {
