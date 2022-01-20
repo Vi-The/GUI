@@ -21,7 +21,7 @@ public class RoomChanger {
     void changeRoom(Rectangle player, int doorXasis, int doorYaxis, String fxmlMail, String roomTitle, boolean disabledCollision) { //Metode siger hvis spilleren position stemmer overens med dørens position, så skifter rummet.
         if (player.getLayoutX() == doorXasis && player.getLayoutY() == doorYaxis) {
             try {
-                collision.removeCollision();
+                collision.removeCollision(); //Fjerner collisions når man går ud af rummet
                 Parent root = FXMLLoader.load(getClass().getResource(fxmlMail+".fxml")); //fxmlMail er navnet på den fil vi skal bruge
                 Stage window = (Stage) player.getScene().getWindow();
                 window.setScene(new Scene(root, 700, 700));
