@@ -31,7 +31,7 @@ public class OutsideSDUController implements Initializable, iController {
     @Override
     public void addCollision() { //Tilføjer vores collisions.
         int changer = -30;
-        for (int i = 0; i < 19; i++)
+        for (int i = 0; i < 19; i++) // fra den side af skærmen til den anden
         {
             collision.addCollision(-30, changer);
             collision.addCollision(690, changer);
@@ -40,7 +40,7 @@ public class OutsideSDUController implements Initializable, iController {
             changer += 40; //Værdien stiger med 40.
         }
 
-        changer = -30;
+        changer = -30; //Hul til udgangen.
         for (int i = 0; i < 9; i++) {
             collision.addCollision(changer, 490);
             collision.addCollision(changer + 400, 490);

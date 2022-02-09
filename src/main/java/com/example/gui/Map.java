@@ -21,7 +21,7 @@ public class Map { //Fungerer på samme måde som shop. Loader billedet ind i vi
     public void addImage() throws FileNotFoundException { //Sørger for den kan sige den ikke kan finde filen.
         Image Map = new Image(new FileInputStream("src/Assets/Map over SDU 3.png"));
         ImageView image = new ImageView(Map);
-        image.setX(0);
+        image.setX(0); //Første pixel skal være i samme hjørne som på vinduet, så vi sikre at billedet fylder hele vinduet ud
         image.setY(0);
         root.getChildren().add(image);
     }
